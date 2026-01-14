@@ -1,0 +1,1210 @@
+﻿
+VEHICLE_BIKE_recoil:
+  Skills:
+  - recoil{r=10;pitch=-.4}
+  - delay 1
+  - recoil{r=10;pitch=.3}
+  - delay 1
+  - recoil{r=10;pitch=-.2}
+  - delay 1
+  - recoil{r=10;pitch=.1}
+                                        
+
+VEHICLE_BIKE_spawn:
+  Skills:
+  - partvis{p=head_light} @self
+  - partvis{p=brake_light} @self
+  - partvis{p=root;child=true;em=false} @self
+  - brightness{p=head_light;b=15;s=15} @self
+  - brightness{p=brake_light;b=15;s=15} @self
+  - setvar{var=caster.color;val=white;type=STRING} @self
+  
+
+VEHICLE_BIKE_hide_player_on_dc:
+  Skills:
+  - skill{s=VEHICLE_BIKE_hide_driver_on_dc} @self
+  
+VEHICLE_BIKE_hide_driver_on_dc:
+  Conditions:
+  - modelhasdriver false
+  Skills:
+  - partvis{p=root_driver;child=true;em=true} @self
+
+
+VEHICLE_BIKE_PAINT_black:
+  Conditions:
+  - varequals{var=caster.color;val=black} false
+  Skills:
+  - sound{s=littleroom_vehicle:vehicle.vehicle_spraypaint;v=1;sc=HOSTILE} @self
+  - setvar{var=caster.color;val=black;type=STRING} @self
+  - remapmodel{m=vehicle_bike;n=vehicle_bike_black} @self
+  - e:p{a=150;hs=1;vs=.75;c=#000000;size=2} @modelpart{pid=chassis}
+
+VEHICLE_BIKE_PAINT_blue:
+  Conditions:
+  - varequals{var=caster.color;val=blue} false
+  Skills:
+  - sound{s=littleroom_vehicle:vehicle.vehicle_spraypaint;v=1;sc=HOSTILE} @self
+  - setvar{var=caster.color;val=blue;type=STRING} @self
+  - remapmodel{m=vehicle_bike;n=vehicle_bike_blue} @self
+  - e:p{a=150;hs=1;vs=.75;c=#3d85c6;size=2} @modelpart{pid=chassis}
+
+VEHICLE_BIKE_PAINT_green:
+  Conditions:
+  - varequals{var=caster.color;val=green} false
+  Skills:
+  - sound{s=littleroom_vehicle:vehicle.vehicle_spraypaint;v=1;sc=HOSTILE} @self
+  - setvar{var=caster.color;val=green;type=STRING} @self
+  - remapmodel{m=vehicle_bike;n=vehicle_bike_green} @self
+  - e:p{a=150;hs=1;vs=.75;c=#affc00;size=2} @modelpart{pid=chassis}
+
+VEHICLE_BIKE_PAINT_pink:
+  Conditions:
+  - varequals{var=caster.color;val=pink} false
+  Skills:
+  - sound{s=littleroom_vehicle:vehicle.vehicle_spraypaint;v=1;sc=HOSTILE} @self
+  - setvar{var=caster.color;val=pink;type=STRING} @self
+  - remapmodel{m=vehicle_bike;n=vehicle_bike_pink} @self
+  - e:p{a=150;hs=1;vs=.75;c=#ff7eca;size=2} @modelpart{pid=chassis}
+
+VEHICLE_BIKE_PAINT_red:
+  Conditions:
+  - varequals{var=caster.color;val=red} false
+  Skills:
+  - sound{s=littleroom_vehicle:vehicle.vehicle_spraypaint;v=1;sc=HOSTILE} @self
+  - setvar{var=caster.color;val=red;type=STRING} @self
+  - remapmodel{m=vehicle_bike;n=vehicle_bike_red} @self
+  - e:p{a=150;hs=1;vs=.75;c=#cc0000;size=2} @modelpart{pid=chassis}
+
+VEHICLE_BIKE_PAINT_white:
+  Conditions:
+  - varequals{var=caster.color;val=white} false
+  Skills:
+  - sound{s=littleroom_vehicle:vehicle.vehicle_spraypaint;v=1;sc=HOSTILE} @self
+  - setvar{var=caster.color;val=white;type=STRING} @self
+  - remapmodel{m=vehicle_bike;n=vehicle_bike} @self
+  - e:p{a=150;hs=1;vs=.75;c=#ffffff;size=2} @modelpart{pid=chassis}
+
+VEHICLE_BIKE_PAINT_yellow:
+  Conditions:
+  - varequals{var=caster.color;val=yellow} false
+  Skills:
+  - sound{s=littleroom_vehicle:vehicle.vehicle_spraypaint;v=1;sc=HOSTILE} @self
+  - setvar{var=caster.color;val=white;type=STRING} @self
+  - remapmodel{m=vehicle_bike;n=vehicle_bike_yellow} @self
+  - e:p{a=150;hs=1;vs=.75;c=#ffd703;size=2} @modelpart{pid=chassis}
+
+
+
+
+VEHICLE_BIKE_LOAD_COLOR:
+  Skills:
+  - skill{s=VEHICLE_BIKE_LOAD_BLACK} @self
+  - skill{s=VEHICLE_BIKE_LOAD_BLUE} @self
+  - skill{s=VEHICLE_BIKE_LOAD_GREEN} @self
+  - skill{s=VEHICLE_BIKE_LOAD_PINK} @self
+  - skill{s=VEHICLE_BIKE_LOAD_RED} @self
+  - skill{s=VEHICLE_BIKE_LOAD_WHITE} @self
+  
+VEHICLE_BIKE_LOAD_BLACK:
+  Conditions:
+  - varequals{var=caster.color;val=black} true
+  Skills:
+  - remapmodel{m=vehicle_bike;n=vehicle_bike_black} @self
+  
+VEHICLE_BIKE_LOAD_BLUE:
+  Conditions:
+  - varequals{var=caster.color;val=blue} true
+  Skills:
+  - remapmodel{m=vehicle_bike;n=vehicle_bike_blue} @self
+  
+VEHICLE_BIKE_LOAD_GREEN:
+  Conditions:
+  - varequals{var=caster.color;val=green} true
+  Skills:
+  - remapmodel{m=vehicle_bike;n=vehicle_bike_green} @self
+  
+VEHICLE_BIKE_LOAD_PINK:
+  Conditions:
+  - varequals{var=caster.color;val=pink} true
+  Skills:
+  - remapmodel{m=vehicle_bike;n=vehicle_bike_pink} @self
+  
+VEHICLE_BIKE_LOAD_RED:
+  Conditions:
+  - varequals{var=caster.color;val=red} true
+  Skills:
+  - remapmodel{m=vehicle_bike;n=vehicle_bike_red} @self
+  
+VEHICLE_BIKE_LOAD_WHITE:
+  Conditions:
+  - varequals{var=caster.color;val=white} true
+  Skills:
+  - remapmodel{m=vehicle_bike;n=vehicle_bike} @self
+
+   
+VEHICLE_BIKE_show_health:
+  TargetConditions:
+  - holding{m=VEHICLE_WRENCH} true
+  - fieldofview{angle=90;r=0}
+  Skills:
+  - am{m=" <caster.hp> / <caster.mhp> "}
+   
+VEHICLE_BIKE_repair:
+  TriggerConditions:
+  - holding{m=VEHICLE_WRENCH} true
+  Conditions:
+  - health{h=150} false
+  Skills:
+  - sound{s=littleroom_vehicle_pack:vehicle.vehicle_repair;v=1;sc=HOSTILE} @self
+  - healpercent{m=0.25} @self
+  - playanimation{a=0;audience=World} @trigger
+
+
+VEHICLE_BIKE_camera_closer:
+  TargetConditions:
+  - blockTypeInRadius{type=AIR;r=1} castinstead VEHICLE_BIKE_camera_reset
+  Skills:
+  - state{s=camera_close;li=5;lo=20} @self
+
+VEHICLE_BIKE_camera_reset:
+  Skills:
+  - state{s=camera_close;r=true} @self
+
+
+
+
+VEHICLE_BIKE_enter:
+  Cooldown: 1
+  TriggerConditions:
+  - holding{m=VEHICLE_PAINT_*} false
+  - holding{m=VEHICLE_WRENCH} false
+  - holding{i=stick} false
+  - fieldofview{angle=180;r=90} orElseCast VEHICLE_BIKE_enter_right
+  Conditions:
+  - (varequals{var=caster.bike_toppled;val=front} || varequals{var=caster.bike_toppled;val=side}) castinstead VEHICLE_BIKE_pickup
+  - varequals{var=caster.flooded;val=true} false
+  - modelhasdriver false
+  Skills:
+  - sudoskill{s=VEHICLE_BIKE_hide_driver;cat=true} @trigger
+  - sound{s=littleroom_vehicle_pack:vehicle.bike_start;v=1;sc=HOSTILE;delay=5} @self
+  - setvar{var=caster.engine;val=started;type=STRING;delay=20} @self
+  - partvis{p=head_light;v=true} @self
+  - partvis{p=root_driver;child=true;v=true;em=true} @self
+  - modelplayerskin{p=driver_head} @trigger
+  - state{s=enter;p=14} @self
+  - mountmodel{mode=[
+      - move{front=<skill.var.meg:front>;side=0} ?!variableEquals{var=caster.flooded;val=true}
+      - skill{s=VEHICLE_BIKE_exit} @trigger ?variableEquals{var=skill.meg:sneak;value=1}
+      - setvar{var=caster.honk;val=false;type=STRING} @self ?variableEquals{var=skill.meg:jump;value=0}
+      - skill{s=VEHICLE_BIKE_lean_left} @self ?variableInRange{var=skill.meg:side;value=>0}
+      - skill{s=VEHICLE_BIKE_lean_right} @self ?variableInRange{var=skill.meg:side;value=<0}
+      - skill{s=VEHICLE_BIKE_lean_reset} @self ?variableInRange{var=skill.meg:side;value=-0.1to0.1}
+      - skill{s=VEHICLE_BIKE_wheelie} @self ?variableEquals{var=skill.meg:jump;value=1}
+      - skill{s=VEHICLE_BIKE_forward_set} @self ?variableInRange{var=skill.meg:front;value=>0}
+      - skill{s=VEHICLE_BIKE_reverse_set} @self ?variableInRange{var=skill.meg:front;value=<0}
+      - skill{s=VEHICLE_BIKE_direction_stop} @self ?variableInRange{var=skill.meg:front;value=0}
+    ]} @trigger
+  
+
+
+VEHICLE_BIKE_enter_right:
+  TriggerConditions:
+  - holding{m=VEHICLE_PAINT_*} false
+  - holding{m=VEHICLE_WRENCH} false
+  - holding{i=stick} false
+  - fieldofview{angle=180;r=270}
+  Conditions:
+  - (varequals{var=caster.bike_toppled;val=front} || varequals{var=caster.bike_toppled;val=side}) castinstead VEHICLE_BIKE_pickup
+  - varequals{var=caster.flooded;val=true} false
+  - modelhasdriver false
+  Skills:
+  - sudoskill{s=VEHICLE_BIKE_hide_driver;cat=true} @trigger
+  - sound{s=littleroom_vehicle_pack:vehicle.bike_start;v=1;sc=HOSTILE;delay=5} @self
+  - setvar{var=caster.engine;val=started;type=STRING;delay=20} @self
+  - partvis{p=head_light;v=true} @self
+  - partvis{p=root_driver;child=true;v=true;em=true} @self
+  - modelplayerskin{p=driver_head} @trigger
+  - state{s=enter_right;p=14} @self
+  - mountmodel{mode=[
+      - move{front=<skill.var.meg:front>;side=0} ?!variableEquals{var=caster.flooded;val=true}
+      - skill{s=VEHICLE_BIKE_exit} @trigger ?variableEquals{var=skill.meg:sneak;value=1}
+      - setvar{var=caster.honk;val=false;type=STRING} @self ?variableEquals{var=skill.meg:jump;value=0}
+      - skill{s=VEHICLE_BIKE_lean_left} @self ?variableInRange{var=skill.meg:side;value=>0}
+      - skill{s=VEHICLE_BIKE_lean_right} @self ?variableInRange{var=skill.meg:side;value=<0}
+      - skill{s=VEHICLE_BIKE_lean_reset} @self ?variableInRange{var=skill.meg:side;value=-0.1to0.1}
+      - skill{s=VEHICLE_BIKE_wheelie} @self ?variableEquals{var=skill.meg:jump;value=1}
+      - skill{s=VEHICLE_BIKE_forward_set} @self ?variableInRange{var=skill.meg:front;value=>0}
+      - skill{s=VEHICLE_BIKE_reverse_set} @self ?variableInRange{var=skill.meg:front;value=<0}
+      - skill{s=VEHICLE_BIKE_direction_stop} @self ?variableInRange{var=skill.meg:front;value=0}
+    ]} @trigger
+    
+    
+
+  
+VEHICLE_BIKE_hide_driver:
+  Skills:
+  - potion{type=INVISIBILITY;l=4;d=10;p=false;i=false} @self
+  - hide{d=20} @Server
+  
+
+
+VEHICLE_BIKE_exit:
+  Cooldown: 1
+  Conditions:
+  - varequals{var=caster.driverexit;val=true} false
+  Skills:
+  - stopsound{s=littleroom_vehicle_pack:vehicle.bike_accelerate_idle_80_tick;v=1;sc=HOSTILE} @pir{r=4}
+  - setvar{var=caster.engine;val=stopped;type=STRING} @self
+  - setvar{var=caster.driverexit;val="true";type=STRING;d=10} @self
+  - partvis{p=root_driver;child=true;em=true;delay=5} @self
+  - skill{s=VEHICLE_BIKE_direction_stop} @self
+  - state{s=exit;p=14} @self
+  - sudoskill{s=VEHICLE_BIKE_show_driver} @trigger
+  - skill{s=VEHICLE_BIKE_exit_lights_time_out;delay=80} @self
+  - delay 3
+  - dismountmodel @trigger
+
+
+
+VEHICLE_BIKE_show_driver:
+  Skills:
+  - potionclear{type=INVISIBILITY;repeat=4;repeati=1;delay=3} @self
+  - showEntity{delay=3} @Server
+
+
+
+VEHICLE_BIKE_exit_lights_time_out:
+  Conditions:
+  - modelhasdriver false
+  Skills:
+  - partvis{p=head_light;v=false} @self
+  - partvis{p=brake_light;v=false} @self
+
+
+
+
+
+VEHICLE_BIKE_wheelie:
+  Conditions:
+  - onground true
+  - varequals{var=caster.flooded;val=true} false
+  - varequals{var=caster.forward_speed;val=full} true
+  - variableEquals{var=caster.wheelie;value=true} false
+  Skills:
+  - setvar{var=caster.wheelie;val=true;type=STRING;duration=40} @self
+  - state{s=wheelie;li=2;lo=2;p=12} @self
+  - e:p{p=large_smoke;hs=.15;vs=.15;a=1;repeat=10;repeati=1} @modelpart{pid=rear_suspension}
+
+
+
+
+VEHICLE_BIKE_lean_left:
+  Conditions:
+  - varequals{var=caster.lean;val=left} false
+  - varequals{var=caster.direction;val=forward} true
+  Skills:
+  - setvar{var=caster.lean;val=left;type=STRING} @self
+  - state{s=tilt_left;li=3;lo=5;p=25} @self
+
+
+VEHICLE_BIKE_lean_right:
+  Conditions:
+  - varequals{var=caster.lean;val=right} false
+  - varequals{var=caster.direction;val=forward} true
+  Skills:
+  - setvar{var=caster.lean;val=right;type=STRING} @self
+  - state{s=tilt_right;li=3;lo=5;p=25} @self
+
+VEHICLE_BIKE_lean_reset:
+  Conditions:
+  - (varequals{var=caster.lean;val=left} || varequals{var=caster.lean;val=right}) true
+  Skills:
+  - setvar{var=caster.lean;val=reset;type=STRING} @self
+  - state{s=tilt_left;r=true;p=25} @self
+  - state{s=tilt_right;r=true;p=25} @self
+  
+  
+
+
+VEHICLE_BIKE_honk:
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - variableEquals{var=caster.honk;value=true} false
+  Skills:
+  - setvar{var=caster.honk;val=true;type=STRING} @self
+  - sound{s=littleroom_vehicle:vehicle.honk;v=1;sc=HOSTILE} @self
+
+
+
+
+
+
+VEHICLE_BIKE_forward_set:
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - varequals{var=caster.direction;val=forward} false
+  - varequals{var=caster.driverexit;val=true} false
+  Skills:
+  - setvar{var=caster.direction;val=forward;type=STRING} @self
+  - skill{s=VEHICLE_BIKE_forward_acceleration} @self
+  - partvis{p=brake_light;v=false} @self
+  - partvis{p=backup_light} @self
+  - e:p{p=block;m=dirt;a=5;repeat=4;repeati=1} @modelpart{pid=back_right_tire;em=false}
+  - e:p{p=block;m=dirt;a=5;repeat=4;repeati=1} @modelpart{pid=back_left_tire;em=false}
+  - defaultstate{t=walk;s=walk} @self
+  - state{s=start_forward;p=11} @self
+  - state{s=forward} @self
+
+
+
+VEHICLE_BIKE_acceleration_loop:
+  Cooldown: 3
+  Conditions:
+  - varequals{var=caster.forward_speed;val=full} true
+  Skills:
+  - sound{s=littleroom_vehicle_pack:vehicle.bike_accelerate_idle_80_tick;v=1;p=<random.float.1.0to1.2>;sc=HOSTILE} @self
+
+
+VEHICLE_BIKE_idle_loop:
+  Cooldown: 4
+  Conditions:
+  - modelhasdriver true
+  - varequals{var=caster.forward_speed;val=full} false
+  - varequals{var=caster.engine;val=started} true
+  Skills:
+  - sound{s=littleroom_vehicle_pack:vehicle.bike_idle_80_tick;v=1;sc=HOSTILE} @self
+  
+
+ 
+VEHICLE_BIKE_forward_acceleration:
+  Conditions:
+  - variableInRange{var=skill.meg:front;value=>0}
+  Skills:
+  - setspeed{t=walking;s=0.25} @self
+  - delay 7
+  - skill{s=VEHICLE_BIKE_forward_acceleration_2} @self
+  
+VEHICLE_BIKE_forward_acceleration_2:
+  Conditions:
+  - variableInRange{var=skill.meg:front;value=>0}
+  Skills:
+  - setspeed{t=walking;s=0.5} @self
+  - delay 7
+  - skill{s=VEHICLE_BIKE_forward_acceleration_3} @self
+  
+VEHICLE_BIKE_forward_acceleration_3:
+  Conditions:
+  - variableInRange{var=skill.meg:front;value=>0}
+  Skills:
+  - setspeed{t=walking;s=1} @self
+  - delay 7
+  - skill{s=VEHICLE_BIKE_forward_acceleration_4} @self
+  
+VEHICLE_BIKE_forward_acceleration_4:
+  Conditions:
+  - variableInRange{var=skill.meg:front;value=>0}
+  Skills:
+  - setspeed{t=walking;s=1.25} @self
+  - delay 7
+  - skill{s=VEHICLE_BIKE_forward_acceleration_5} @self
+  
+VEHICLE_BIKE_forward_acceleration_5:
+  Conditions:
+  - variableInRange{var=skill.meg:front;value=>0}
+  Skills:
+  - setspeed{t=walking;s=1.75} @self
+  - delay 7
+  - skill{s=VEHICLE_BIKE_forward_acceleration_6} @self
+  
+VEHICLE_BIKE_forward_acceleration_6:
+  Conditions:
+  - variableInRange{var=skill.meg:front;value=>0}
+  Skills:
+  - setspeed{t=walking;s=2} @self
+
+
+
+
+VEHICLE_BIKE_reverse_set:
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - varequals{var=caster.direction;val=reverse} false
+  - varequals{var=caster.driverexit;val=true} false
+  Skills:
+  - setvar{var=caster.direction;val=reverse;type=STRING} @self
+  - setspeed{t=walking;s=0.25} @self
+  - partvis{p=backup_light;v=true} @self
+  - defaultstate{t=walk;s=walk_reverse} @self
+  - state{s=start_reverse;p=11} @self
+  - state{s=reverse;p=1} @self
+  - skill{s=VEHICLE_BIKE_reverse_player_animate} @self
+  
+
+
+VEHICLE_BIKE_reverse_player_animate:
+  Skills:
+  - state{s=reverse_player} @self
+
+
+
+ 
+VEHICLE_BIKE_direction_stop:
+  Conditions:
+  - onground true
+  - varequals{var=caster.direction;val=stop} false
+  Skills:
+  - stopsound{s=littleroom_vehicle_pack:vehicle.bike_accelerate_start;v=1;sc=HOSTILE} @pir{r=8}
+  - stopsound{s=littleroom_vehicle_pack:vehicle.bike_accelerate_idle_80_tick;v=1;sc=HOSTILE} @pir{r=8}
+  - sound{s=littleroom_vehicle_pack:vehicle.bike_accelerate_stop;v=1;sc=HOSTILE} @self
+  - setSkillCooldown{skill=VEHICLE_BIKE_forward_set;seconds=1} @self
+  - setSkillCooldown{skill=VEHICLE_BIKE_reverse_set;seconds=1} @self
+  - partvis{p=brake_light;v=true} @self
+  - partvis{p=backup_light} @self
+  - skill{s=VEHICLE_BIKE_direction_stop_forward} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - state{s=wheelie;p=12;r=true;repeat=10;repeati=1} @self
+  - state{s=reverse_player;p=15;r=true} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+  
+VEHICLE_BIKE_direction_stop_forward:
+  Conditions:
+  - varequals{var=caster.direction;val=forward} true
+  Skills:
+  - state{s=stop_forward;p=11} @self
+
+
+
+
+VEHICLE_BIKE_forward_fullspeed:
+  Conditions:
+  - directionalVelocity{z=>0.75;absz=true;relative=true} orElseCast VEHICLE_BIKE_forward_fullspeed_reset
+  Skills:
+  - setvar{var=caster.forward_speed;val=full;type=STRING} @self
+
+VEHICLE_BIKE_forward_fullspeed_reset:
+  Conditions:
+  - directionalVelocity{z=<0.75;relative=true} true
+  Skills:
+  - setvar{var=caster.forward_speed;val=false;type=STRING} @self
+
+
+
+
+
+
+
+
+
+VEHICLE_BIKE_flooded:
+  Cooldown: 1
+  TargetConditions:
+  - blocktype{type=WATER} true
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  Skills:
+  - e:p{p=bubble;a=2;hs=.5;vs=.25;;d=true;dir=0,1,0;s=1;repeat=60;repeati=5} @modelpart{pid=chassis}
+  - setvar{var=caster.flooded;val=true;type=STRING} @self  
+  - setvar{var=caster.engine;val=stopped;type=STRING} @self
+  - skill{s=VEHICLE_BIKE_exit_lights_time_out;delay=80} @self
+  
+
+VEHICLE_BIKE_collision_check:
+  Conditions:
+  - varequals{var=caster.forward_speed;val=full} true
+  Skills:
+  - totem{md=2;oH=VEHICLE_BIKE_collision_totem;drawhitbox=false;hr=0.5;vr=1;hnp=true;yo=1}
+
+  
+
+VEHICLE_BIKE_collision_totem:
+  Skills:
+  - skill{s=VEHICLE_BIKE_collision_totem_skill}
+  
+VEHICLE_BIKE_collision_totem_skill:
+  Cooldown: 1
+  TargetConditions:
+  - faction{faction=Vehicle} castinstead VEHICLE_BIKE_forward_collision_vehicle
+  Skills:
+  - throw{v=8;vy=1}
+  - dismountmodel{delay=2} @modelDriver
+  - signal{s=COLLISION}
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+  - stopsound{s=littleroom_vehicle_pack:vehicle.bike_accelerate_idle_80_tick;v=1;sc=HOSTILE} @pir{r=8}
+  - sound{s=littleroom_vehicle_pack:vehicle.bike_impact;v=3;p=<random.float.0.9to1.1>;sc=HOSTILE} @self
+  - lunge{v=1;vy=0.5} @forward{f=5}
+  - setspeed{t=walking;s=0} @self
+  - damage{a=10} @self
+  - damage{a=10}
+  - state{s=front_collision;p=20} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - partvis{p=root_driver;child=true;em=true;delay=2} @self
+  - sudoskill{s=VEHICLE_BIKE_show_driver} @trigger
+  - setvar{var=caster.bike_toppled;val=front;type=STRING} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+  - state{s=hard_landing_forward;lo=5;p=12} @self
+  - skill{s=VEHICLE_BIKE_forward_acceleration_3} @self
+  - skill{s=VEHICLE_BIKE_recoil} @ModelDriver
+  - skill{s=VEHICLE_BIKE_recoil} @ModelPassengers
+
+
+VEHICLE_BIKE_forward_collision_vehicle:
+  Cooldown: 1
+  Skills:
+  - dismountmodel{delay=2} @modelDriver
+  - signal{s=COLLISION}
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+  - stopsound{s=littleroom_vehicle_pack:vehicle.bike_accelerate_idle_80_tick;v=1;sc=HOSTILE} @pir{r=8}
+  - sound{s=littleroom_vehicle_pack:vehicle.bike_impact;v=3;p=<random.float.0.9to1.1>;sc=HOSTILE} @self
+  - lunge{v=0.15;vy=0.15} @forward{f=-1}
+  - setspeed{t=walking;s=0} @self
+  - damage{a=10} @self
+  - state{s=front_collision;p=20} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - partvis{p=root_driver;child=true;em=true;delay=2} @self
+  - sudoskill{s=VEHICLE_BIKE_show_driver} @trigger
+  - setvar{var=caster.bike_toppled;val=front;type=STRING} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+
+VEHICLE_BIKE_recieve_collision:
+  TriggerConditions:
+  - fieldofview{angle=90;r=0} orElseCast VEHICLE_BIKE_recieve_collision_left
+  Cooldown: 1
+  Skills:
+  - dismountmodel{delay=2} @modelDriver
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+  - stopsound{s=littleroom_vehicle_pack:vehicle.bike_accelerate_idle_80_tick;v=1;sc=HOSTILE} @pir{r=8}
+  - sound{s=littleroom_vehicle_pack:vehicle.bike_impact;v=3;p=<random.float.0.9to1.1>;sc=HOSTILE} @self
+  - lunge{v=0.15;vy=0.15} @forward{f=-1}
+  - setspeed{t=walking;s=0} @self
+  - damage{a=10} @self
+  - state{s=front_collision;p=20} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - partvis{p=root_driver;child=true;em=true;delay=2} @self
+  - sudoskill{s=VEHICLE_BIKE_show_driver} @trigger
+  - setvar{var=caster.bike_toppled;val=front;type=STRING} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+
+
+VEHICLE_BIKE_recieve_collision_left:
+  TriggerConditions:
+  - fieldofview{angle=90;r=90} orElseCast VEHICLE_BIKE_recieve_collision_right
+  Cooldown: 1
+  Skills:
+  - dismountmodel{delay=2} @modelDriver
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+  - stopsound{s=littleroom_vehicle_pack:vehicle.bike_accelerate_idle_80_tick;v=1;sc=HOSTILE} @pir{r=8}
+  - sound{s=littleroom_vehicle_pack:vehicle.bike_impact;v=3;p=<random.float.0.9to1.1>;sc=HOSTILE} @self
+  - lunge{v=0.15;vy=0.15} @forward{sso=-1}
+  - setspeed{t=walking;s=0} @self
+  - damage{a=10} @self
+  - state{s=side_collision;p=20} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - partvis{p=root_driver;child=true;em=true;delay=2} @self
+  - sudoskill{s=VEHICLE_BIKE_show_driver} @trigger
+  - setvar{var=caster.bike_toppled;val=side;type=STRING} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+
+
+VEHICLE_BIKE_recieve_collision_right:
+  TriggerConditions:
+  - fieldofview{angle=90;r=270} orElseCast VEHICLE_BIKE_recieve_collision_rear
+  Cooldown: 1
+  Skills:
+  - dismountmodel{delay=2} @modelDriver
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+  - stopsound{s=littleroom_vehicle_pack:vehicle.bike_accelerate_idle_80_tick;v=1;sc=HOSTILE} @pir{r=8}
+  - sound{s=littleroom_vehicle_pack:vehicle.bike_impact;v=3;p=<random.float.0.9to1.1>;sc=HOSTILE} @self
+  - lunge{v=0.15;vy=0.15} @forward{sso=1}
+  - setspeed{t=walking;s=0} @self
+  - damage{a=10} @self
+  - state{s=side_collision;p=20} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - partvis{p=root_driver;child=true;em=true;delay=2} @self
+  - sudoskill{s=VEHICLE_BIKE_show_driver} @trigger
+  - setvar{var=caster.bike_toppled;val=side;type=STRING} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+
+VEHICLE_BIKE_recieve_collision_rear:
+  Conditions:
+  - varequals{var=caster.forward_speed;val=full} false
+  TriggerConditions:
+  - fieldofview{angle=90;r=180}
+  Cooldown: 1
+  Skills:
+  - dismountmodel{delay=2} @modelDriver
+  - stopsound{s=littleroom_vehicle_pack:vehicle.bike_accelerate_idle_80_tick;v=1;sc=HOSTILE} @pir{r=8}
+  - sound{s=littleroom_vehicle_pack:vehicle.bike_impact;v=3;p=<random.float.0.9to1.1>;sc=HOSTILE} @self
+  - lunge{v=0.15;vy=0.15} @forward{f=1}
+  - setspeed{t=walking;s=0} @self
+  - damage{a=10} @self
+  - state{s=front_collision;p=20} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - partvis{p=root_driver;child=true;em=true;delay=2} @self
+  - sudoskill{s=VEHICLE_BIKE_show_driver} @trigger
+  - setvar{var=caster.bike_toppled;val=front;type=STRING} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+
+
+
+  
+VEHICLE_BIKE_forward_collision_block:
+  Cooldown: 1
+  Conditions:
+  - varequals{var=caster.forward_speed;val=full} true
+  TargetConditions:
+  - blockType{type=WATER,
+                   AIR,
+                   WHITE_CARPET,
+                   ORANGE_CARPET,
+                   MAGENTA_CARPET,
+                   LIGHT_BLUE_CARPET,
+                   YELLOW_CARPET,
+                   LIME_CARPET,
+                   PINK_CARPET,
+                   GRAY_CARPET,
+                   LIGHT_GRAY_CARPET,
+                   CYAN_CARPET,
+                   PURPLE_CARPET,
+                   BLUE_CARPET,
+                   BROWN_CARPET,
+                   GREEN_CARPET,
+                   RED_CARPET,
+                   BLACK_CARPET,
+                   GRASS,
+                   TALL_GRASS,
+                   SMALL_AMETHYST_BUD,
+                   MEDIUM_AMETHYST_BUD,
+                   LARGE_AMETHYST_BUD,
+                   BROWN_MUSHROOM,
+                   RED_MUSHROOM,
+                   CRIMSON_FUNGUS,
+                   WARPED_FUNGUS,
+                   FERN,
+                   DEAD_BUSH,
+                   DANDELION,
+                   POPPY,
+                   BLUE_ORCHID,
+                   ALLIUM,
+                   AZURE_BLUET,
+                   RED_TULIP,
+                   ORANGE_TULIP,
+                   WHITE_TULIP,
+                   PINK_TULIP,
+                   OXEYE_DAISY,
+                   CORNFLOWER,
+                   LILY_OF_THE_VALLEY,
+                   TORCHFLOWER,
+                   WITHER_ROSE,
+                   PINK_PETALS,
+                   SPORE_BLOSSOM,
+                   CRIMSON_ROOTS,
+                   WARPED_ROOTS,
+                   NETHER_SPROUTS,
+                   WEEPING_VINES,
+                   TWISTING_VINES,
+                   VINE,
+                   LARGE_FERN,
+                   SUNFLOWER,
+                   LILAC,
+                   ROSE_BUSH,
+                   PEONY,
+                   PITCHER_PLANT,
+                   SMALL_DRIPLEAF,
+                   GLOW_LICHEN,
+                   HANGING_ROOTS,
+                   SEAGRASS,
+                   SEA_PICKLE,
+                   COBWEB,
+                   WHEAT,
+                   BEETROOTS,
+                   CARROTS,
+                   POTATOES,
+                   NETHER_WART,
+                   SEAGRASS,
+                   LIGHT,
+                   RAIL
+                   } false
+  Cooldown: 1
+  Skills:
+  - dismountmodel{delay=2} @modelDriver
+  - stopsound{s=littleroom_vehicle_pack:vehicle.bike_accelerate_idle_80_tick;v=1;sc=HOSTILE} @pir{r=8}
+  - sound{s=littleroom_vehicle_pack:vehicle.bike_impact;v=3;p=<random.float.0.9to1.1>;sc=HOSTILE} @self
+  - lunge{v=0.15;vy=0.15} @forward{f=-1}
+  - setspeed{t=walking;s=0} @self
+  - damage{a=10} @self
+  - state{s=front_collision;p=20} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - partvis{p=root_driver;child=true;em=true;delay=2} @self
+  - sudoskill{s=VEHICLE_BIKE_show_driver} @trigger
+  - setvar{var=caster.bike_toppled;val=front;type=STRING} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+  
+  
+VEHICLE_BIKE_pickup:
+  Cooldown: 1
+  Conditions:
+  - varequals{var=caster.bike_toppled;val=front} orElseCast VEHICLE_BIKE_pickup_side
+  Skills:
+  - state{s=pickup_front} @self
+  - state{s=front_collision;r=true;p=20} @self
+  - state{s=side_collision;r=true;p=20} @self
+  - delay 20
+  - setvar{var=caster.bike_toppled;val=false;type=STRING} @self
+  
+VEHICLE_BIKE_pickup_side:
+  Cooldown: 1
+  Conditions:
+  - varequals{var=caster.bike_toppled;val=side}
+  Skills:
+  - state{s=pickup_side} @self
+  - state{s=front_collision;r=true;p=20} @self
+  - state{s=side_collision;r=true;p=20} @self
+  - delay 20
+  - setvar{var=caster.bike_toppled;val=false;type=STRING} @self
+
+
+
+VEHICLE_BIKE_low_health:
+  Skills:
+  - e:p{p=large_smoke;hs=.25;vs=.1;a=4;y=1.5} @forward{f=.5}
+
+
+
+
+VEHICLE_BIKE_hard_land_velocity_check:
+  Conditions:
+  - onground false
+  - directionalVelocity{y=-0.4to0.3} false
+  - varequals{var=caster.hard_land;val=true} false
+  Skills:
+  - state{s=in_air_tilt_down;li=5;lo=5;p=12} @self
+  - setvar{var=caster.hard_land;val=true;type=STRING} @self
+
+
+VEHICLE_BIKE_suspension_hard_land:
+  Cooldown: 0.1
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - varequals{var=caster.hard_land;val=true} true
+  - ( altitude{a=<1.25} || onground )
+  Skills:
+  - setvar{var=caster.hard_land;val=false;type=STRING} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.bike_land;v=1;p=<random.float.-0.8to1.1>;sc=HOSTILE} @self
+  - jump{v=0.2} @self
+  - state{s=hard_landing_forward;lo=5;p=12} @self
+
+
+
+VEHICLE_BIKE_death:
+  Skills:
+  - stopsound{s=littleroom_vehicle_pack:vehicle.bike_accelerate_start;v=1;sc=HOSTILE} @pir{r=8}
+  - stopsound{s=littleroom_vehicle_pack:vehicle.bike_accelerate_idle_80_tick;v=1;sc=HOSTILE} @pir{r=8}
+  - dismountallmodel @self
+  - skill{s=VEHICLE_BIKE_recoil} @pir{r=16}
+  - e:p{p=lava;a=10;hs=.25;vs=.15;y=1} @self
+  - e:p{p=flash;a=1;y=1} @self
+  - summon{t=VEHICLE_BIKE_DEAD} @self
+  
+
+
+VEHICLE_BIKE_DEAD_spawn:
+  Skills:
+  - skill{s=VEHICLE_BIKE_recoil} @pir{r=32}
+  - sound{s=littleroom_vehicle_pack:vehicle.explode;v=3;p=<random.float.0.9to1.1>;sc=HOSTILE} @self
+  - effect:blockmask{m=light;r=3;oa=true;na=false;d=5} @self
+  - summon{t=VEHICLE_BIKE_DEAD_fx;f=2;yf=2} @self
+  - summon{t=VEHICLE_BIKE_DEAD_fx;f=2;yf=2} @self
+  - summon{t=VEHICLE_BIKE_DEAD_fx;f=2;yf=2} @self
+  - throw{v=8;vy=2} @eir{r=4}
+  - e:p{p=large_smoke;a=10;hs=.25;vs=.15;repeat=120;repeati=1;y=1} @self
+  - e:p{p=flame;a=10;hs=.25;vs=.15;repeat=120;repeati=1;y=1} @self
+  - e:p{p=flash;a=1;y=1} @self
+  - lunge{v=<random.float.0.5to0.85>;vy=<random.float.0.8to1.15>} @RLNTE
+  - setvar{var=caster.inair;val=true;type=STRING} @self
+  - delay 20
+  - state{s=in_air} @self
+  
+VEHICLE_BIKE_DEAD_land:
+  Cooldown: 1
+  Conditions:
+  - ( altitude{a=<1.25} || onground )
+  - varequals{var=caster.inair;val=true} true
+  Skills:
+  - totem{md=2;oH=[ - throw{v=4;vy=2}];hr=2;vr=1;drawhitbox=false;hnp=true} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.dead_land;p=<random.float.0.9to1.1>;v=1;sc=HOSTILE} @self
+  - skill{s=VEHICLE_BIKE_recoil} @pir{r=16}
+  - lunge{v=0.5;vy=0.1} @forward{f=1;yo=5}
+  - setvar{var=caster.inair;val=false;type=STRING} @self
+  - state{s=land_1} @self
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+VEHICLE_BIKE_wheel_check:
+  Conditions:
+  - onground true
+  Skills:
+
+  - skill{s=VEHICLE_BIKE_front_wheel_check_down} @modelpart{pid=front_check;offset=GLOBAL;y=-0.25}
+  - skill{s=VEHICLE_BIKE_front_wheel_check_up} @modelpart{pid=front_check;offset=GLOBAL;y=0.5}
+
+  - skill{s=VEHICLE_BIKE_back_wheel_check_down} @modelpart{pid=back_check;offset=GLOBAL;y=-0.25}
+  - skill{s=VEHICLE_BIKE_back_wheel_check_up} @modelpart{pid=back_check;offset=GLOBAL;y=0.5}
+  
+  
+  
+  
+  
+  
+
+  
+VEHICLE_BIKE_front_wheel_check_down:
+  TargetConditions:
+  - blockType{type=WATER,
+                   AIR,
+                   WHITE_CARPET,
+                   ORANGE_CARPET,
+                   MAGENTA_CARPET,
+                   LIGHT_BLUE_CARPET,
+                   YELLOW_CARPET,
+                   LIME_CARPET,
+                   PINK_CARPET,
+                   GRAY_CARPET,
+                   LIGHT_GRAY_CARPET,
+                   CYAN_CARPET,
+                   PURPLE_CARPET,
+                   BLUE_CARPET,
+                   BROWN_CARPET,
+                   GREEN_CARPET,
+                   RED_CARPET,
+                   BLACK_CARPET,
+                   GRASS,
+                   TALL_GRASS,
+                   SMALL_AMETHYST_BUD,
+                   MEDIUM_AMETHYST_BUD,
+                   LARGE_AMETHYST_BUD,
+                   BROWN_MUSHROOM,
+                   RED_MUSHROOM,
+                   CRIMSON_FUNGUS,
+                   WARPED_FUNGUS,
+                   FERN,
+                   DEAD_BUSH,
+                   DANDELION,
+                   POPPY,
+                   BLUE_ORCHID,
+                   ALLIUM,
+                   AZURE_BLUET,
+                   RED_TULIP,
+                   ORANGE_TULIP,
+                   WHITE_TULIP,
+                   PINK_TULIP,
+                   OXEYE_DAISY,
+                   CORNFLOWER,
+                   LILY_OF_THE_VALLEY,
+                   TORCHFLOWER,
+                   WITHER_ROSE,
+                   PINK_PETALS,
+                   SPORE_BLOSSOM,
+                   CRIMSON_ROOTS,
+                   WARPED_ROOTS,
+                   NETHER_SPROUTS,
+                   WEEPING_VINES,
+                   TWISTING_VINES,
+                   VINE,
+                   LARGE_FERN,
+                   SUNFLOWER,
+                   LILAC,
+                   ROSE_BUSH,
+                   PEONY,
+                   PITCHER_PLANT,
+                   SMALL_DRIPLEAF,
+                   GLOW_LICHEN,
+                   HANGING_ROOTS,
+                   SEAGRASS,
+                   SEA_PICKLE,
+                   COBWEB,
+                   WHEAT,
+                   BEETROOTS,
+                   CARROTS,
+                   POTATOES,
+                   NETHER_WART,
+                   SEAGRASS,
+                   RAIL,
+                   LAVA,
+                   LIGHT
+                   } orElseCast VEHICLE_BIKE_front_wheel_check_flat
+  Skills:
+  - state{s=front_down;li=5;lo=5;p=2} @self
+  - setvar{var=caster.front_wheel;val="down";type=STRING} @self
+  
+VEHICLE_BIKE_front_wheel_check_up:
+  TargetConditions:
+  - blockType{type=WATER,
+                   AIR,
+                   WHITE_CARPET,
+                   ORANGE_CARPET,
+                   MAGENTA_CARPET,
+                   LIGHT_BLUE_CARPET,
+                   YELLOW_CARPET,
+                   LIME_CARPET,
+                   PINK_CARPET,
+                   GRAY_CARPET,
+                   LIGHT_GRAY_CARPET,
+                   CYAN_CARPET,
+                   PURPLE_CARPET,
+                   BLUE_CARPET,
+                   BROWN_CARPET,
+                   GREEN_CARPET,
+                   RED_CARPET,
+                   BLACK_CARPET,
+                   GRASS,
+                   TALL_GRASS,
+                   SMALL_AMETHYST_BUD,
+                   MEDIUM_AMETHYST_BUD,
+                   LARGE_AMETHYST_BUD,
+                   BROWN_MUSHROOM,
+                   RED_MUSHROOM,
+                   CRIMSON_FUNGUS,
+                   WARPED_FUNGUS,
+                   FERN,
+                   DEAD_BUSH,
+                   DANDELION,
+                   POPPY,
+                   BLUE_ORCHID,
+                   ALLIUM,
+                   AZURE_BLUET,
+                   RED_TULIP,
+                   ORANGE_TULIP,
+                   WHITE_TULIP,
+                   PINK_TULIP,
+                   OXEYE_DAISY,
+                   CORNFLOWER,
+                   LILY_OF_THE_VALLEY,
+                   TORCHFLOWER,
+                   WITHER_ROSE,
+                   PINK_PETALS,
+                   SPORE_BLOSSOM,
+                   CRIMSON_ROOTS,
+                   WARPED_ROOTS,
+                   NETHER_SPROUTS,
+                   WEEPING_VINES,
+                   TWISTING_VINES,
+                   VINE,
+                   LARGE_FERN,
+                   SUNFLOWER,
+                   LILAC,
+                   ROSE_BUSH,
+                   PEONY,
+                   PITCHER_PLANT,
+                   SMALL_DRIPLEAF,
+                   GLOW_LICHEN,
+                   HANGING_ROOTS,
+                   SEAGRASS,
+                   SEA_PICKLE,
+                   COBWEB,
+                   WHEAT,
+                   BEETROOTS,
+                   CARROTS,
+                   POTATOES,
+                   NETHER_WART,
+                   SEAGRASS,
+                   RAIL,
+                   LAVA,
+                   LIGHT
+                   } castinstead VEHICLE_BIKE_front_wheel_check_flat
+  Skills:
+  - state{s=front_up;li=5;lo=5;p=2} @self
+  - setvar{var=caster.front_wheel;val="up";type=STRING} @self
+  
+VEHICLE_BIKE_front_wheel_check_flat:
+  Skills:
+  - setvar{var=caster.front_wheel;val="flat";type=STRING} @self
+  - state{s=front_down;r=true;p=2} @self
+  - state{s=front_up;r=true;p=2} @self
+
+
+  
+VEHICLE_BIKE_back_wheel_check_down:
+  TargetConditions:
+  - blockType{type=WATER,
+                   AIR,
+                   WHITE_CARPET,
+                   ORANGE_CARPET,
+                   MAGENTA_CARPET,
+                   LIGHT_BLUE_CARPET,
+                   YELLOW_CARPET,
+                   LIME_CARPET,
+                   PINK_CARPET,
+                   GRAY_CARPET,
+                   LIGHT_GRAY_CARPET,
+                   CYAN_CARPET,
+                   PURPLE_CARPET,
+                   BLUE_CARPET,
+                   BROWN_CARPET,
+                   GREEN_CARPET,
+                   RED_CARPET,
+                   BLACK_CARPET,
+                   GRASS,
+                   TALL_GRASS,
+                   SMALL_AMETHYST_BUD,
+                   MEDIUM_AMETHYST_BUD,
+                   LARGE_AMETHYST_BUD,
+                   BROWN_MUSHROOM,
+                   RED_MUSHROOM,
+                   CRIMSON_FUNGUS,
+                   WARPED_FUNGUS,
+                   FERN,
+                   DEAD_BUSH,
+                   DANDELION,
+                   POPPY,
+                   BLUE_ORCHID,
+                   ALLIUM,
+                   AZURE_BLUET,
+                   RED_TULIP,
+                   ORANGE_TULIP,
+                   WHITE_TULIP,
+                   PINK_TULIP,
+                   OXEYE_DAISY,
+                   CORNFLOWER,
+                   LILY_OF_THE_VALLEY,
+                   TORCHFLOWER,
+                   WITHER_ROSE,
+                   PINK_PETALS,
+                   SPORE_BLOSSOM,
+                   CRIMSON_ROOTS,
+                   WARPED_ROOTS,
+                   NETHER_SPROUTS,
+                   WEEPING_VINES,
+                   TWISTING_VINES,
+                   VINE,
+                   LARGE_FERN,
+                   SUNFLOWER,
+                   LILAC,
+                   ROSE_BUSH,
+                   PEONY,
+                   PITCHER_PLANT,
+                   SMALL_DRIPLEAF,
+                   GLOW_LICHEN,
+                   HANGING_ROOTS,
+                   SEAGRASS,
+                   SEA_PICKLE,
+                   COBWEB,
+                   WHEAT,
+                   BEETROOTS,
+                   CARROTS,
+                   POTATOES,
+                   NETHER_WART,
+                   SEAGRASS,
+                   RAIL,
+                   LAVA,
+                   LIGHT
+                   } orElseCast VEHICLE_BIKE_back_wheel_check_flat
+  Skills:
+  - state{s=back_down;li=5;lo=5;p=4} @self
+  
+VEHICLE_BIKE_back_wheel_check_up:
+  TargetConditions:
+  - blockType{type=WATER,
+                   AIR,
+                   WHITE_CARPET,
+                   ORANGE_CARPET,
+                   MAGENTA_CARPET,
+                   LIGHT_BLUE_CARPET,
+                   YELLOW_CARPET,
+                   LIME_CARPET,
+                   PINK_CARPET,
+                   GRAY_CARPET,
+                   LIGHT_GRAY_CARPET,
+                   CYAN_CARPET,
+                   PURPLE_CARPET,
+                   BLUE_CARPET,
+                   BROWN_CARPET,
+                   GREEN_CARPET,
+                   RED_CARPET,
+                   BLACK_CARPET,
+                   GRASS,
+                   TALL_GRASS,
+                   SMALL_AMETHYST_BUD,
+                   MEDIUM_AMETHYST_BUD,
+                   LARGE_AMETHYST_BUD,
+                   BROWN_MUSHROOM,
+                   RED_MUSHROOM,
+                   CRIMSON_FUNGUS,
+                   WARPED_FUNGUS,
+                   FERN,
+                   DEAD_BUSH,
+                   DANDELION,
+                   POPPY,
+                   BLUE_ORCHID,
+                   ALLIUM,
+                   AZURE_BLUET,
+                   RED_TULIP,
+                   ORANGE_TULIP,
+                   WHITE_TULIP,
+                   PINK_TULIP,
+                   OXEYE_DAISY,
+                   CORNFLOWER,
+                   LILY_OF_THE_VALLEY,
+                   TORCHFLOWER,
+                   WITHER_ROSE,
+                   PINK_PETALS,
+                   SPORE_BLOSSOM,
+                   CRIMSON_ROOTS,
+                   WARPED_ROOTS,
+                   NETHER_SPROUTS,
+                   WEEPING_VINES,
+                   TWISTING_VINES,
+                   VINE,
+                   LARGE_FERN,
+                   SUNFLOWER,
+                   LILAC,
+                   ROSE_BUSH,
+                   PEONY,
+                   PITCHER_PLANT,
+                   SMALL_DRIPLEAF,
+                   GLOW_LICHEN,
+                   HANGING_ROOTS,
+                   SEAGRASS,
+                   SEA_PICKLE,
+                   COBWEB,
+                   WHEAT,
+                   BEETROOTS,
+                   CARROTS,
+                   POTATOES,
+                   NETHER_WART,
+                   SEAGRASS,
+                   RAIL,
+                   LAVA,
+                   LIGHT
+                   } castinstead VEHICLE_BIKE_back_wheel_check_flat
+  Skills:
+  - state{s=back_up;li=5;lo=5;p=4} @self
+  
+VEHICLE_BIKE_back_wheel_check_flat:
+  Skills:
+  - state{s=back_down;r=true;p=4} @self
+  - state{s=back_up;r=true;p=4} @self
+  
+  

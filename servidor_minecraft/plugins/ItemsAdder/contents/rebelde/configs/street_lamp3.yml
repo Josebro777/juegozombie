@@ -1,0 +1,46 @@
+info:
+  namespace: rebelde
+items:
+  street_lamp3:
+    display_name: "Lampara de calle 3"
+    permission: rebelde.rp
+    resource:
+      material: PAPER
+      generate: false
+      model_path: street_lamp3
+    behaviours:
+      furniture:
+        entity: item_display
+        light_level: 300
+        fixed_rotation: true 
+        display_transformation:
+          transform: HEAD
+          right_rotation:
+            axis_angle:
+              angle: 180
+              axis:
+                x: 0
+                y: 1
+                z: 0
+          translation:
+            x: 0
+            y: 0
+            z: 0
+          scale:
+            x: 1
+            y: 1
+            z: 2
+        solid: true
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+        sound:
+          place:
+            name: block.metal.fall
+          break:
+            name: block.metal.break

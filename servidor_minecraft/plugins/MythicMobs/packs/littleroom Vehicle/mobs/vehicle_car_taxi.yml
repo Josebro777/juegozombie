@@ -1,0 +1,82 @@
+﻿
+VEHICLE_CAR_TAXI:
+  Type: PIG  
+  Display: "Taxi"
+  Health: 250
+  Faction: Vehicle  
+  DamageModifiers:
+  - DROWNING 0
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  Options:
+    Despawn: FALSE
+    Silent: true
+    PreventOtherDrops: true
+    #Collidable: false
+    Invincible: false
+    MovementSpeed: 0.2
+    KnockbackResistance: 1
+  Skills:
+  - model{mid=vehicle_car_taxi;d=false;usm=true;drive=true;ride=true;step=1;lp=true;syncbody=false} @self ~onSpawn
+  - model{mid=vehicle_car_taxi;d=false;usm=true;drive=true;ride=true;step=1;lp=true;syncbody=false} @self ~onLoad
+  - bodyrotation{mh=45;mb=45;rde=120;rdu=120;m=false} @self ~onSpawn
+  - bodyrotation{mh=45;mb=45;rde=120;rdu=120;m=false} @self ~onLoad
+  - throw{v=10;vy=-1} @eir{r=10;conditions=[ - boundingboxesoverlap]} ~onTimer:1
+  - sudoskill{s=VEHICLE_CAR_TAXI_hide_driver;cat=true} @modeldriver ~onTimer:1
+  - sudoskill{s=VEHICLE_CAR_TAXI_hide_passenger;cat=true} @modelpassengers{mid=vehicle_car_taxi;p=passenger_seat} ~onTimer:1 
+  - skill{s=VEHICLE_CAR_TAXI_spawn} @self ~onSpawn
+  - skill{s=VEHICLE_CAR_TAXI_blinker_left_blink;cd=1} ~onTimer:1
+  - skill{s=VEHICLE_CAR_TAXI_blinker_right_blink;cd=1} ~onTimer:1
+  - skill{s=VEHICLE_CAR_TAXI_wheel_check} @self ~onTimer:1
+  - skill{s=VEHICLE_CAR_TAXI_suspension_hard_land} @self ~onTimer:1
+  - skill{s=VEHICLE_CAR_TAXI_hard_land_velocity_check} @self ~onTimer:1
+  - skill{s=VEHICLE_CAR_TAXI_enter_driver} @trigger ~onInteract
+  - skill{s=VEHICLE_CAR_TAXI_enter_passenger} @trigger ~onInteract
+  - skill{s=VEHICLE_CAR_TAXI_open_hatch} @trigger ~onInteract
+  - skill{s=VEHICLE_CAR_TAXI_close_hatch} @trigger ~onInteract
+  - skill{s=VEHICLE_CAR_TAXI_open_bonnet} @trigger ~onInteract
+  - skill{s=VEHICLE_CAR_TAXI_close_bonnet} @trigger ~onInteract
+  - skill{s=VEHICLE_CAR_TAXI_forward_fullspeed} @self ~onTimer:5
+  - skill{s=VEHICLE_CAR_TAXI_collision_check} @forward{f=2} ~onTimer:1
+  - skill{s=VEHICLE_CAR_TAXI_acceleration_loop} @self ~onTimer:1
+  - skill{s=VEHICLE_CAR_TAXI_flooded} @selflocation{y=1} ~onTimer:1
+  - skill{s=VEHICLE_CAR_TAXI_alarm} @self ~onDamaged
+  - skill{s=VEHICLE_CAR_TAXI_idle_loop} @self ~onTimer:1
+  - skill{s=VEHICLE_CAR_TAXI_forward_collision_block} @forward{f=2;yo=1.5;lockpitch=true} ~onTimer:1
+  - skill{s=VEHICLE_CAR_TAXI_recieve_collision} @self ~onSignal:COLLISION
+  - skill{s=VEHICLE_CAR_TAXI_low_health} @self ~onTimer:5 <25%
+  - skill{s=VEHICLE_CAR_TAXI_death} @self ~onDeath
+  - skill{s=VEHICLE_CAR_TAXI_show_health} @pir{r=4} ~onTimer:10
+  - skill{s=VEHICLE_CAR_TAXI_repair} @self ~onInteract
+  - skill{s=VEHICLE_CAR_TAXI_hide_player_on_dc} @self ~onTimer:20
+
+VEHICLE_CAR_TAXI_DEAD:
+  Type: PIG
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  Display: "Dead Taxi"
+  Options:
+    Despawn: NEVER
+    Silent: true
+    PreventOtherDrops: true
+    Invincible: true
+  Skills:
+  - model{mid=vehicle_car_dead;d=false;usm=true;d=false} @self ~onSpawn
+  - model{mid=vehicle_car_dead;d=false;usm=true;d=false} @self ~onLoad
+  - skill{s=VEHICLE_CAR_TAXI_DEAD_spawn} @self ~onSpawn
+  - skill{s=VEHICLE_CAR_TAXI_DEAD_land} @self ~onTimer:1
+  
+VEHICLE_CAR_TAXI_DEAD_fx:
+  Type: ARMOR_STAND
+  Display: "Dead Taxi FX"
+  Options:
+    Invincible: true
+    Invisible: true
+  Skills:
+  - e:p{p=flame;a=2;hs=.15;vs=.15;repeat=80;repeati=1} @self ~onSpawn
+  - e:p{p=large_smoke;a=5;hs=.15;vs=.15;repeat=80;repeati=1} @self ~onSpawn
+  - remove{delay=80} @self ~onSpawn

@@ -1,0 +1,192 @@
+Events:
+  Mitre1:
+    type: block_interact
+    conditions:
+    - '%player% == %worldguard_region_owner% or %worldguard_region_members%'
+    - '%block_x% == 3288'
+    - '%block_y% == 32'
+    - '%block_z% == -315'
+    - '%block% equals BARRIER'
+    actions:
+      default:
+      - 'player_command_as_op: setblock 3288 32 -315 air'
+      - 'player_command_as_op: setblock 3288 31 -315 air'
+      - 'playsound: BLOCK.BAMBOO_WOOD_DOOR.OPEN;10;0.1'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~-3 0'
+      - 'player_command_as_op: setblock 3288 32 -315 minecraft:structure_void'
+    enabled: true
+  Mitre1cerrar:
+    type: block_interact
+    conditions:
+    - '%player% == %worldguard_region_owner% or %worldguard_region_members%'
+    - '%block_x% == 3288'
+    - '%block_y% == 32'
+    - '%block_z% == -315'
+    - '%block% equals STRUCTURE_VOID'
+    actions:
+      default:
+      - 'player_command_as_op: setblock 3288 32 -315 barrier'
+      - 'player_command_as_op: setblock 3288 31 -315 barrier'
+      - 'playsound: BLOCK.BAMBOO_WOOD_DOOR.CLOSE;10;0.1'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+      - 'wait_ticks: 1'
+      - 'player_command_as_op: execute as 22aa981e-829a-4ab1-9264-2f8ee6606bd9 at
+        @s run tp @s ~ ~ ~ ~3 0'
+    enabled: true

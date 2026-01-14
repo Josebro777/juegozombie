@@ -1,0 +1,69 @@
+###########################################################
+# Please ensure that these settings have the correct type #
+# If an integer is needed, make sure the setting has an   #
+# integer, same is needed for (true/false)                #
+###########################################################
+
+# Will players have a maximum amount of views (true/false)
+maximum-views: true
+# If players have a maximum amount of views, what is the maximum amount (integer)
+maximum-views-amount: 5
+
+# Default interval between Locations for when a View is created (seconds)
+default-interval: 6
+
+# Will views have a maximum amount of locations (true/false)
+maximum-locations: true
+# If views have a maximum amount of locations, what is the maximum amount (integer)
+maximum-locations-amount: 10
+
+# Is permissions enabled (true/false)
+# If set to false, players will be able to create and modify their Views by default. OP is then needed for admin commands or the permission 'cinematicview.admin'
+# If set to true, players will need to be given permissions manually with a separate Permissions Plugin. Permission example: 'cinematicview.basic'
+permissions: true
+
+# If set to true, player will be unable to rotate (look around) when showing a view (true/false)
+lock-rotation: true
+
+# Maximum value for view interval possible (integer)
+maximum-view-interval: 20
+
+# Add a pumpkin head when showing a view (true/false)
+pumpkin-head: false
+
+# When forcing all players to show a view, who should be excluded (string):
+# Options:
+# - none
+# - admins
+# - user
+# NOTE, if the setting is set incorrectly, it will be disabled by default
+all-exclude: none
+
+# Should messages be displayed when showing a view (true/false)
+show-view-message: true
+
+# Which move function you would like to use when showing a cinematic. 
+# Options:
+# - original
+# - smooth
+# Please be aware that the 'smooth' option is not perfect yet. At low cinematic intervals
+# it can cause players to be kicked and also spam the console with 'Moved too quickly'
+# The moved to quickly can be adjusted through server settings as well as the max packet rate. 
+# There is also protection against players being kicked as they will be teleported back and put
+# into the correct gamemode if they are kicked. The 'smooth' movement only works in Minecraft 1.21 and up.
+move-function: smooth
+
+# Add an NPC at player's original location when showing a cinematic (true/false) (only works in the latest minecraft version 1.21.4)
+show-npc: false
+
+# Choose a cinematic view to show when players join for the first time or always
+# Join View Settings:
+# - disabled (No view will start when players join)
+# - first (The view will only start if it is the first time a player joins the server)
+# - always (Always start a view when players join)
+# NOTE, if the setting is set incorrectly, it will be disabled by default
+join-view-setting: disabled
+join-view: joinView
+
+# The radius of chunks to load before a player teleports (integer)
+chunk-radius: 5

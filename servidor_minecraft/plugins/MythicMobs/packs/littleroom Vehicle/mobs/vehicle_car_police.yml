@@ -1,0 +1,82 @@
+﻿
+VEHICLE_CAR_POLICE:
+  Type: PIG  
+  Display: "Police Car"
+  Health: 500
+  Faction: Vehicle  
+  DamageModifiers:
+  - DROWNING 0
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  Options:
+    Despawn: FALSE
+    Silent: true
+    PreventOtherDrops: true
+    #Collidable: false
+    Invincible: false
+    MovementSpeed: 0.3
+    KnockbackResistance: 1
+  Skills:
+  - model{mid=vehicle_car_police;d=false;usm=true;drive=true;ride=true;step=1;lp=true;syncbody=false} @self ~onSpawn
+  - model{mid=vehicle_car_police;d=false;usm=true;drive=true;ride=true;step=1;lp=true;syncbody=false} @self ~onLoad
+  - bodyrotation{mh=45;mb=45;rde=120;rdu=120;m=false} @self ~onSpawn
+  - bodyrotation{mh=45;mb=45;rde=120;rdu=120;m=false} @self ~onLoad
+  - throw{v=1;vy=-1} @eir{r=2;conditions=[ - boundingboxesoverlap]} ~onTimer:1
+  - sudoskill{s=VEHICLE_CAR_POLICE_hide_driver;cat=true} @modeldriver ~onTimer:1
+  - sudoskill{s=VEHICLE_CAR_POLICE_hide_passenger;cat=true} @modelpassengers{mid=vehicle_car_police;p=passenger_seat} ~onTimer:1 
+  - skill{s=VEHICLE_CAR_POLICE_spawn} @self ~onSpawn
+  - skill{s=VEHICLE_CAR_POLICE_blinker_left_blink;cd=1} ~onTimer:1
+  - skill{s=VEHICLE_CAR_POLICE_blinker_right_blink;cd=1} ~onTimer:1
+  - skill{s=VEHICLE_CAR_POLICE_wheel_check} @self ~onTimer:1
+  - skill{s=VEHICLE_CAR_POLICE_suspension_hard_land} @self ~onTimer:1
+  - skill{s=VEHICLE_CAR_POLICE_hard_land_velocity_check} @self ~onTimer:1
+  - skill{s=VEHICLE_CAR_POLICE_enter_driver} @trigger ~onInteract
+  - skill{s=VEHICLE_CAR_POLICE_enter_passenger} @trigger ~onInteract
+  - skill{s=VEHICLE_CAR_POLICE_open_hatch} @trigger ~onInteract
+  - skill{s=VEHICLE_CAR_POLICE_close_hatch} @trigger ~onInteract
+  - skill{s=VEHICLE_CAR_POLICE_open_bonnet} @trigger ~onInteract
+  - skill{s=VEHICLE_CAR_POLICE_close_bonnet} @trigger ~onInteract
+  - skill{s=VEHICLE_CAR_POLICE_forward_fullspeed} @self ~onTimer:5
+  - skill{s=VEHICLE_CAR_POLICE_acceleration_loop} @self ~onTimer:1
+  - skill{s=VEHICLE_CAR_POLICE_flooded} @selflocation{y=1} ~onTimer:1
+  - skill{s=VEHICLE_CAR_POLICE_alarm} @self ~onDamaged
+  - skill{s=VEHICLE_CAR_POLICE_idle_loop} @self ~onTimer:1
+  - skill{s=VEHICLE_CAR_POLICE_forward_collision_block} @forward{f=2;yo=1.5;lockpitch=true} ~onTimer:1
+  - skill{s=VEHICLE_CAR_POLICE_recieve_collision} @self ~onSignal:COLLISION
+  - skill{s=VEHICLE_CAR_POLICE_low_health} @self ~onTimer:5 <25%
+  - skill{s=VEHICLE_CAR_POLICE_siren_loop} @self ~onTimer:1
+  - skill{s=VEHICLE_CAR_POLICE_death} @self ~onDeath
+  - skill{s=VEHICLE_CAR_POLICE_show_health} @pir{r=4} ~onTimer:10
+  - skill{s=VEHICLE_CAR_POLICE_repair} @self ~onInteract
+  - skill{s=VEHICLE_CAR_POLICE_hide_player_on_dc} @self ~onTimer:20
+
+VEHICLE_CAR_POLICE_DEAD:
+  Type: PIG
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  Display: "Dead Police Car"
+  Options:
+    Despawn: NEVER
+    Silent: true
+    PreventOtherDrops: true
+    Invincible: true
+  Skills:
+  - model{mid=vehicle_car_dead;d=false;usm=true;d=false} @self ~onSpawn
+  - model{mid=vehicle_car_dead;d=false;usm=true;d=false} @self ~onLoad
+  - skill{s=VEHICLE_CAR_POLICE_DEAD_spawn} @self ~onSpawn
+  - skill{s=VEHICLE_CAR_POLICE_DEAD_land} @self ~onTimer:1
+  
+VEHICLE_CAR_POLICE_DEAD_fx:
+  Type: ARMOR_STAND
+  Display: "Dead Police Car FX"
+  Options:
+    Invincible: true
+    Invisible: true
+  Skills:
+  - e:p{p=flame;a=2;hs=.15;vs=.15;repeat=80;repeati=1} @self ~onSpawn
+  - e:p{p=large_smoke;a=5;hs=.15;vs=.15;repeat=80;repeati=1} @self ~onSpawn
+  - remove{delay=80} @self ~onSpawn

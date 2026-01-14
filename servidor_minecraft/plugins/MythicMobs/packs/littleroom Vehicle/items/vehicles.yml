@@ -1,0 +1,5 @@
+
+VEHICLE_WRENCH:
+  Id: CARROT_ON_A_STICK
+  Display: '&fHerramienta para reparar'
+  Model: 13370036

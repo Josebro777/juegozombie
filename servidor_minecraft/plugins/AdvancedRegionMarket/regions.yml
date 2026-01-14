@@ -1,0 +1,50 @@
+Regions:
+  world:
+    lavalle-2:
+      sold: true
+      paybackPercentage: 0
+      isHotel: false
+      lastreset: 0
+      lastLogin: 1768433033246
+      maxMembers: -1
+      regiontype: rentregion
+      price: 1.0
+      signs:
+      - world;3779.0;52.0;-284.0;WALL;SOUTH
+      kind: Default
+      flagGroup: Default
+      inactivityReset: true
+      entityLimitGroup: Default
+      autorestore: true
+      allowedSubregions: 0
+      userrestorable: true
+      boughtExtraTotalEntitys: 0
+      isprotectionofcontinuance: false
+      boughtExtraEntitys: []
+      extendTime: 2592000000
+      payedTill: 1768848736500
+      maxExtendTime: 2592000000
+    mitre1:
+      sold: true
+      paybackPercentage: 0
+      isHotel: true
+      lastreset: 0
+      lastLogin: 1768433033246
+      maxMembers: -1
+      regiontype: rentregion
+      price: 1.0
+      signs:
+      - world;3310.0;32.0;-340.0;WALL;EAST
+      kind: Default
+      flagGroup: Default
+      inactivityReset: true
+      entityLimitGroup: Default
+      autorestore: true
+      allowedSubregions: 0
+      userrestorable: true
+      boughtExtraTotalEntitys: 0
+      isprotectionofcontinuance: false
+      boughtExtraEntitys: []
+      extendTime: 2592000000
+      payedTill: 1768864889972
+      maxExtendTime: 2592000000

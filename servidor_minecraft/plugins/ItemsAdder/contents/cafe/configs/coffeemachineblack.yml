@@ -1,0 +1,45 @@
+info:
+  namespace: cafe
+items:
+  coffeemachineblack:
+    display_name: "Cafetera Negra"
+    permission: cafe.coffeemachineblack
+    resource:
+      material: PAPER
+      generate: false
+      model_path: coffeemachineblack
+    behaviours:
+      furniture:
+        entity: item_display
+        fixed_rotation: true 
+        display_transformation:
+          transform: HEAD
+          right_rotation:
+            axis_angle:
+              angle: 180
+              axis:
+                x: 0
+                y: 1
+                z: 0
+          translation:
+            x: 0
+            y: 1.4
+            z: 0
+          scale:
+            x: 0.5
+            y: 0.5
+            z: 0.5
+        solid: true
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+        sound:
+          place:
+            name: block.metal.fall
+          break:
+            name: block.metal.break

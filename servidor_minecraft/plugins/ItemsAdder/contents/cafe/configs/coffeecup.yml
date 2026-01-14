@@ -1,0 +1,41 @@
+info:
+  namespace: cafe
+items:
+  coffeecup:
+    display_name: "Taza de Cafe"
+    permission: cafe.coffeecup
+    resource:
+      material: PAPER
+      generate: false
+      model_path: coffeecup
+    behaviours:
+      furniture:
+        entity: item_display
+        fixed_rotation: true 
+        display_transformation:
+          transform: HEAD
+          right_rotation:
+            axis_angle:
+              angle: 180
+              axis:
+                x: 0
+                y: 1
+                z: 0
+          translation:
+            x: 0
+            y: 1.4
+            z: 0
+          scale:
+            x: 0.5
+            y: 0.5
+            z: 0.5
+        solid: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        sound:
+          place:
+            name: block.metal.fall
+          break:
+            name: block.metal.break

@@ -1,0 +1,88 @@
+﻿
+VEHICLE_TRUCK:
+  Type: PIG  
+  Display: "Truck"
+  Health: 500
+  Faction: Vehicle
+  DamageModifiers:
+  - DROWNING 0
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  Options:
+    Despawn: FALSE
+    Silent: true
+    PreventOtherDrops: true
+    Invincible: false
+    MovementSpeed: 0.5
+    KnockbackResistance: 1
+  Skills:
+  - model{mid=vehicle_truck;d=false;usm=true;drive=true;ride=true;step=1;lp=true;syncbody=false} @self ~onSpawn
+  - model{mid=vehicle_truck;d=false;usm=true;drive=true;ride=true;step=1;lp=true;syncbody=false} @self ~onLoad
+  - bodyrotation{mh=45;mb=45;rde=120;rdu=120;m=false} @self ~onSpawn
+  - bodyrotation{mh=45;mb=45;rde=120;rdu=120;m=false} @self ~onLoad
+  - throw{v=10;vy=-1} @eir{r=10;conditions=[ - boundingboxesoverlap]} ~onTimer:1
+  - sudoskill{s=VEHICLE_TRUCK_hide_driver;cat=true} @modeldriver ~onTimer:1
+  - sudoskill{s=VEHICLE_TRUCK_hide_passenger;cat=true} @modelpassengers{mid=vehicle_truck;p=passenger_back,passenger_seat} ~onTimer:1 
+  - skill{s=VEHICLE_TRUCK_spawn} @self ~onSpawn
+  - skill{s=VEHICLE_TRUCK_blinker_left_blink;cd=1} ~onTimer:1
+  - skill{s=VEHICLE_TRUCK_blinker_right_blink;cd=1} ~onTimer:1
+  - skill{s=VEHICLE_TRUCK_wheel_check} @self ~onTimer:1
+  - skill{s=VEHICLE_TRUCK_suspension_hard_land} @self ~onTimer:1
+  - skill{s=VEHICLE_TRUCK_hard_land_velocity_check} @self ~onTimer:1
+  - skill{s=VEHICLE_TRUCK_enter_driver} @trigger ~onInteract
+  - skill{s=VEHICLE_TRUCK_enter_passenger} @trigger ~onInteract
+  - skill{s=VEHICLE_TRUCK_enter_back} @trigger ~onInteract
+  - skill{s=VEHICLE_TRUCK_open_bonnet} @trigger ~onInteract
+  - skill{s=VEHICLE_TRUCK_close_bonnet} @trigger ~onInteract
+  - skill{s=VEHICLE_TRUCK_forward_fullspeed} @self ~onTimer:5
+  - skill{s=VEHICLE_TRUCK_acceleration_loop} @self ~onTimer:1
+  - skill{s=VEHICLE_TRUCK_flooded} @selflocation{y=1.5} ~onTimer:1
+  - skill{s=VEHICLE_TRUCK_idle_loop} @self ~onTimer:1
+  - skill{s=VEHICLE_TRUCK_alarm} @self ~onDamaged
+  - skill{s=VEHICLE_TRUCK_forward_collision_block} @forward{f=1.5;yo=1.5;lockpitch=true} ~onTimer:1
+  - skill{s=VEHICLE_TRUCK_recieve_collision} @self ~onSignal:COLLISION
+  - skill{s=VEHICLE_TRUCK_low_health} @self ~onTimer:5 <25%
+  - skill{s=VEHICLE_TRUCK_death} @self ~onDeath
+  - skill{s=VEHICLE_TRUCK_PAINT_black} @self ~onSignal:PAINT_BLACK
+  - skill{s=VEHICLE_TRUCK_PAINT_blue} @self ~onSignal:PAINT_BLUE
+  - skill{s=VEHICLE_TRUCK_PAINT_green} @self ~onSignal:PAINT_GREEN
+  - skill{s=VEHICLE_TRUCK_PAINT_pink} @self ~onSignal:PAINT_PINK
+  - skill{s=VEHICLE_TRUCK_PAINT_red} @self ~onSignal:PAINT_RED
+  - skill{s=VEHICLE_TRUCK_PAINT_white} @self ~onSignal:PAINT_WHITE
+  - skill{s=VEHICLE_TRUCK_LOAD_COLOR} @self ~onLoad
+  - skill{s=VEHICLE_TRUCK_show_health} @pir{r=4} ~onTimer:10
+  - skill{s=VEHICLE_TRUCK_repair} @self ~onInteract
+  - skill{s=VEHICLE_TRUCK_hide_player_on_dc} @self ~onTimer:20 
+
+
+
+VEHICLE_TRUCK_DEAD:
+  Type: PIG
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  Display: "Dead Truck"
+  Options:
+    Silent: true
+    PreventOtherDrops: true
+    Invincible: true
+    Despawn: NEVER
+  Skills:
+  - model{mid=vehicle_truck_dead;d=false;usm=true;d=false} @self ~onSpawn
+  - model{mid=vehicle_truck_dead;d=false;usm=true;d=false} @self ~onLoad
+  - skill{s=VEHICLE_TRUCK_DEAD_spawn} @self ~onSpawn
+  - skill{s=VEHICLE_TRUCK_DEAD_land} @self ~onTimer:1
+  
+VEHICLE_TRUCK_DEAD_fx:
+  Type: ARMOR_STAND
+  Display: "Dead Truck FX"
+  Options:
+    Invincible: true
+    Invisible: true
+  Skills:
+  - e:p{p=flame;a=2;hs=.15;vs=.15;repeat=80;repeati=1} @self ~onSpawn
+  - e:p{p=large_smoke;a=5;hs=.15;vs=.15;repeat=80;repeati=1} @self ~onSpawn
+  - remove{delay=80} @self ~onSpawn

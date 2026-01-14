@@ -1,0 +1,81 @@
+﻿
+VEHICLE_BIKE:
+  Type: PIG  
+  Display: "Bike"
+  Health: 150
+  Faction: Vehicle
+  DamageModifiers:
+  - DROWNING 0
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  Options:
+    Despawn: FALSE
+    Silent: true
+    PreventOtherDrops: true
+    #Collidable: false
+    Invincible: false
+    MovementSpeed: 0.3
+    KnockbackResistance: 1
+  Skills:
+  - model{mid=vehicle_bike;d=false;usm=true;drive=true;step=1;lp=true;ride=true} @self ~onSpawn
+  - model{mid=vehicle_bike;d=false;usm=true;drive=true;step=1;lp=true;ride=true} @self ~onLoad
+  - bodyrotation{mh=45;mb=45;rde=120;rdu=120;m=false} @self ~onSpawn
+  - bodyrotation{mh=45;mb=45;rde=120;rdu=120;m=false} @self ~onLoad
+  - throw{v=2;vy=-1} @eir{r=2;conditions=[ - boundingboxesoverlap]} ~onTimer:1
+  - sudoskill{s=VEHICLE_BIKE_hide_driver;cat=true} @modeldriver ~onTimer:1
+  - skill{s=VEHICLE_BIKE_spawn} @self ~onSpawn
+  - skill{s=VEHICLE_BIKE_wheel_check} @self ~onTimer:1
+  - skill{s=VEHICLE_BIKE_suspension_hard_land} @self ~onTimer:1
+  - skill{s=VEHICLE_BIKE_hard_land_velocity_check} @self ~onTimer:1
+  - skill{s=VEHICLE_BIKE_enter} @trigger ~onInteract
+  - skill{s=VEHICLE_BIKE_forward_fullspeed} @self ~onTimer:5
+  - skill{s=VEHICLE_BIKE_collision_check} @forward{f=0.5} ~onTimer:1
+  - skill{s=VEHICLE_BIKE_acceleration_loop} @self ~onTimer:1
+  - skill{s=VEHICLE_BIKE_flooded} @selflocation{y=1.5} ~onTimer:20
+  - skill{s=VEHICLE_BIKE_idle_loop} @self ~onTimer:1
+  - skill{s=VEHICLE_BIKE_pickup} @self ~onInteract
+  - skill{s=VEHICLE_BIKE_forward_collision_block} @forward{f=1;yo=1.25;lockpitch=true} ~onTimer:1
+  - skill{s=VEHICLE_BIKE_recieve_collision} @self ~onSignal:COLLISION
+  - skill{s=VEHICLE_BIKE_low_health} @self ~onTimer:20 <25%
+  - skill{s=VEHICLE_BIKE_death} @self ~onDeath
+  - skill{s=VEHICLE_BIKE_PAINT_black} @self ~onSignal:PAINT_BLACK
+  - skill{s=VEHICLE_BIKE_PAINT_blue} @self ~onSignal:PAINT_BLUE
+  - skill{s=VEHICLE_BIKE_PAINT_green} @self ~onSignal:PAINT_GREEN
+  - skill{s=VEHICLE_BIKE_PAINT_pink} @self ~onSignal:PAINT_PINK
+  - skill{s=VEHICLE_BIKE_PAINT_red} @self ~onSignal:PAINT_RED
+  - skill{s=VEHICLE_BIKE_PAINT_white} @self ~onSignal:PAINT_WHITE
+  - skill{s=VEHICLE_BIKE_LOAD_COLOR} @self ~onLoad
+  - skill{s=VEHICLE_BIKE_show_health} @pir{r=4} ~onTimer:20
+  - skill{s=VEHICLE_BIKE_repair} @self ~onInteract
+  - skill{s=VEHICLE_BIKE_hide_player_on_dc} @self ~onTimer:20
+
+VEHICLE_BIKE_DEAD:
+  Type: PIG
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  Display: "Dead Bike"
+  Options:
+    Despawn: NEVER
+    Silent: true
+    PreventOtherDrops: true
+    Invincible: true
+  Skills:
+  - model{mid=vehicle_bike_dead;d=false;usm=true;d=false} @self ~onSpawn
+  - model{mid=vehicle_bike_dead;d=false;usm=true;d=false} @self ~onLoad
+  - skill{s=VEHICLE_CAR_DEAD_spawn} @self ~onSpawn
+  - skill{s=VEHICLE_CAR_DEAD_land} @self ~onTimer:1
+  
+VEHICLE_BIKE_DEAD_fx:
+  Type: ARMOR_STAND
+  Display: "Dead Bike FX"
+  Options:
+    Invincible: true
+    Invisible: true
+  Skills:
+  - e:p{p=flame;a=2;hs=.15;vs=.15;repeat=80;repeati=1} @self ~onSpawn
+  - e:p{p=large_smoke;a=5;hs=.15;vs=.15;repeat=80;repeati=1} @self ~onSpawn
+  - remove{delay=80} @self ~onSpawn

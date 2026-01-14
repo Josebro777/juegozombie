@@ -1,0 +1,43 @@
+info:
+  namespace: cafe
+items:
+  awning:
+    display_name: "Toldo"
+    permission: cafe.awning
+    resource:
+      material: PAPER
+      generate: false
+      model_path: awning
+    behaviours:
+      furniture:
+        entity: item_display
+        fixed_rotation: true 
+        display_transformation:
+          transform: HEAD
+          right_rotation:
+            axis_angle:
+              angle: 180
+              axis:
+                x: 0
+                y: 1
+                z: 0
+          translation:
+            x: 0
+            y: 1.8
+            z: 0
+          scale:
+            x: 0.8
+            y: 0.8
+            z: 0.8
+        solid: true
+        placeable_on:
+          floor: false
+          ceiling: false
+          walls: true
+        hitbox:
+          height: 1
+        sound:
+          place:
+            name: block.metal.fall
+          break:
+            name: block.metal.break

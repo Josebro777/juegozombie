@@ -1,0 +1,1634 @@
+﻿#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+### RECOIL ###
+
+VEHICLE_CAR_TAXI_recoil:
+  Skills:
+  - recoil{r=10;pitch=-.4}
+  - delay 1
+  - recoil{r=10;pitch=.3}
+  - delay 1
+  - recoil{r=10;pitch=-.2}
+  - delay 1
+  - recoil{r=10;pitch=.1}
+
+  
+  
+#███████ ██████   █████  ██     ██ ███    ██ 
+#██      ██   ██ ██   ██ ██     ██ ████   ██ 
+#███████ ██████  ███████ ██  █  ██ ██ ██  ██ 
+#     ██ ██      ██   ██ ██ ███ ██ ██  ██ ██ 
+#███████ ██      ██   ██  ███ ███  ██   ████ 
+                                            
+                                           
+
+VEHICLE_CAR_TAXI_spawn:
+  Skills:
+  - partvis{p=backup_light} @self
+  - partvis{p=head_light} @self
+  - partvis{p=brake_light} @self
+  - partvis{p=left_light} @self
+  - partvis{p=right_light} @self
+  - partvis{p=root_driver;child=true;em=true} @self
+  - partvis{p=root_passenger;child=true;em=true} @self
+  - brightness{p=_light;b=15;s=15;em=false} @self
+
+# just in case a player disconnects, removes the player model #
+
+VEHICLE_CAR_TAXI_hide_player_on_dc:
+  Skills:
+  - skill{s=VEHICLE_CAR_TAXI_hide_driver_on_dc} @self
+  - skill{s=VEHICLE_CAR_TAXI_hide_passenger_on_dc} @self
+  
+VEHICLE_CAR_TAXI_hide_driver_on_dc:
+  Conditions:
+  - modelhasdriver false
+  Skills:
+  - partvis{p=root_driver;child=true;em=true} @self
+  
+VEHICLE_CAR_TAXI_hide_passenger_on_dc:
+  Conditions:
+  - modelhaspassengers{mid=vehicle_car_taxi;p=passenger_seat} false
+  Skills:
+  - partvis{p=root_passenger;child=true;em=true} @self
+
+
+#██████  ███████ ██████   █████  ██ ██████  
+#██   ██ ██      ██   ██ ██   ██ ██ ██   ██ 
+#██████  █████   ██████  ███████ ██ ██████  
+#██   ██ ██      ██      ██   ██ ██ ██   ██ 
+#██   ██ ███████ ██      ██   ██ ██ ██   ██ 
+                                          
+   
+
+VEHICLE_CAR_TAXI_show_health:
+  TargetConditions:
+  - holding{m=VEHICLE_WRENCH} true
+  - fieldofview{angle=90;r=0}
+  Conditions:
+  - varequals{var=caster.bonnet;val=open} true
+  Skills:
+  - am{m=" <caster.hp> / <caster.mhp> "}
+  
+VEHICLE_CAR_TAXI_repair:
+  TriggerConditions:
+  - holding{m=VEHICLE_WRENCH} true
+  - fieldofview{angle=90;r=0}
+  Conditions:
+  - varequals{var=caster.bonnet;val=open} true
+  - health{h=250} false
+  Skills:
+  - sound{s=littleroom_vehicle_pack:vehicle.vehicle_repair;v=1;sc=HOSTILE} @self
+  - healpercent{m=0.25} @self
+  - playanimation{a=0;audience=World} @trigger
+
+
+
+
+
+
+#███████ ███    ██ ████████ ███████ ██████          ██     ███████ ██   ██ ██ ████████ 
+#██      ████   ██    ██    ██      ██   ██        ██      ██       ██ ██  ██    ██    
+#█████   ██ ██  ██    ██    █████   ██████        ██       █████     ███   ██    ██    
+#██      ██  ██ ██    ██    ██      ██   ██      ██        ██       ██ ██  ██    ██    
+#███████ ██   ████    ██    ███████ ██   ██     ██         ███████ ██   ██ ██    ██    
+                                                                                      
+                                                                                   
+
+
+# ENTER VEHICLE LEFT SIDE #
+VEHICLE_CAR_TAXI_enter_driver:
+  Cooldown: 1
+  TriggerConditions:
+  - fieldofview{angle=90;r=90}
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - modelhasdriver false
+  Skills:
+  - setvar{var=caster.alarm_setoff;val=false;type=STRING} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.door_shut;v=1;p=<random.float.-0.8to1.1>;sc=HOSTILE;delay=8} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.car_start;v=1;sc=HOSTILE;delay=5} @self
+  - setvar{var=caster.engine;val=started;type=STRING;delay=20} @self
+  - partvis{p=head_light;v=true} @self
+  - partvis{p=root_driver;child=true;v=true;em=true} @self
+  - modelplayerskin{p=driver_head} @trigger
+  - state{s=enter;p=14} @self
+  - mountmodel{mode=[
+      - move{front=<skill.var.meg:front>;side=0} ?!variableEquals{var=caster.flooded;val=true}
+      - skill{s=VEHICLE_CAR_TAXI_exit_driver} @trigger ?variableInRange{var=skill.meg:sneak;value=>0}
+      - setvar{var=caster.honk;val=false;type=STRING} @self ?variableEquals{var=skill.meg:jump;value=0}
+      - skill{s=VEHICLE_CAR_TAXI_blinker_left} @self ?variableInRange{var=skill.meg:side;value=>0}
+      - skill{s=VEHICLE_CAR_TAXI_blinker_right} @self ?variableInRange{var=skill.meg:side;value=<0}
+      - skill{s=VEHICLE_CAR_TAXI_blinker_reset} @self ?variableInRange{var=skill.meg:side;value=-0.1to0.1}
+      - skill{s=VEHICLE_CAR_TAXI_honk} @self ?variableEquals{var=skill.meg:jump;value=1}
+      - skill{s=VEHICLE_CAR_TAXI_forward_set} @self ?variableInRange{var=skill.meg:front;value=>0}
+      - skill{s=VEHICLE_CAR_TAXI_reverse_set} @self ?variableInRange{var=skill.meg:front;value=<0}
+      - skill{s=VEHICLE_CAR_TAXI_direction_stop} @self ?variableInRange{var=skill.meg:front;value=0}
+    ]} @trigger
+  
+# HIDE DRIVER #
+VEHICLE_CAR_TAXI_hide_driver:
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;l=4;d=10;p=false;i=false} @self
+  - potion{type=INVISIBILITY;l=4;d=10;p=false;i=false} @self
+  - hide{d=20} @Server
+  
+# EXIT DRIVER #
+VEHICLE_CAR_TAXI_exit_driver:
+  Cooldown: 1
+  Conditions:
+  - varequals{var=caster.driverexit;val=true} false
+  Skills:
+  - stopsound{s=littleroom_vehicle_pack:vehicle.car_accelerate_idle_60_tick;v=1;sc=HOSTILE} @pir{r=4}
+  - setvar{var=caster.engine;val=stopped;type=STRING} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.door_shut;v=1;p=<random.float.-0.8to1.1>;sc=HOSTILE;delay=10} @self
+  - setvar{var=caster.driverexit;val="true";type=STRING;d=10} @self
+  - partvis{p=root_driver;child=true;em=true;delay=3} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop} @self
+  - state{s=exit;p=14} @self
+  - sudoskill{s=VEHICLE_CAR_TAXI_show_driver} @trigger
+  - skill{s=VEHICLE_CAR_TAXI_exit_lights_time_out;delay=80} @self
+  - delay 3
+  - dismountmodel @trigger
+
+# UNHIDE DRIVER #
+VEHICLE_CAR_TAXI_show_driver:
+  Skills:
+  - potionclear{type=INVISIBILITY;repeat=4;repeati=1;delay=3} @self
+  - showEntity{delay=3} @Server
+  
+# LIGHTS TIME OUT #
+VEHICLE_CAR_TAXI_exit_lights_time_out:
+  Conditions:
+  - modelhasdriver false
+  Skills:
+  - partvis{p=head_light;v=false} @self
+  - partvis{p=brake_light;v=false} @self
+  
+  
+  
+#####################
+## PASSENGER ENTRY ##
+#####################
+
+
+VEHICLE_CAR_TAXI_enter_passenger:
+  Cooldown: 1
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - modelhaspassengers{mid=vehicle_car_taxi;p=passenger_seat} false
+  TriggerConditions:
+  - fieldofview{angle=90;r=270}
+  Skills:
+  - partvis{p=root_passenger;child=true;v=true;em=true} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.door_shut;v=1;p=<random.float.-0.8to1.1>;sc=HOSTILE;delay=10} @self
+  - modelplayerskin{p=passenger_head} @trigger
+  - state{s=enter_right;p=17} @self
+  - mountmodel{d=false;
+               mid=vehicle_car_taxi;
+               p=passenger_seat;
+               mode=[
+               - skill{s=VEHICLE_CAR_TAXI_exit_passenger} @trigger ?variableEquals{var=skill.meg:sneak;value=1}
+               - skill{s=VEHICLE_CAR_TAXI_passenger_to_driver} @trigger ?variableInRange{var=skill.meg:side;value=>0}
+               ]} @trigger
+  
+VEHICLE_CAR_TAXI_hide_passenger:
+  Skills:
+  - potion{type=INVISIBILITY;l=4;d=10;p=false;i=false} @self
+  - hide{d=20} @Server
+  
+  
+# CHANGE SEATS TO DRIVER #
+VEHICLE_CAR_TAXI_passenger_to_driver:
+  Cooldown: 1
+  Conditions:
+  - modelhasdriver false
+  Skills:
+  - dismountmodel{mid=vehicle_car_taxi;p=passenger_seat;d=false} @trigger
+  - partvis{p=root_passenger;child=true;em=true;delay=3} @self
+  - setvar{var=caster.alarm_setoff;val=false;type=STRING} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.car_start;v=1;sc=HOSTILE;delay=5} @self
+  - setvar{var=caster.engine;val=started;type=STRING;delay=20} @self
+  - partvis{p=head_light;v=true} @self
+  - partvis{p=root_driver;child=true;v=true;em=true} @self
+  - modelplayerskin{p=driver_head} @trigger
+  - mountmodel{mode=[
+      - move{front=<skill.var.meg:front>;side=0} ?!variableEquals{var=caster.flooded;val=true}
+      - skill{s=VEHICLE_CAR_TAXI_exit_driver} @trigger ?variableInRange{var=skill.meg:sneak;value=>0}
+      - setvar{var=caster.honk;val=false;type=STRING} @self ?variableEquals{var=skill.meg:jump;value=0}
+      - skill{s=VEHICLE_CAR_TAXI_blinker_left} @self ?variableInRange{var=skill.meg:side;value=>0}
+      - skill{s=VEHICLE_CAR_TAXI_blinker_right} @self ?variableInRange{var=skill.meg:side;value=<0}
+      - skill{s=VEHICLE_CAR_TAXI_blinker_reset} @self ?variableInRange{var=skill.meg:side;value=-0.1to0.1}
+      - skill{s=VEHICLE_CAR_TAXI_honk} @self ?variableEquals{var=skill.meg:jump;value=1}
+      - skill{s=VEHICLE_CAR_TAXI_forward_set} @self ?variableInRange{var=skill.meg:front;value=>0}
+      - skill{s=VEHICLE_CAR_TAXI_reverse_set} @self ?variableInRange{var=skill.meg:front;value=<0}
+      - skill{s=VEHICLE_CAR_TAXI_direction_stop} @self ?variableInRange{var=skill.meg:front;value=0}
+    ]} @trigger
+  
+VEHICLE_CAR_TAXI_exit_passenger:
+  Cooldown: 1
+  Skills:
+  - sound{s=littleroom_vehicle_pack:vehicle.door_shut;v=1;p=<random.float.-0.8to1.1>;sc=HOSTILE;delay=10} @self
+  - partvis{p=root_passenger;child=true;em=true;delay=3} @self
+  - sudoskill{s=VEHICLE_CAR_TAXI_show_passenger} @trigger
+  - state{s=exit_right;p=17} @self
+  - delay 3
+  - dismountmodel{mid=vehicle_car_taxi;p=passenger_seat;d=false} @trigger
+
+VEHICLE_CAR_TAXI_show_passenger:
+  Skills:
+  - potionclear{type=INVISIBILITY;repeat=4;repeati=1;delay=3} @self
+  - showEntity{delay=3} @Server
+  
+  
+  
+  
+#██ ███    ██ ████████ ███████ ██████   █████   ██████ ████████ ██  ██████  ███    ██ 
+#██ ████   ██    ██    ██      ██   ██ ██   ██ ██         ██    ██ ██    ██ ████   ██ 
+#██ ██ ██  ██    ██    █████   ██████  ███████ ██         ██    ██ ██    ██ ██ ██  ██ 
+#██ ██  ██ ██    ██    ██      ██   ██ ██   ██ ██         ██    ██ ██    ██ ██  ██ ██ 
+#██ ██   ████    ██    ███████ ██   ██ ██   ██  ██████    ██    ██  ██████  ██   ████
+
+
+
+# open trunk #
+
+VEHICLE_CAR_TAXI_open_hatch:
+  Cooldown: 1
+  TriggerConditions:
+  - fieldofview{angle=90;r=180}
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - varequals{var=caster.hatch;val=open} false
+  Skills:
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_close_hatch;seconds=1} @self
+  - playanimation{a=0;audience=World} @trigger
+  - state{s=open_hatch;p=16} @self
+  - setvar{var=caster.hatch;val=open;type=STRING} @self
+  
+
+# close trunk #
+
+VEHICLE_CAR_TAXI_close_hatch:
+  Cooldown: 1
+  TriggerConditions:
+  - fieldofview{angle=90;r=180}
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - varequals{var=caster.hatch;val=closed} false
+  Skills:
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_open_hatch;seconds=1} @self
+  - playanimation{a=0;audience=World} @trigger
+  - state{s=close_hatch;p=16} @self
+  - setvar{var=caster.hatch;val=closed;type=STRING} @self
+
+## open hood ##
+
+VEHICLE_CAR_TAXI_open_bonnet:
+  Cooldown: 1
+  TriggerConditions:
+  - fieldofview{angle=90;r=0}
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - varequals{var=caster.bonnet;val=open} false
+  Skills:
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_close_bonnet;seconds=1} @self
+  - playanimation{a=0;audience=World} @trigger
+  - state{s=open_bonnet;p=17} @self
+  - setvar{var=caster.bonnet;val=open;type=STRING} @self
+  
+  # close hood #
+
+VEHICLE_CAR_TAXI_close_bonnet:
+  Cooldown: 1
+  TriggerConditions:
+  - fieldofview{angle=90;r=0}
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - varequals{var=caster.bonnet;val=closed} false
+  Skills:
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_open_bonnet;seconds=1} @self
+  - playanimation{a=0;audience=World} @trigger
+  - state{s=close_bonnet;p=17} @self
+  - setvar{var=caster.bonnet;val=closed;type=STRING} @self
+
+
+## HONK ##
+
+VEHICLE_CAR_TAXI_honk:
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - variableEquals{var=caster.honk;value=true} false
+  Skills:
+  - setvar{var=caster.honk;val=true;type=STRING} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.honk;v=1;sc=HOSTILE} @self
+  
+## BLINKER ##
+
+VEHICLE_CAR_TAXI_blinker_left:
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - varequals{var=caster.blinker;val=left} false
+  Skills:
+  - setvar{var=caster.blinker;val=left;type=STRING} @self
+
+VEHICLE_CAR_TAXI_blinker_left_blink:
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - varequals{var=caster.blinker;val=left} true
+  Skills:
+  - partvis{p=left_light;v=true} @self
+  - delay 10
+  - partvis{p=left_light;v=false} @self
+
+VEHICLE_CAR_TAXI_blinker_right:
+  Conditions:
+  - varequals{var=caster.blinker;val=right} false
+  Skills:
+  - setvar{var=caster.blinker;val=right;type=STRING} @self
+
+VEHICLE_CAR_TAXI_blinker_right_blink:
+  Conditions:
+  - varequals{var=caster.blinker;val=right} true
+  Skills:
+  - partvis{p=right_light;v=true} @self
+  - delay 10
+  - partvis{p=right_light;v=false} @self
+
+VEHICLE_CAR_TAXI_blinker_reset:
+  Conditions:
+  - (varequals{var=caster.blinker;val=left} || varequals{var=caster.blinker;val=right}) true
+  Skills:
+  - partvis{p=left_light;v=false} @self
+  - partvis{p=right_light;v=false} @self
+  - setvar{var=caster.blinker;val=reset;type=STRING} @self
+
+
+
+
+#██████  ██████  ██ ██    ██ ██ ███    ██  ██████  
+#██   ██ ██   ██ ██ ██    ██ ██ ████   ██ ██       
+#██   ██ ██████  ██ ██    ██ ██ ██ ██  ██ ██   ███ 
+#██   ██ ██   ██ ██  ██  ██  ██ ██  ██ ██ ██    ██ 
+#██████  ██   ██ ██   ████   ██ ██   ████  ██████  
+
+
+  
+  # start driving forward #
+VEHICLE_CAR_TAXI_forward_set:
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - varequals{var=caster.direction;val=forward} false
+  - varequals{var=caster.driverexit;val=true} false
+  Skills:
+  - setvar{var=caster.direction;val=forward;type=STRING} @self
+  - skill{s=VEHICLE_CAR_TAXI_forward_acceleration} @self
+  - partvis{p=brake_light;v=false} @self
+  - partvis{p=backup_light} @self
+  - e:p{p=block;m=dirt;a=5;repeat=4;repeati=1} @modelpart{pid=back_right_tire;em=false}
+  - e:p{p=block;m=dirt;a=5;repeat=4;repeati=1} @modelpart{pid=back_left_tire;em=false}
+  - state{s=start_forward;p=11} @self
+  - state{s=forward} @self
+
+
+# acceleration loop sound #
+VEHICLE_CAR_TAXI_acceleration_loop:
+  Cooldown: 3
+  Conditions:
+  - varequals{var=caster.forward_speed;val=full} true
+  Skills:
+  - sound{s=littleroom_vehicle_pack:vehicle.car_accelerate_idle_60_tick;v=1;sc=HOSTILE} @self
+
+# idle engine loop #
+VEHICLE_CAR_TAXI_idle_loop:
+  Cooldown: 5
+  Conditions:
+  - modelhasdriver true
+  - varequals{var=caster.forward_speed;val=full} false
+  - varequals{var=caster.engine;val=started} true
+  Skills:
+  - sound{s=littleroom_vehicle_pack:vehicle.car_idle_100_tick;v=1;sc=HOSTILE} @self
+
+ # acceleration system #
+VEHICLE_CAR_TAXI_forward_acceleration:
+  Conditions:
+  - variableInRange{var=skill.meg:front;value=>0}
+  Skills:
+  - sound{s=littleroom_vehicle_pack:vehicle.car_accelerate_start;v=1;sc=HOSTILE} @self
+  - setspeed{t=walking;s=0.5} @self
+  - delay 10
+  - skill{s=VEHICLE_CAR_TAXI_forward_acceleration_2} @self
+  
+VEHICLE_CAR_TAXI_forward_acceleration_2:
+  Conditions:
+  - variableInRange{var=skill.meg:front;value=>0}
+  Skills:
+  - setspeed{t=walking;s=1} @self
+  - delay 10
+  - skill{s=VEHICLE_CAR_TAXI_forward_acceleration_3} @self
+  
+VEHICLE_CAR_TAXI_forward_acceleration_3:
+  Conditions:
+  - variableInRange{var=skill.meg:front;value=>0}
+  Skills:
+  - setspeed{t=walking;s=1.25} @self
+  - delay 10
+  - skill{s=VEHICLE_CAR_TAXI_forward_acceleration_4} @self
+  
+VEHICLE_CAR_TAXI_forward_acceleration_4:
+  Conditions:
+  - variableInRange{var=skill.meg:front;value=>0}
+  Skills:
+  - setspeed{t=walking;s=1.5} @self
+  - delay 10
+  - skill{s=VEHICLE_CAR_TAXI_forward_acceleration_5} @self
+  
+VEHICLE_CAR_TAXI_forward_acceleration_5:
+  Conditions:
+  - variableInRange{var=skill.meg:front;value=>0}
+  Skills:
+  - setspeed{t=walking;s=1.75} @self
+  - delay 10
+  - skill{s=VEHICLE_CAR_TAXI_forward_acceleration_6} @self
+  
+VEHICLE_CAR_TAXI_forward_acceleration_6:
+  Conditions:
+  - variableInRange{var=skill.meg:front;value=>0}
+  Skills:
+  - setspeed{t=walking;s=2} @self
+
+
+# start reverse #
+
+VEHICLE_CAR_TAXI_reverse_set:
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - varequals{var=caster.direction;val=reverse} false
+  - varequals{var=caster.driverexit;val=true} false
+  Skills:
+  - setvar{var=caster.direction;val=reverse;type=STRING} @self
+  - partvis{p=brake_light;v=false} @self
+  - setspeed{t=walking;s=1} @self
+  - partvis{p=backup_light;v=true} @self
+  - state{s=start_reverse;p=11} @self
+  - state{s=reverse;p=1} @self
+
+# stop #
+
+VEHICLE_CAR_TAXI_direction_stop:
+  Conditions:
+  - onground true
+  - varequals{var=caster.direction;val=stop} false
+  Skills:
+  - stopsound{s=littleroom_vehicle_pack:vehicle.car_accelerate_start;v=1;sc=HOSTILE} @modelDriver
+  - stopsound{s=littleroom_vehicle_pack:vehicle.car_accelerate_start;v=1;sc=HOSTILE} @modelPassengers
+  - stopsound{s=littleroom_vehicle_pack:vehicle.car_accelerate_idle_60_tick;v=1;sc=HOSTILE} @modelDriver
+  - stopsound{s=littleroom_vehicle_pack:vehicle.car_accelerate_idle_60_tick;v=1;sc=HOSTILE} @modelPassengers
+  - sound{s=littleroom_vehicle_pack:vehicle.car_accelerate_stop;v=1;sc=HOSTILE} @self
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_forward_set;seconds=1} @self
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_reverse_set;seconds=1} @self
+  - partvis{p=brake_light;v=true} @self
+  - partvis{p=backup_light} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop_forward} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop_reverse} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+  
+VEHICLE_CAR_TAXI_direction_stop_forward:
+  Conditions:
+  - varequals{var=caster.direction;val=forward} true
+  Skills:
+  - state{s=stop_forward;p=11} @self
+
+VEHICLE_CAR_TAXI_direction_stop_reverse:
+  Conditions:
+  - varequals{var=caster.direction;val=reverse} true
+  Skills:
+  - state{s=stop_reverse;p=11} @self
+
+
+# this checks for full speed for collisions #
+
+VEHICLE_CAR_TAXI_forward_fullspeed:
+  Conditions:
+  - directionalVelocity{z=>0.5;absz=true;relative=true} orElseCast VEHICLE_CAR_TAXI_forward_fullspeed_reset
+  Skills:
+  - setvar{var=caster.forward_speed;val=full;type=STRING} @self
+
+VEHICLE_CAR_TAXI_forward_fullspeed_reset:
+  Conditions:
+  - directionalVelocity{z=<0.75;relative=true} true
+  Skills:
+  - setvar{var=caster.forward_speed;val=false;type=STRING} @self
+  
+  
+
+
+
+
+
+
+
+# ██████  ██████  ██      ██      ██ ███████ ██  ██████  ███    ██ 
+#██      ██    ██ ██      ██      ██ ██      ██ ██    ██ ████   ██ 
+#██      ██    ██ ██      ██      ██ ███████ ██ ██    ██ ██ ██  ██ 
+#██      ██    ██ ██      ██      ██      ██ ██ ██    ██ ██  ██ ██ 
+# ██████  ██████  ███████ ███████ ██ ███████ ██  ██████  ██   ████ 
+
+
+
+# vehicle submerged in water #
+
+VEHICLE_CAR_TAXI_flooded:
+  Cooldown: 1
+  TargetConditions:
+  - blocktype{type=WATER} true
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  Skills:
+  - e:p{p=bubble;a=2;hs=.5;vs=.25;;d=true;dir=0,1,0;s=1;repeat=60;repeati=5} @modelpart{pid=chassis}
+  - setvar{var=caster.flooded;val=true;type=STRING} @self  
+  - setvar{var=caster.engine;val=stopped;type=STRING} @self
+  - skill{s=VEHICLE_CAR_TAXI_exit_lights_time_out;delay=80} @self
+  
+  
+  
+## COLLISION ##
+
+VEHICLE_CAR_TAXI_collision_check:
+  Conditions:
+  - varequals{var=caster.forward_speed;val=full} true
+  Skills:
+  - totem{md=2;oH=VEHICLE_CAR_TAXI_collision_totem;drawhitbox=false;hr=1.25;vr=1;hnp=true;yo=1}
+
+  
+
+  ##VEHICLE COLLISION##
+  
+ #targetconditions wasnt working without this russiandoll style skill setup#
+VEHICLE_CAR_TAXI_collision_totem:
+  Skills:
+  - skill{s=VEHICLE_CAR_TAXI_collision_totem_skill}
+  
+VEHICLE_CAR_TAXI_collision_totem_skill:
+  Cooldown: 1
+  TargetConditions:
+  - faction{faction=Vehicle} castinstead VEHICLE_CAR_TAXI_forward_collision_vehicle
+  Skills:
+  - state{s=hard_landing_forward;lo=5;p=12} @self
+  - skill{s=VEHICLE_CAR_TAXI_forward_acceleration_3} @self
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @ModelDriver
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @ModelPassengers
+  - throw{v=8;vy=1}
+  - damage{a=5}
+
+  ##VEHICLE COLLISION##
+  
+  
+  # hit vehicle #
+VEHICLE_CAR_TAXI_forward_collision_vehicle:
+  Cooldown: 1
+  Skills:
+  - damage{a=5}
+  - sound{s=littleroom_vehicle_pack:vehicle.vehicle_impact;v=3;p=<random.float.0.9to1.1>;sc=HOSTILE} @self
+  - lunge{v=1.5;vy=0.15} @forward{f=-2}
+  - damage{a=1} @ModelDriver
+  - damage{a=1} @ModelPassengers
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @ModelDriver
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @ModelPassengers
+  - signal{s=COLLISION}
+  - throw{v=5;vy=2}
+  - setspeed{t=walking;s=0} @self
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_forward_set;seconds=1} @self
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_reverse_set;seconds=1} @self
+  - state{s=collision;p=20} @self
+  - partvis{p=backup_light} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop_forward} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop_reverse} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+  
+  # take hit from vehicle #
+VEHICLE_CAR_TAXI_recieve_collision:
+  TriggerConditions:
+  - fieldofview{angle=90;r=0} orElseCast VEHICLE_CAR_TAXI_recieve_collision_left
+  Cooldown: 1
+  Skills:
+  - damage{a=10} @self
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @ModelDriver
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @ModelPassengers
+  - skill{s=VEHICLE_CAR_TAXI_alarm} @self
+  - setspeed{t=walking;s=0} @self
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_forward_set;seconds=1} @self
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_reverse_set;seconds=1} @self
+  - state{s=collision;p=20} @self
+  - partvis{p=backup_light} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop_forward} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop_reverse} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+
+  # take hit from vehicle leftside #
+VEHICLE_CAR_TAXI_recieve_collision_left:
+  TriggerConditions:
+  - fieldofview{angle=90;r=90} orElseCast VEHICLE_CAR_TAXI_recieve_collision_right
+  Cooldown: 1
+  Skills:
+  - damage{a=10} @self
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @ModelDriver
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @ModelPassengers
+  - skill{s=VEHICLE_CAR_TAXI_alarm} @self
+  - setspeed{t=walking;s=0} @self
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_forward_set;seconds=1} @self
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_reverse_set;seconds=1} @self
+  - state{s=collision_left;p=20} @self
+  - partvis{p=backup_light} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop_forward} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop_reverse} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+
+  # take hit from vehicle rightside #
+VEHICLE_CAR_TAXI_recieve_collision_right:
+  TriggerConditions:
+  - fieldofview{angle=90;r=270} orElseCast VEHICLE_CAR_TAXI_recieve_collision_rear
+  Cooldown: 1
+  Skills:
+  - damage{a=10} @self
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @ModelDriver
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @ModelPassengers
+  - skill{s=VEHICLE_CAR_TAXI_alarm} @self
+  - setspeed{t=walking;s=0} @self
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_forward_set;seconds=1} @self
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_reverse_set;seconds=1} @self
+  - state{s=collision_right;p=20} @self
+  - partvis{p=backup_light} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop_forward} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop_reverse} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+
+  # take hit from vehicle rear #
+VEHICLE_CAR_TAXI_recieve_collision_rear:
+  Conditions:
+  - varequals{var=caster.forward_speed;val=full} false
+  TriggerConditions:
+  - fieldofview{angle=90;r=180}
+  Cooldown: 1
+  Skills:
+  - damage{a=10} @self
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @ModelDriver
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @ModelPassengers
+  - skill{s=VEHICLE_CAR_TAXI_alarm} @self
+  - setspeed{t=walking;s=0} @self
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_forward_set;seconds=1} @self
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_reverse_set;seconds=1} @self
+  - state{s=collision;p=20} @self
+  - partvis{p=backup_light} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop_forward} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop_reverse} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+  
+  
+  
+  # car alarm #
+VEHICLE_CAR_TAXI_alarm:
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - varequals{var=caster.alarm_setoff;val=true} false
+  - modelhasdriver false
+  Skills:
+  - setvar{var=caster.alarm_setoff;val=true;type=STRING} @self
+  - partvis{p=brake_light;v=true} @self
+  - partvis{p=head_light;v=true} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.alarm;v=5;sc=HOSTILE} @self
+  - delay 20
+  - partvis{p=brake_light;v=false} @self
+  - partvis{p=head_light;v=false} @self
+  - delay 10
+  - partvis{p=brake_light;v=true} @self
+  - partvis{p=head_light;v=true} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.alarm;v=5;sc=HOSTILE} @self
+  - delay 20
+  - partvis{p=brake_light;v=false} @self
+  - partvis{p=head_light;v=false} @self
+  - delay 10
+  - partvis{p=brake_light;v=true} @self
+  - partvis{p=head_light;v=true} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.alarm;v=5;sc=HOSTILE} @self
+  - delay 20
+  - partvis{p=brake_light;v=false} @self
+  - partvis{p=head_light;v=false} @self
+  - delay 10
+  - partvis{p=brake_light;v=true} @self
+  - partvis{p=head_light;v=true} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.alarm;v=5;sc=HOSTILE} @self
+  - delay 20
+  - partvis{p=brake_light;v=false} @self
+  - partvis{p=head_light;v=false} @self
+  - delay 10
+  - partvis{p=brake_light;v=true} @self
+  - partvis{p=head_light;v=true} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.alarm;v=5;sc=HOSTILE} @self
+  - delay 20
+  - partvis{p=brake_light;v=false} @self
+  - partvis{p=head_light;v=false} @self
+  - delay 10
+  
+  
+  ##BLOCK COLLISION##
+  
+VEHICLE_CAR_TAXI_forward_collision_block:
+  Conditions:
+  - varequals{var=caster.forward_speed;val=full} true
+  TargetConditions:
+  - blockType{type=WATER,
+                   AIR,
+                   WHITE_CARPET,
+                   ORANGE_CARPET,
+                   MAGENTA_CARPET,
+                   LIGHT_BLUE_CARPET,
+                   YELLOW_CARPET,
+                   LIME_CARPET,
+                   PINK_CARPET,
+                   GRAY_CARPET,
+                   LIGHT_GRAY_CARPET,
+                   CYAN_CARPET,
+                   PURPLE_CARPET,
+                   BLUE_CARPET,
+                   BROWN_CARPET,
+                   GREEN_CARPET,
+                   RED_CARPET,
+                   BLACK_CARPET,
+                   GRASS,
+                   TALL_GRASS,
+                   SMALL_AMETHYST_BUD,
+                   MEDIUM_AMETHYST_BUD,
+                   LARGE_AMETHYST_BUD,
+                   BROWN_MUSHROOM,
+                   RED_MUSHROOM,
+                   CRIMSON_FUNGUS,
+                   WARPED_FUNGUS,
+                   FERN,
+                   DEAD_BUSH,
+                   DANDELION,
+                   POPPY,
+                   BLUE_ORCHID,
+                   ALLIUM,
+                   AZURE_BLUET,
+                   RED_TULIP,
+                   ORANGE_TULIP,
+                   WHITE_TULIP,
+                   PINK_TULIP,
+                   OXEYE_DAISY,
+                   CORNFLOWER,
+                   LILY_OF_THE_VALLEY,
+                   TORCHFLOWER,
+                   WITHER_ROSE,
+                   PINK_PETALS,
+                   SPORE_BLOSSOM,
+                   CRIMSON_ROOTS,
+                   WARPED_ROOTS,
+                   NETHER_SPROUTS,
+                   WEEPING_VINES,
+                   TWISTING_VINES,
+                   VINE,
+                   LARGE_FERN,
+                   SUNFLOWER,
+                   LILAC,
+                   ROSE_BUSH,
+                   PEONY,
+                   PITCHER_PLANT,
+                   SMALL_DRIPLEAF,
+                   GLOW_LICHEN,
+                   HANGING_ROOTS,
+                   SEAGRASS,
+                   SEA_PICKLE,
+                   COBWEB,
+                   WHEAT,
+                   BEETROOTS,
+                   CARROTS,
+                   POTATOES,
+                   NETHER_WART,
+                   SEAGRASS,
+                   LIGHT,
+                   RAIL,
+                   LAVA
+                   } false
+  Cooldown: 1
+  Skills:
+  - sound{s=littleroom_vehicle_pack:vehicle.vehicle_impact;v=3;p=<random.float.0.9to1.1>;sc=HOSTILE} @self
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @ModelDriver
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @ModelPassengers
+  - lunge{v=1.5;vy=0.15} @forward{f=-2}
+  - setspeed{t=walking;s=0} @self
+  - damage{a=10} @self
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_forward_set;seconds=1} @self
+  - setSkillCooldown{skill=VEHICLE_CAR_TAXI_reverse_set;seconds=1} @self
+  - state{s=collision;p=20} @self
+  - partvis{p=brake_light;v=true} @self
+  - partvis{p=backup_light} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop_forward} @self
+  - skill{s=VEHICLE_CAR_TAXI_direction_stop_reverse} @self
+  - setvar{var=caster.direction;val=stop;type=STRING} @self
+  - modstate{s=reverse;sp=0} @self
+  - modstate{s=forward;sp=0} @self
+
+
+## SUSPENSION ##
+
+## LANDING ##
+
+VEHICLE_CAR_TAXI_hard_land_velocity_check:
+  Conditions:
+  - onground false
+  - directionalVelocity{y=-0.4to0.3} false
+  - varequals{var=caster.hard_land;val=true} false
+  Skills:
+  - state{s=in_air_tilt_down;li=5;lo=5;p=12} @self
+  - setvar{var=caster.hard_land;val=true;type=STRING} @self
+
+VEHICLE_CAR_TAXI_suspension_hard_land:
+  Cooldown: 0.1
+  Conditions:
+  - varequals{var=caster.flooded;val=true} false
+  - varequals{var=caster.hard_land;val=true} true
+  - ( altitude{a=<1.25} || onground )
+  Skills:
+  - setvar{var=caster.hard_land;val=false;type=STRING} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.vehicle_hard_land;v=1;p=<random.float.-0.8to1.1>;sc=HOSTILE} @self
+  - jump{v=0.2} @self
+  - state{s=hard_landing_forward;lo=5;p=12} @self
+  
+  
+
+## LOW HEALTH ##
+
+VEHICLE_CAR_TAXI_low_health:
+  Skills:
+  - e:p{p=large_smoke;hs=.25;vs=.1;a=4;y=1.5} @forward{f=1.5}
+
+
+## DEATH ##
+
+VEHICLE_CAR_TAXI_death:
+  Skills:
+  - potion{type=BLINDESS;duration=40;level=4} @modelDriver
+  - potion{type=BLINDESS;duration=40;level=4} @modelPassengers
+  - potion{type=NAUSEA;duration=240;level=4} @modelDriver
+  - potion{type=NAUSEA;duration=240;level=4} @modelPassengers
+  - stopsound{s=littleroom_vehicle_pack:vehicle.car_accelerate_start;v=1;sc=HOSTILE} @modelDriver
+  - stopsound{s=littleroom_vehicle_pack:vehicle.car_accelerate_start;v=1;sc=HOSTILE} @modelPassengers
+  - stopsound{s=littleroom_vehicle_pack:vehicle.car_accelerate_idle_60_tick;v=1;sc=HOSTILE} @modelDriver
+  - stopsound{s=littleroom_vehicle_pack:vehicle.car_accelerate_idle_60_tick;v=1;sc=HOSTILE} @modelPassengers
+  - sudoskill{s=VEHICLE_CAR_TAXI_show_passenger} @modelDriver
+  - sudoskill{s=VEHICLE_CAR_TAXI_show_driver} @modelPassengers
+  - damage{a=5} @modelDriver
+  - damage{a=5} @modelPassengers
+  - throw{v=6;vy=2} @modelPassengers
+  - throw{v=6;vy=2} @modelDriver
+  - dismountallmodel @self
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @pir{r=16}
+  - e:p{p=lava;a=10;hs=.25;vs=.15;y=1} @self
+  - e:p{p=flash;a=1;y=1} @self
+  - summon{t=VEHICLE_CAR_TAXI_DEAD} @self
+  
+  
+  
+  
+#### DEAD CAR #####
+
+VEHICLE_CAR_TAXI_DEAD_spawn:
+  Skills:
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @pir{r=32}
+  - sound{s=littleroom_vehicle_pack:vehicle.explode;v=3;sc=HOSTILE} @self
+  - effect:blockmask{m=light;r=3;oa=true;na=false;d=5} @self
+  - summon{t=VEHICLE_CAR_TAXI_DEAD_fx;f=2;yf=2} @self
+  - summon{t=VEHICLE_CAR_TAXI_DEAD_fx;f=2;yf=2} @self
+  - summon{t=VEHICLE_CAR_TAXI_DEAD_fx;f=2;yf=2} @self
+  - throw{v=8;vy=2} @eir{r=4}
+  - e:p{p=large_smoke;a=10;hs=.25;vs=.15;repeat=120;repeati=1;y=1} @self
+  - e:p{p=flame;a=10;hs=.25;vs=.15;repeat=120;repeati=1;y=1} @self
+  - e:p{p=flash;a=1;y=1} @self
+  - lunge{v=<random.float.0.5to0.85>;vy=<random.float.0.8to1.15>} @RLNTE
+  - setvar{var=caster.inair;val=true;type=STRING} @self
+  - delay 20
+  - state{s=in_air} @self
+  
+VEHICLE_CAR_TAXI_DEAD_land:
+  Conditions:
+  - onground true
+  - varequals{var=caster.inair;val=true} true
+  Skills:
+  - totem{md=2;oH=[ - throw{v=4;vy=2}];hr=2;vr=1;drawhitbox=false;hnp=true} @self
+  - sound{s=littleroom_vehicle_pack:vehicle.dead_land;v=1;sc=HOSTILE} @self
+  - skill{s=VEHICLE_CAR_TAXI_recoil} @pir{r=16}
+  - lunge{v=0.5;vy=0.1} @forward{f=1;yo=5}
+  - setvar{var=caster.inair;val=false;type=STRING} @self
+  - state{s=land_<random.1to2>;p=2} @self
+
+
+  
+  
+# ██████  ██████   ██████  ██    ██ ███    ██ ██████       ██████ ██   ██ ███████  ██████ ██   ██ 
+#██       ██   ██ ██    ██ ██    ██ ████   ██ ██   ██     ██      ██   ██ ██      ██      ██  ██  
+#██   ███ ██████  ██    ██ ██    ██ ██ ██  ██ ██   ██     ██      ███████ █████   ██      █████   
+#██    ██ ██   ██ ██    ██ ██    ██ ██  ██ ██ ██   ██     ██      ██   ██ ██      ██      ██  ██  
+# ██████  ██   ██  ██████   ██████  ██   ████ ██████       ██████ ██   ██ ███████  ██████ ██   ██ 
+                                                                                                
+
+VEHICLE_CAR_TAXI_wheel_check:
+  Conditions:
+  - altitude{a=>2} false
+  Skills:
+  
+  # front left #
+  - skill{s=front_left_wheel_check_down} @modelpart{pid=front_left_check;offset=GLOBAL;y=-0.25}
+  - skill{s=front_left_wheel_check_up} @modelpart{pid=front_left_check;offset=GLOBAL;y=0.5}
+  
+  # front right  #
+  - skill{s=front_right_wheel_check_down} @modelpart{pid=front_right_check;offset=GLOBAL;y=-0.25}
+  - skill{s=front_right_wheel_check_up} @modelpart{pid=front_right_check;offset=GLOBAL;y=0.5}
+  
+  # back left  #
+  - skill{s=back_left_wheel_check_down} @modelpart{pid=back_left_check;offset=GLOBAL;y=-0.25}
+  - skill{s=back_left_wheel_check_up} @modelpart{pid=back_left_check;offset=GLOBAL;y=0.5}
+  
+  # back right  #
+  - skill{s=back_right_wheel_check_down} @modelpart{pid=back_right_check;offset=GLOBAL;y=-0.25}
+  - skill{s=back_right_wheel_check_up} @modelpart{pid=back_right_check;offset=GLOBAL;y=0.5}
+  
+  
+  
+  
+  
+  
+  
+  ## FRONT LEFT ##
+front_left_wheel_check_down:
+  TargetConditions:
+  - blockType{type=WATER,
+                   AIR,
+                   WHITE_CARPET,
+                   ORANGE_CARPET,
+                   MAGENTA_CARPET,
+                   LIGHT_BLUE_CARPET,
+                   YELLOW_CARPET,
+                   LIME_CARPET,
+                   PINK_CARPET,
+                   GRAY_CARPET,
+                   LIGHT_GRAY_CARPET,
+                   CYAN_CARPET,
+                   PURPLE_CARPET,
+                   BLUE_CARPET,
+                   BROWN_CARPET,
+                   GREEN_CARPET,
+                   RED_CARPET,
+                   BLACK_CARPET,
+                   GRASS,
+                   TALL_GRASS,
+                   SMALL_AMETHYST_BUD,
+                   MEDIUM_AMETHYST_BUD,
+                   LARGE_AMETHYST_BUD,
+                   BROWN_MUSHROOM,
+                   RED_MUSHROOM,
+                   CRIMSON_FUNGUS,
+                   WARPED_FUNGUS,
+                   FERN,
+                   DEAD_BUSH,
+                   DANDELION,
+                   POPPY,
+                   BLUE_ORCHID,
+                   ALLIUM,
+                   AZURE_BLUET,
+                   RED_TULIP,
+                   ORANGE_TULIP,
+                   WHITE_TULIP,
+                   PINK_TULIP,
+                   OXEYE_DAISY,
+                   CORNFLOWER,
+                   LILY_OF_THE_VALLEY,
+                   TORCHFLOWER,
+                   WITHER_ROSE,
+                   PINK_PETALS,
+                   SPORE_BLOSSOM,
+                   CRIMSON_ROOTS,
+                   WARPED_ROOTS,
+                   NETHER_SPROUTS,
+                   WEEPING_VINES,
+                   TWISTING_VINES,
+                   VINE,
+                   LARGE_FERN,
+                   SUNFLOWER,
+                   LILAC,
+                   ROSE_BUSH,
+                   PEONY,
+                   PITCHER_PLANT,
+                   SMALL_DRIPLEAF,
+                   GLOW_LICHEN,
+                   HANGING_ROOTS,
+                   SEAGRASS,
+                   SEA_PICKLE,
+                   COBWEB,
+                   WHEAT,
+                   BEETROOTS,
+                   CARROTS,
+                   POTATOES,
+                   NETHER_WART,
+                   SEAGRASS,
+                   LIGHT,
+                   RAIL,
+                   LAVA
+                   } orElseCast front_left_wheel_check_flat
+  Skills:
+  - state{s=front_left_down;li=2;lo=2;p=2} @self
+  
+front_left_wheel_check_up:
+  TargetConditions:
+  - blockType{type=WATER,
+                   AIR,
+                   WHITE_CARPET,
+                   ORANGE_CARPET,
+                   MAGENTA_CARPET,
+                   LIGHT_BLUE_CARPET,
+                   YELLOW_CARPET,
+                   LIME_CARPET,
+                   PINK_CARPET,
+                   GRAY_CARPET,
+                   LIGHT_GRAY_CARPET,
+                   CYAN_CARPET,
+                   PURPLE_CARPET,
+                   BLUE_CARPET,
+                   BROWN_CARPET,
+                   GREEN_CARPET,
+                   RED_CARPET,
+                   BLACK_CARPET,
+                   GRASS,
+                   TALL_GRASS,
+                   SMALL_AMETHYST_BUD,
+                   MEDIUM_AMETHYST_BUD,
+                   LARGE_AMETHYST_BUD,
+                   BROWN_MUSHROOM,
+                   RED_MUSHROOM,
+                   CRIMSON_FUNGUS,
+                   WARPED_FUNGUS,
+                   FERN,
+                   DEAD_BUSH,
+                   DANDELION,
+                   POPPY,
+                   BLUE_ORCHID,
+                   ALLIUM,
+                   AZURE_BLUET,
+                   RED_TULIP,
+                   ORANGE_TULIP,
+                   WHITE_TULIP,
+                   PINK_TULIP,
+                   OXEYE_DAISY,
+                   CORNFLOWER,
+                   LILY_OF_THE_VALLEY,
+                   TORCHFLOWER,
+                   WITHER_ROSE,
+                   PINK_PETALS,
+                   SPORE_BLOSSOM,
+                   CRIMSON_ROOTS,
+                   WARPED_ROOTS,
+                   NETHER_SPROUTS,
+                   WEEPING_VINES,
+                   TWISTING_VINES,
+                   VINE,
+                   LARGE_FERN,
+                   SUNFLOWER,
+                   LILAC,
+                   ROSE_BUSH,
+                   PEONY,
+                   PITCHER_PLANT,
+                   SMALL_DRIPLEAF,
+                   GLOW_LICHEN,
+                   HANGING_ROOTS,
+                   SEAGRASS,
+                   SEA_PICKLE,
+                   COBWEB,
+                   WHEAT,
+                   BEETROOTS,
+                   CARROTS,
+                   POTATOES,
+                   NETHER_WART,
+                   SEAGRASS,
+                   LIGHT,
+                   RAIL,
+                   LAVA
+                   } castinstead front_left_wheel_check_flat
+  Skills:
+  - state{s=front_left_up;li=2;lo=2;p=2} @self
+  
+front_left_wheel_check_flat:
+  Skills:
+  - state{s=front_left_down;r=true;p=2} @self
+  - state{s=front_left_up;r=true;p=2} @self
+
+
+  ## FRONT RIGHT ##
+  
+front_right_wheel_check_down:
+  TargetConditions:
+  - blockType{type=WATER,
+                   AIR,
+                   WHITE_CARPET,
+                   ORANGE_CARPET,
+                   MAGENTA_CARPET,
+                   LIGHT_BLUE_CARPET,
+                   YELLOW_CARPET,
+                   LIME_CARPET,
+                   PINK_CARPET,
+                   GRAY_CARPET,
+                   LIGHT_GRAY_CARPET,
+                   CYAN_CARPET,
+                   PURPLE_CARPET,
+                   BLUE_CARPET,
+                   BROWN_CARPET,
+                   GREEN_CARPET,
+                   RED_CARPET,
+                   BLACK_CARPET,
+                   GRASS,
+                   TALL_GRASS,
+                   SMALL_AMETHYST_BUD,
+                   MEDIUM_AMETHYST_BUD,
+                   LARGE_AMETHYST_BUD,
+                   BROWN_MUSHROOM,
+                   RED_MUSHROOM,
+                   CRIMSON_FUNGUS,
+                   WARPED_FUNGUS,
+                   FERN,
+                   DEAD_BUSH,
+                   DANDELION,
+                   POPPY,
+                   BLUE_ORCHID,
+                   ALLIUM,
+                   AZURE_BLUET,
+                   RED_TULIP,
+                   ORANGE_TULIP,
+                   WHITE_TULIP,
+                   PINK_TULIP,
+                   OXEYE_DAISY,
+                   CORNFLOWER,
+                   LILY_OF_THE_VALLEY,
+                   TORCHFLOWER,
+                   WITHER_ROSE,
+                   PINK_PETALS,
+                   SPORE_BLOSSOM,
+                   CRIMSON_ROOTS,
+                   WARPED_ROOTS,
+                   NETHER_SPROUTS,
+                   WEEPING_VINES,
+                   TWISTING_VINES,
+                   VINE,
+                   LARGE_FERN,
+                   SUNFLOWER,
+                   LILAC,
+                   ROSE_BUSH,
+                   PEONY,
+                   PITCHER_PLANT,
+                   SMALL_DRIPLEAF,
+                   GLOW_LICHEN,
+                   HANGING_ROOTS,
+                   SEAGRASS,
+                   SEA_PICKLE,
+                   COBWEB,
+                   WHEAT,
+                   BEETROOTS,
+                   CARROTS,
+                   POTATOES,
+                   NETHER_WART,
+                   SEAGRASS,
+                   LIGHT,
+                   RAIL,
+                   LAVA
+                   } orElseCast front_right_wheel_check_flat
+  Skills:
+  - state{s=front_right_down;li=2;lo=2;p=3} @self
+  
+front_right_wheel_check_up:
+  TargetConditions:
+  - blockType{type=WATER,
+                   AIR,
+                   WHITE_CARPET,
+                   ORANGE_CARPET,
+                   MAGENTA_CARPET,
+                   LIGHT_BLUE_CARPET,
+                   YELLOW_CARPET,
+                   LIME_CARPET,
+                   PINK_CARPET,
+                   GRAY_CARPET,
+                   LIGHT_GRAY_CARPET,
+                   CYAN_CARPET,
+                   PURPLE_CARPET,
+                   BLUE_CARPET,
+                   BROWN_CARPET,
+                   GREEN_CARPET,
+                   RED_CARPET,
+                   BLACK_CARPET,
+                   GRASS,
+                   TALL_GRASS,
+                   SMALL_AMETHYST_BUD,
+                   MEDIUM_AMETHYST_BUD,
+                   LARGE_AMETHYST_BUD,
+                   BROWN_MUSHROOM,
+                   RED_MUSHROOM,
+                   CRIMSON_FUNGUS,
+                   WARPED_FUNGUS,
+                   FERN,
+                   DEAD_BUSH,
+                   DANDELION,
+                   POPPY,
+                   BLUE_ORCHID,
+                   ALLIUM,
+                   AZURE_BLUET,
+                   RED_TULIP,
+                   ORANGE_TULIP,
+                   WHITE_TULIP,
+                   PINK_TULIP,
+                   OXEYE_DAISY,
+                   CORNFLOWER,
+                   LILY_OF_THE_VALLEY,
+                   TORCHFLOWER,
+                   WITHER_ROSE,
+                   PINK_PETALS,
+                   SPORE_BLOSSOM,
+                   CRIMSON_ROOTS,
+                   WARPED_ROOTS,
+                   NETHER_SPROUTS,
+                   WEEPING_VINES,
+                   TWISTING_VINES,
+                   VINE,
+                   LARGE_FERN,
+                   SUNFLOWER,
+                   LILAC,
+                   ROSE_BUSH,
+                   PEONY,
+                   PITCHER_PLANT,
+                   SMALL_DRIPLEAF,
+                   GLOW_LICHEN,
+                   HANGING_ROOTS,
+                   SEAGRASS,
+                   SEA_PICKLE,
+                   COBWEB,
+                   WHEAT,
+                   BEETROOTS,
+                   CARROTS,
+                   POTATOES,
+                   NETHER_WART,
+                   SEAGRASS,
+                   LIGHT,
+                   RAIL,
+                   LAVA
+                   } castinstead front_right_wheel_check_flat
+  Skills:
+  - state{s=front_right_up;li=2;lo=2;p=3} @self
+  
+front_right_wheel_check_flat:
+  Skills:
+  - state{s=front_right_down;r=true;p=3} @self
+  - state{s=front_right_up;r=true;p=3} @self
+  
+  ## BACK LEFT ##
+  
+back_left_wheel_check_down:
+  TargetConditions:
+  - blockType{type=WATER,
+                   AIR,
+                   WHITE_CARPET,
+                   ORANGE_CARPET,
+                   MAGENTA_CARPET,
+                   LIGHT_BLUE_CARPET,
+                   YELLOW_CARPET,
+                   LIME_CARPET,
+                   PINK_CARPET,
+                   GRAY_CARPET,
+                   LIGHT_GRAY_CARPET,
+                   CYAN_CARPET,
+                   PURPLE_CARPET,
+                   BLUE_CARPET,
+                   BROWN_CARPET,
+                   GREEN_CARPET,
+                   RED_CARPET,
+                   BLACK_CARPET,
+                   GRASS,
+                   TALL_GRASS,
+                   SMALL_AMETHYST_BUD,
+                   MEDIUM_AMETHYST_BUD,
+                   LARGE_AMETHYST_BUD,
+                   BROWN_MUSHROOM,
+                   RED_MUSHROOM,
+                   CRIMSON_FUNGUS,
+                   WARPED_FUNGUS,
+                   FERN,
+                   DEAD_BUSH,
+                   DANDELION,
+                   POPPY,
+                   BLUE_ORCHID,
+                   ALLIUM,
+                   AZURE_BLUET,
+                   RED_TULIP,
+                   ORANGE_TULIP,
+                   WHITE_TULIP,
+                   PINK_TULIP,
+                   OXEYE_DAISY,
+                   CORNFLOWER,
+                   LILY_OF_THE_VALLEY,
+                   TORCHFLOWER,
+                   WITHER_ROSE,
+                   PINK_PETALS,
+                   SPORE_BLOSSOM,
+                   CRIMSON_ROOTS,
+                   WARPED_ROOTS,
+                   NETHER_SPROUTS,
+                   WEEPING_VINES,
+                   TWISTING_VINES,
+                   VINE,
+                   LARGE_FERN,
+                   SUNFLOWER,
+                   LILAC,
+                   ROSE_BUSH,
+                   PEONY,
+                   PITCHER_PLANT,
+                   SMALL_DRIPLEAF,
+                   GLOW_LICHEN,
+                   HANGING_ROOTS,
+                   SEAGRASS,
+                   SEA_PICKLE,
+                   COBWEB,
+                   WHEAT,
+                   BEETROOTS,
+                   CARROTS,
+                   POTATOES,
+                   NETHER_WART,
+                   SEAGRASS,
+                   LIGHT,
+                   RAIL,
+                   LAVA
+                   } orElseCast back_left_wheel_check_flat
+  Skills:
+  - state{s=back_left_down;li=2;lo=2;p=4} @self
+  
+back_left_wheel_check_up:
+  TargetConditions:
+  - blockType{type=WATER,
+                   AIR,
+                   WHITE_CARPET,
+                   ORANGE_CARPET,
+                   MAGENTA_CARPET,
+                   LIGHT_BLUE_CARPET,
+                   YELLOW_CARPET,
+                   LIME_CARPET,
+                   PINK_CARPET,
+                   GRAY_CARPET,
+                   LIGHT_GRAY_CARPET,
+                   CYAN_CARPET,
+                   PURPLE_CARPET,
+                   BLUE_CARPET,
+                   BROWN_CARPET,
+                   GREEN_CARPET,
+                   RED_CARPET,
+                   BLACK_CARPET,
+                   GRASS,
+                   TALL_GRASS,
+                   SMALL_AMETHYST_BUD,
+                   MEDIUM_AMETHYST_BUD,
+                   LARGE_AMETHYST_BUD,
+                   BROWN_MUSHROOM,
+                   RED_MUSHROOM,
+                   CRIMSON_FUNGUS,
+                   WARPED_FUNGUS,
+                   FERN,
+                   DEAD_BUSH,
+                   DANDELION,
+                   POPPY,
+                   BLUE_ORCHID,
+                   ALLIUM,
+                   AZURE_BLUET,
+                   RED_TULIP,
+                   ORANGE_TULIP,
+                   WHITE_TULIP,
+                   PINK_TULIP,
+                   OXEYE_DAISY,
+                   CORNFLOWER,
+                   LILY_OF_THE_VALLEY,
+                   TORCHFLOWER,
+                   WITHER_ROSE,
+                   PINK_PETALS,
+                   SPORE_BLOSSOM,
+                   CRIMSON_ROOTS,
+                   WARPED_ROOTS,
+                   NETHER_SPROUTS,
+                   WEEPING_VINES,
+                   TWISTING_VINES,
+                   VINE,
+                   LARGE_FERN,
+                   SUNFLOWER,
+                   LILAC,
+                   ROSE_BUSH,
+                   PEONY,
+                   PITCHER_PLANT,
+                   SMALL_DRIPLEAF,
+                   GLOW_LICHEN,
+                   HANGING_ROOTS,
+                   SEAGRASS,
+                   SEA_PICKLE,
+                   COBWEB,
+                   WHEAT,
+                   BEETROOTS,
+                   CARROTS,
+                   POTATOES,
+                   NETHER_WART,
+                   SEAGRASS,
+                   LIGHT,
+                   RAIL,
+                   LAVA
+                   } castinstead back_left_wheel_check_flat
+  Skills:
+  - state{s=back_left_up;li=2;lo=2;p=4} @self
+  
+back_left_wheel_check_flat:
+  Skills:
+  - state{s=back_left_down;r=true;p=4} @self
+  - state{s=back_left_up;r=true;p=4} @self
+  
+  ## BACK RIGHT ##
+  
+back_right_wheel_check_down:
+  TargetConditions:
+  - blockType{type=WATER,
+                   AIR,
+                   WHITE_CARPET,
+                   ORANGE_CARPET,
+                   MAGENTA_CARPET,
+                   LIGHT_BLUE_CARPET,
+                   YELLOW_CARPET,
+                   LIME_CARPET,
+                   PINK_CARPET,
+                   GRAY_CARPET,
+                   LIGHT_GRAY_CARPET,
+                   CYAN_CARPET,
+                   PURPLE_CARPET,
+                   BLUE_CARPET,
+                   BROWN_CARPET,
+                   GREEN_CARPET,
+                   RED_CARPET,
+                   BLACK_CARPET,
+                   GRASS,
+                   TALL_GRASS,
+                   SMALL_AMETHYST_BUD,
+                   MEDIUM_AMETHYST_BUD,
+                   LARGE_AMETHYST_BUD,
+                   BROWN_MUSHROOM,
+                   RED_MUSHROOM,
+                   CRIMSON_FUNGUS,
+                   WARPED_FUNGUS,
+                   FERN,
+                   DEAD_BUSH,
+                   DANDELION,
+                   POPPY,
+                   BLUE_ORCHID,
+                   ALLIUM,
+                   AZURE_BLUET,
+                   RED_TULIP,
+                   ORANGE_TULIP,
+                   WHITE_TULIP,
+                   PINK_TULIP,
+                   OXEYE_DAISY,
+                   CORNFLOWER,
+                   LILY_OF_THE_VALLEY,
+                   TORCHFLOWER,
+                   WITHER_ROSE,
+                   PINK_PETALS,
+                   SPORE_BLOSSOM,
+                   CRIMSON_ROOTS,
+                   WARPED_ROOTS,
+                   NETHER_SPROUTS,
+                   WEEPING_VINES,
+                   TWISTING_VINES,
+                   VINE,
+                   LARGE_FERN,
+                   SUNFLOWER,
+                   LILAC,
+                   ROSE_BUSH,
+                   PEONY,
+                   PITCHER_PLANT,
+                   SMALL_DRIPLEAF,
+                   GLOW_LICHEN,
+                   HANGING_ROOTS,
+                   SEAGRASS,
+                   SEA_PICKLE,
+                   COBWEB,
+                   WHEAT,
+                   BEETROOTS,
+                   CARROTS,
+                   POTATOES,
+                   NETHER_WART,
+                   SEAGRASS,
+                   LIGHT,
+                   RAIL,
+                   LAVA
+                   } orElseCast back_right_wheel_check_flat
+  Skills:
+  - state{s=back_right_down;li=2;lo=2;p=5} @self
+  
+back_right_wheel_check_up:
+  TargetConditions:
+  - blockType{type=WATER,
+                   AIR,
+                   WHITE_CARPET,
+                   ORANGE_CARPET,
+                   MAGENTA_CARPET,
+                   LIGHT_BLUE_CARPET,
+                   YELLOW_CARPET,
+                   LIME_CARPET,
+                   PINK_CARPET,
+                   GRAY_CARPET,
+                   LIGHT_GRAY_CARPET,
+                   CYAN_CARPET,
+                   PURPLE_CARPET,
+                   BLUE_CARPET,
+                   BROWN_CARPET,
+                   GREEN_CARPET,
+                   RED_CARPET,
+                   BLACK_CARPET,
+                   GRASS,
+                   TALL_GRASS,
+                   SMALL_AMETHYST_BUD,
+                   MEDIUM_AMETHYST_BUD,
+                   LARGE_AMETHYST_BUD,
+                   BROWN_MUSHROOM,
+                   RED_MUSHROOM,
+                   CRIMSON_FUNGUS,
+                   WARPED_FUNGUS,
+                   FERN,
+                   DEAD_BUSH,
+                   DANDELION,
+                   POPPY,
+                   BLUE_ORCHID,
+                   ALLIUM,
+                   AZURE_BLUET,
+                   RED_TULIP,
+                   ORANGE_TULIP,
+                   WHITE_TULIP,
+                   PINK_TULIP,
+                   OXEYE_DAISY,
+                   CORNFLOWER,
+                   LILY_OF_THE_VALLEY,
+                   TORCHFLOWER,
+                   WITHER_ROSE,
+                   PINK_PETALS,
+                   SPORE_BLOSSOM,
+                   CRIMSON_ROOTS,
+                   WARPED_ROOTS,
+                   NETHER_SPROUTS,
+                   WEEPING_VINES,
+                   TWISTING_VINES,
+                   VINE,
+                   LARGE_FERN,
+                   SUNFLOWER,
+                   LILAC,
+                   ROSE_BUSH,
+                   PEONY,
+                   PITCHER_PLANT,
+                   SMALL_DRIPLEAF,
+                   GLOW_LICHEN,
+                   HANGING_ROOTS,
+                   SEAGRASS,
+                   SEA_PICKLE,
+                   COBWEB,
+                   WHEAT,
+                   BEETROOTS,
+                   CARROTS,
+                   POTATOES,
+                   NETHER_WART,
+                   SEAGRASS,
+                   LIGHT,
+                   RAIL
+                   } castinstead back_right_wheel_check_flat
+  Skills:
+  - state{s=back_right_up;li=2;lo=2;p=5} @self
+  
+back_right_wheel_check_flat:
+  Skills:
+  - state{s=back_right_down;r=true;p=5} @self
+  - state{s=back_right_up;r=true;p=5} @self
+  
+  
+  
+  
+  
+  
+
+# 539422WMXSMJMI029ZRQLIRUBCFG
