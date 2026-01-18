@@ -5,7 +5,7 @@ Regions:
       paybackPercentage: 0
       isHotel: false
       lastreset: 0
-      lastLogin: 1768433033246
+      lastLogin: 1768697678807
       maxMembers: -1
       regiontype: rentregion
       price: 1.0
@@ -29,7 +29,7 @@ Regions:
       paybackPercentage: 0
       isHotel: true
       lastreset: 0
-      lastLogin: 1768433033246
+      lastLogin: 1768697678808
       maxMembers: -1
       regiontype: rentregion
       price: 1.0

@@ -1,711 +1,647 @@
-[23:22:31] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.9+10-Ubuntu-124.04; Ubuntu null) on Linux 6.8.0-1030-azure (amd64)
-[23:22:31] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.10-117-ver/1.21.10@df4b668 (2025-11-30T22:37:28Z) for Minecraft 1.21.10
-[23:22:31] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
-[23:22:33] [Paper Plugin Remapper Thread - 0/INFO]: [PluginRemapper] Remapping plugin 'plugins/SkinsRestorer.jar'...
-[23:22:36] [Paper Plugin Remapper Thread - 0/INFO]: [PluginRemapper] Done remapping plugin 'plugins/SkinsRestorer.jar' in 3289ms.
-[23:22:36] [ServerMain/INFO]: [PluginInitializerManager] Initialized 17 plugins
-[23:22:36] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (17):
+[00:53:30] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.9+10-Ubuntu-124.04; Ubuntu null) on Linux 6.8.0-1030-azure (amd64)
+[00:53:30] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.10-117-ver/1.21.10@df4b668 (2025-11-30T22:37:28Z) for Minecraft 1.21.10
+[00:53:30] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[00:53:32] [ServerMain/INFO]: [PluginInitializerManager] Initialized 17 plugins
+[00:53:32] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (17):
  - AdvancedRegionMarket (3.5.5), CinematicView (1.51), ConditionalEvents (4.73.1), EzEconomy (0.1.1), FastAsyncWorldEdit (2.14.3+8ddae9a), ItemsAdder (4.0.15), LuckPerms (5.5.17), ModelEngine (R4.0.9), MythicMobs (5.11.1-de409cac), PlaceholderAPI (2.11.7), Point (1.0), ProtocolLib (5.4.0), SkinsRestorer (15.9.3), TAB (5.4.0), Vault (1.7.3-b131), WorldEditSelectionVisualizer (2.1.9), WorldGuard (7.0.15-beta-01+445a1d7)
-[23:22:41] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
-[23:22:41] [ServerMain/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
-[23:22:41] [ServerMain/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 511.2ms
-[23:22:43] [ServerMain/INFO]: Loaded 1461 recipes
-[23:22:43] [ServerMain/INFO]: Loaded 1574 advancements
-[23:22:43] [Server thread/INFO]: Starting minecraft server version 1.21.10
-[23:22:43] [Server thread/INFO]: Loading properties
-[23:22:43] [Server thread/INFO]: This server is running Paper version 1.21.10-117-ver/1.21.10@df4b668 (2025-11-30T22:37:28Z) (Implementing API version 1.21.10-R0.1-SNAPSHOT)
-[23:22:43] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
-[23:22:43] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[23:22:43] [Server thread/INFO]: Using 4 threads for Netty based IO
-[23:22:44] [Server thread/INFO]: [MoonriseCommon] Paper is using 1 worker threads, 1 I/O threads
-[23:22:44] [Server thread/INFO]: Default game type: SURVIVAL
-[23:22:44] [Server thread/INFO]: Generating keypair
-[23:22:45] [Server thread/INFO]: Starting Minecraft server on *:25565
-[23:22:45] [Server thread/INFO]: Using epoll channel type
-[23:22:45] [Server thread/INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
-[23:22:45] [Server thread/INFO]: Paper: Using OpenSSL 3.x.x (Linux x86_64) cipher from Velocity.
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loading 4 libraries... please wait
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-api/4.16.0/adventure-api-4.16.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-key/4.16.0/adventure-key-4.16.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/examination-api/1.3.0/examination-api-1.3.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/examination-string/1.3.0/examination-string-1.3.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/org/jetbrains/annotations/24.1.0/annotations-24.1.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-platform-bukkit/4.3.2/adventure-platform-bukkit-4.3.2.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-platform-api/4.3.2/adventure-platform-api-4.3.2.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-bungeecord/4.3.2/adventure-text-serializer-bungeecord-4.3.2.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-legacy/4.13.1/adventure-text-serializer-legacy-4.13.1.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-nbt/4.13.1/adventure-nbt-4.13.1.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-gson-legacy-impl/4.13.1/adventure-text-serializer-gson-legacy-impl-4.13.1.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-platform-facet/4.3.2/adventure-platform-facet-4.3.2.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-platform-viaversion/4.3.2/adventure-platform-viaversion-4.3.2.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-minimessage/4.16.0/adventure-text-minimessage-4.16.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-gson/4.16.0/adventure-text-serializer-gson-4.16.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-json/4.16.0/adventure-text-serializer-json-4.16.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/option/1.0.0/option-1.0.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loading 3 libraries... please wait
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-api/4.14.0/adventure-api-4.14.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-key/4.14.0/adventure-key-4.14.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/examination-api/1.3.0/examination-api-1.3.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/examination-string/1.3.0/examination-string-1.3.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/org/jetbrains/annotations/24.0.1/annotations-24.0.1.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-gson/4.14.0/adventure-text-serializer-gson-4.14.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-json/4.14.0/adventure-text-serializer-json-4.14.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-bungeecord/4.3.0/adventure-text-serializer-bungeecord-4.3.0.jar
-[23:22:45] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-legacy/4.13.0/adventure-text-serializer-legacy-4.13.0.jar
-[23:22:45] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.5.17
-[23:22:46] [Server thread/INFO]: [LuckPerms] Loading configuration...
-[23:22:46] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
-[23:22:46] [Server thread/INFO]: [FastAsyncWorldEdit] Loading server plugin FastAsyncWorldEdit v2.14.3+8ddae9a
-[23:22:47] [Server thread/INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@357756b0]
-[23:22:47] [Server thread/INFO]: [WorldGuard] Loading server plugin WorldGuard v7.0.15-beta-01+445a1d7
-[23:22:47] [Server thread/INFO]: [PlaceholderAPI] Loading server plugin PlaceholderAPI v2.11.7
-[23:22:47] [Server thread/INFO]: [MythicMobs] Loading server plugin MythicMobs v5.11.1-de409cac
-[23:22:47] [Server thread/INFO]: [LumineUtils] (io.lumine.mythic.bukkit.utils.) is bound to plugin MythicMobs - io.lumine.mythic.bukkit.MythicBukkit
-[23:22:47] [Server thread/INFO]: [MythicMobs] §x§f§f§0§0§0§0M§x§f§f§6§6§0§0y§x§f§f§c§c§0§0t§x§c§b§f§f§0§0h§x§6§5§f§f§0§0i§x§0§0§f§f§0§0c§x§0§0§f§f§6§6 §x§0§0§f§f§c§bE§x§0§0§c§b§f§fn§x§0§0§6§5§f§fa§x§0§0§0§0§f§fb§x§6§6§0§0§f§fl§x§c§c§0§0§f§fe§x§f§f§0§0§c§cd§x§f§f§0§0§6§6!
-[23:22:47] [Server thread/INFO]: [ProtocolLib] Loading server plugin ProtocolLib v5.4.0
-[23:22:47] [Server thread/WARN]: [ProtocolLib] Version (MC: 1.21.10) has not yet been tested! Proceed with caution.
-[23:22:47] [Server thread/INFO]: [ModelEngine] Loading server plugin ModelEngine vR4.0.9
-[23:22:47] [Server thread/INFO]: [CinematicView] Loading server plugin CinematicView v1.51
-[23:22:47] [Server thread/INFO]: [SkinsRestorer] Loading server plugin SkinsRestorer v15.9.3
-[23:22:47] [Server thread/INFO]: [WESV] Loading server plugin WorldEditSelectionVisualizer v2.1.9
-[23:22:47] [Server thread/INFO]: [EzEconomy] Loading server plugin EzEconomy v0.1.1
-[23:22:47] [Server thread/INFO]: [ConditionalEvents] Loading server plugin ConditionalEvents v4.73.1
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading server plugin ItemsAdder v4.0.15
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library FastNbt-jar (remapped)...
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library httpmime...
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library httpclient
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library httpcore
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library commons-logging
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library commons-codec
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library commons-math3...
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library speedy-math...
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library jansi...
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library fastjson...
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library fastjson2-extension
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library fastjson2
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library json-path...
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library json-smart
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library accessors-smart
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library asm
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library slf4j-api
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library armor-equip-event...
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library glowingentities...
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library reflection-remapper
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-api...
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-key
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library examination-api
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library examination-string
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library annotations
-[23:22:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-minimessage...
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-api
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-key
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library examination-api
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library examination-string
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library annotations
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-gson...
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-json
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-api
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-key
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library examination-api
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library examination-string
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library option
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library jspecify
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library gson
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library auto-service-annotations
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-commons
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library annotations
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-gson-legacy-impl...
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-gson
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-json
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library option
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library jspecify
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library gson
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library auto-service-annotations
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-commons
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library annotations
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-json-legacy-impl
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-api
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-key
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library examination-api
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library examination-string
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-nbt
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-platform-bukkit...
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-platform-api
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-api
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-key
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-bungeecord
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-legacy
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-nbt
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library examination-api
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library examination-string
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library annotations
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-gson
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-json
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library option
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library jspecify
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library auto-service-annotations
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-commons
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-gson-legacy-impl
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-json-legacy-impl
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-platform-facet
-[23:22:48] [Server thread/INFO]: [ItemsAdder] Loading library adventure-platform-viaversion
-[23:22:48] [Server thread/INFO]: [Point] Loading server plugin Point v1.0
-[23:22:48] [Server thread/INFO]: [TAB] Loading server plugin TAB v5.4.0
-[23:22:48] [Server thread/INFO]: [AdvancedRegionMarket] Loading server plugin AdvancedRegionMarket v3.5.5
-[23:22:48] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[23:22:48] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.5.17
-[23:22:48] [Server thread/INFO]:         __    
-[23:22:48] [Server thread/INFO]:   |    |__)   LuckPerms v5.5.17
-[23:22:48] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
-[23:22:48] [Server thread/INFO]: 
-[23:22:48] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
-[23:22:49] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
-[23:22:49] [Server thread/INFO]: [LuckPerms] Performing initial data load...
-[23:22:49] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 1132ms)
-[23:22:49] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
-[23:22:49] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
-[23:22:49] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
-[23:22:49] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
-[23:22:49] [Server thread/INFO]: [FastAsyncWorldEdit] Enabling FastAsyncWorldEdit v2.14.3+8ddae9a
-[23:22:49] [Server thread/INFO]: [com.fastasyncworldedit.core.Fawe] LZ4 Compression Binding loaded successfully
-[23:22:49] [Server thread/INFO]: [com.fastasyncworldedit.core.Fawe] ZSTD Compression Binding loaded successfully
-[23:22:49] [Server thread/INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
-[23:22:49] [Server thread/INFO]: WEPIF: Vault detected! Using Vault for permissions
-[23:22:49] [Server thread/INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.fawe.v1_21_9.PaperweightFaweAdapter as the Bukkit adapter
-[23:22:50] [Server thread/INFO]: [ProtocolLib] Enabling ProtocolLib v5.4.0
-[23:22:50] [Server thread/INFO]: [ModelEngine] Enabling ModelEngine vR4.0.9
-[23:22:51] [Server thread/INFO]: [ModelEngine] [S] Loading cache version: R4.0.8
-[23:22:51] [ForkJoinPool.commonPool-worker-1/WARN]: [com.fastasyncworldedit.core.util.UpdateNotification] A new release for FastAsyncWorldEdit is available: 2.15.0. You are currently on 2.14.3.
+[00:53:38] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[00:53:38] [ServerMain/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[00:53:38] [ServerMain/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 532.9ms
+[00:53:40] [ServerMain/INFO]: Loaded 1461 recipes
+[00:53:40] [ServerMain/INFO]: Loaded 1574 advancements
+[00:53:40] [Server thread/INFO]: Starting minecraft server version 1.21.10
+[00:53:40] [Server thread/INFO]: Loading properties
+[00:53:40] [Server thread/INFO]: This server is running Paper version 1.21.10-117-ver/1.21.10@df4b668 (2025-11-30T22:37:28Z) (Implementing API version 1.21.10-R0.1-SNAPSHOT)
+[00:53:40] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[00:53:40] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[00:53:40] [Server thread/INFO]: Using 4 threads for Netty based IO
+[00:53:41] [Server thread/INFO]: [MoonriseCommon] Paper is using 1 worker threads, 1 I/O threads
+[00:53:42] [Server thread/INFO]: Default game type: SURVIVAL
+[00:53:42] [Server thread/INFO]: Generating keypair
+[00:53:42] [Server thread/INFO]: Starting Minecraft server on *:25565
+[00:53:42] [Server thread/INFO]: Using epoll channel type
+[00:53:42] [Server thread/INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[00:53:42] [Server thread/INFO]: Paper: Using OpenSSL 3.x.x (Linux x86_64) cipher from Velocity.
+[00:53:42] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loading 4 libraries... please wait
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-api/4.16.0/adventure-api-4.16.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-key/4.16.0/adventure-key-4.16.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/examination-api/1.3.0/examination-api-1.3.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/examination-string/1.3.0/examination-string-1.3.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/org/jetbrains/annotations/24.1.0/annotations-24.1.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-platform-bukkit/4.3.2/adventure-platform-bukkit-4.3.2.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-platform-api/4.3.2/adventure-platform-api-4.3.2.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-bungeecord/4.3.2/adventure-text-serializer-bungeecord-4.3.2.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-legacy/4.13.1/adventure-text-serializer-legacy-4.13.1.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-nbt/4.13.1/adventure-nbt-4.13.1.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-gson-legacy-impl/4.13.1/adventure-text-serializer-gson-legacy-impl-4.13.1.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-platform-facet/4.3.2/adventure-platform-facet-4.3.2.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-platform-viaversion/4.3.2/adventure-platform-viaversion-4.3.2.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-minimessage/4.16.0/adventure-text-minimessage-4.16.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-gson/4.16.0/adventure-text-serializer-gson-4.16.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-json/4.16.0/adventure-text-serializer-json-4.16.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/option/1.0.0/option-1.0.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loading 3 libraries... please wait
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-api/4.14.0/adventure-api-4.14.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-key/4.14.0/adventure-key-4.14.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/examination-api/1.3.0/examination-api-1.3.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/examination-string/1.3.0/examination-string-1.3.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/org/jetbrains/annotations/24.0.1/annotations-24.0.1.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-gson/4.14.0/adventure-text-serializer-gson-4.14.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-json/4.14.0/adventure-text-serializer-json-4.14.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-bungeecord/4.3.0/adventure-text-serializer-bungeecord-4.3.0.jar
+[00:53:43] [Server thread/INFO]: [SpigotLibraryLoader] [ModelEngine] Loaded library /workspaces/juegozombie/servidor_minecraft/libraries/net/kyori/adventure-text-serializer-legacy/4.13.0/adventure-text-serializer-legacy-4.13.0.jar
+[00:53:43] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.5.17
+[00:53:44] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[00:53:44] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[00:53:44] [Server thread/INFO]: [FastAsyncWorldEdit] Loading server plugin FastAsyncWorldEdit v2.14.3+8ddae9a
+[00:53:46] [Server thread/INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@425f29fc]
+[00:53:46] [Server thread/INFO]: [WorldGuard] Loading server plugin WorldGuard v7.0.15-beta-01+445a1d7
+[00:53:46] [Server thread/INFO]: [PlaceholderAPI] Loading server plugin PlaceholderAPI v2.11.7
+[00:53:46] [Server thread/INFO]: [MythicMobs] Loading server plugin MythicMobs v5.11.1-de409cac
+[00:53:46] [Server thread/INFO]: [LumineUtils] (io.lumine.mythic.bukkit.utils.) is bound to plugin MythicMobs - io.lumine.mythic.bukkit.MythicBukkit
+[00:53:46] [Server thread/INFO]: [MythicMobs] §x§f§f§0§0§0§0M§x§f§f§6§6§0§0y§x§f§f§c§c§0§0t§x§c§b§f§f§0§0h§x§6§5§f§f§0§0i§x§0§0§f§f§0§0c§x§0§0§f§f§6§6 §x§0§0§f§f§c§bE§x§0§0§c§b§f§fn§x§0§0§6§5§f§fa§x§0§0§0§0§f§fb§x§6§6§0§0§f§fl§x§c§c§0§0§f§fe§x§f§f§0§0§c§cd§x§f§f§0§0§6§6!
+[00:53:46] [Server thread/INFO]: [ProtocolLib] Loading server plugin ProtocolLib v5.4.0
+[00:53:46] [Server thread/WARN]: [ProtocolLib] Version (MC: 1.21.10) has not yet been tested! Proceed with caution.
+[00:53:46] [Server thread/INFO]: [ModelEngine] Loading server plugin ModelEngine vR4.0.9
+[00:53:46] [Server thread/INFO]: [CinematicView] Loading server plugin CinematicView v1.51
+[00:53:46] [Server thread/INFO]: [SkinsRestorer] Loading server plugin SkinsRestorer v15.9.3
+[00:53:46] [Server thread/INFO]: [WESV] Loading server plugin WorldEditSelectionVisualizer v2.1.9
+[00:53:46] [Server thread/INFO]: [EzEconomy] Loading server plugin EzEconomy v0.1.1
+[00:53:46] [Server thread/INFO]: [ConditionalEvents] Loading server plugin ConditionalEvents v4.73.1
+[00:53:46] [Server thread/INFO]: [ItemsAdder] Loading server plugin ItemsAdder v4.0.15
+[00:53:46] [Server thread/INFO]: [ItemsAdder] Loading library FastNbt-jar (remapped)...
+[00:53:46] [Server thread/INFO]: [ItemsAdder] Loading library httpmime...
+[00:53:46] [Server thread/INFO]: [ItemsAdder] Loading library httpclient
+[00:53:46] [Server thread/INFO]: [ItemsAdder] Loading library httpcore
+[00:53:46] [Server thread/INFO]: [ItemsAdder] Loading library commons-logging
+[00:53:46] [Server thread/INFO]: [ItemsAdder] Loading library commons-codec
+[00:53:46] [Server thread/INFO]: [ItemsAdder] Loading library commons-math3...
+[00:53:46] [Server thread/INFO]: [ItemsAdder] Loading library speedy-math...
+[00:53:46] [Server thread/INFO]: [ItemsAdder] Loading library jansi...
+[00:53:46] [Server thread/INFO]: [ItemsAdder] Loading library fastjson...
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library fastjson2-extension
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library fastjson2
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library json-path...
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library json-smart
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library accessors-smart
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library asm
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library slf4j-api
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library armor-equip-event...
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library glowingentities...
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library reflection-remapper
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-api...
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-key
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library examination-api
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library examination-string
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library annotations
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-minimessage...
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-api
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-key
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library examination-api
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library examination-string
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library annotations
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-gson...
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-json
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-api
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-key
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library examination-api
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library examination-string
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library option
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library jspecify
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library gson
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library auto-service-annotations
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-commons
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library annotations
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-gson-legacy-impl...
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-gson
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-json
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library option
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library jspecify
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library gson
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library auto-service-annotations
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-commons
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library annotations
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-json-legacy-impl
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-api
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-key
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library examination-api
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library examination-string
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-nbt
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-platform-bukkit...
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-platform-api
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-api
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-key
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-bungeecord
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-legacy
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-nbt
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library examination-api
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library examination-string
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library annotations
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-gson
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-json
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library option
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library jspecify
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library auto-service-annotations
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-commons
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-gson-legacy-impl
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-text-serializer-json-legacy-impl
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-platform-facet
+[00:53:47] [Server thread/INFO]: [ItemsAdder] Loading library adventure-platform-viaversion
+[00:53:48] [Server thread/INFO]: [Point] Loading server plugin Point v1.0
+[00:53:48] [Server thread/INFO]: [TAB] Loading server plugin TAB v5.4.0
+[00:53:48] [Server thread/INFO]: [AdvancedRegionMarket] Loading server plugin AdvancedRegionMarket v3.5.5
+[00:53:48] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[00:53:48] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.5.17
+[00:53:48] [Server thread/INFO]:         __    
+[00:53:48] [Server thread/INFO]:   |    |__)   LuckPerms v5.5.17
+[00:53:48] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[00:53:48] [Server thread/INFO]: 
+[00:53:48] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[00:53:49] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[00:53:49] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[00:53:49] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 1484ms)
+[00:53:49] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[00:53:49] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[00:53:49] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[00:53:49] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[00:53:49] [Server thread/INFO]: [FastAsyncWorldEdit] Enabling FastAsyncWorldEdit v2.14.3+8ddae9a
+[00:53:49] [Server thread/INFO]: [com.fastasyncworldedit.core.Fawe] LZ4 Compression Binding loaded successfully
+[00:53:49] [Server thread/INFO]: [com.fastasyncworldedit.core.Fawe] ZSTD Compression Binding loaded successfully
+[00:53:49] [Server thread/INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
+[00:53:49] [Server thread/INFO]: WEPIF: Vault detected! Using Vault for permissions
+[00:53:50] [Server thread/INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.fawe.v1_21_9.PaperweightFaweAdapter as the Bukkit adapter
+[00:53:51] [Server thread/INFO]: [ProtocolLib] Enabling ProtocolLib v5.4.0
+[00:53:51] [Server thread/INFO]: [ModelEngine] Enabling ModelEngine vR4.0.9
+[00:53:51] [Server thread/INFO]: [ModelEngine] [S] Loading cache version: R4.0.8
+[00:53:51] [ForkJoinPool.commonPool-worker-1/WARN]: [com.fastasyncworldedit.core.util.UpdateNotification] A new release for FastAsyncWorldEdit is available: 2.15.0. You are currently on 2.14.3.
 Download from https://modrinth.com/plugin/fastasyncworldedit or https://hangar.papermc.io/IntellectualSites/FastAsyncWorldEdit
-[23:22:51] [Server thread/WARN]: [ModelEngine] [S] Unable to activate MineSkin skin generation: Empty API Key
-[23:22:51] [Server thread/INFO]: [ModelEngine] [S] Loading default skin: Steve
-[23:22:51] [Server thread/INFO]: [ModelEngine] [S] Registered default skin: Steve
-[23:22:51] [Server thread/INFO]: [ModelEngine] [S] Loading default skin: Alex
-[23:22:51] [ForkJoinPool.commonPool-worker-1/INFO]: [ModelEngine] [A] Registered default skin: Alex
-[23:22:51] [Server thread/INFO]: [SkinsRestorer] Enabling SkinsRestorer v15.9.3
-[23:22:51] [Server thread/INFO]: [SkinsRestorer] Running on Minecraft 1.21.10.
-[23:22:52] [Server thread/INFO]: [SkinsRestorer] Using paper join listener!
-[23:22:52] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: skinsrestorer [15.9.3]
-[23:22:52] [Server thread/INFO]: [SkinsRestorer] PlaceholderAPI expansion registered!
-[23:22:52] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[23:22:52] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[23:22:52] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[23:22:52] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[23:22:52] [Server thread/INFO]: Preparing level "world"
-[23:22:52] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] ----------------------------------------------
-[23:22:52] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     +==================+
-[23:22:52] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     |   SkinsRestorer  |
-[23:22:52] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     |------------------|
-[23:22:52] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     |  Standalone Mode |
-[23:22:52] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     +==================+
-[23:22:52] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] ----------------------------------------------
-[23:22:52] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     Version: 15.9.3
-[23:22:52] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     Commit: 989bf18
-[23:22:52] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     This is the latest version!
-[23:22:52] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] ----------------------------------------------
-[23:22:52] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] Do you have issues? Read our troubleshooting guide: https://skinsrestorer.net/docs/troubleshooting
-[23:22:52] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] Want to support SkinsRestorer? Consider donating: https://skinsrestorer.net/donate
-[23:22:52] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:overworld'...
-[23:22:52] [Server thread/INFO]: Prepared spawn area in 1 ms
-[23:22:52] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:the_nether'...
-[23:22:52] [Server thread/INFO]: Prepared spawn area in 0 ms
-[23:22:52] [Server thread/INFO]: Done preparing level "world" (0.250s)
-[23:22:52] [Server thread/INFO]: [WorldGuard] Enabling WorldGuard v7.0.15-beta-01+445a1d7
-[23:22:52] [Server thread/INFO]: [WorldGuard] (world) TNT ignition is PERMITTED.
-[23:22:52] [Server thread/INFO]: [WorldGuard] (world) Lighters are PERMITTED.
-[23:22:52] [Server thread/INFO]: [WorldGuard] (world) Lava fire is PERMITTED.
-[23:22:52] [Server thread/INFO]: [WorldGuard] (world) Fire spread is UNRESTRICTED.
-[23:22:52] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world'
-[23:22:52] [Server thread/INFO]: [WorldGuard] (world_nether) TNT ignition is PERMITTED.
-[23:22:52] [Server thread/INFO]: [WorldGuard] (world_nether) Lighters are PERMITTED.
-[23:22:52] [Server thread/INFO]: [WorldGuard] (world_nether) Lava fire is PERMITTED.
-[23:22:52] [Server thread/INFO]: [WorldGuard] (world_nether) Fire spread is UNRESTRICTED.
-[23:22:52] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_nether'
-[23:22:52] [Server thread/INFO]: [WorldGuard] Loading region data...
-[23:22:53] [Server thread/INFO]: [PlaceholderAPI] Enabling PlaceholderAPI v2.11.7
-[23:22:53] [Server thread/INFO]: [PlaceholderAPI] Fetching available expansion information...
-[23:22:53] [Server thread/INFO]: [MythicMobs] Enabling MythicMobs v5.11.1-de409cac
-[23:22:53] [Server thread/INFO]: [MythicMobs] Loading MythicMobs for Paper (MC: 1.21.10)...
-[23:22:53] [Server thread/INFO]: [MythicMobs] The server is running Paper; enabled Paper exclusive functionality
-[23:22:54] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: mythic [5.0.0]
-[23:22:55] [Server thread/INFO]: [MythicMobs] Mythic PlaceholderAPI Support has been enabled!
-[23:22:55] [Server thread/INFO]: [MythicMobs] Mythic Vault Support has been enabled!
-[23:22:55] [Server thread/INFO]: [MythicMobs] Mythic WorldGuard Support has been enabled!
-[23:22:57] [Server thread/INFO]: [MythicMobs] Loading Packs...
-[23:22:57] [Server thread/INFO]: [MythicMobs] Loading Items...
-[23:22:57] [Server thread/INFO]: [MythicMobs] Loading Item Groups...
-[23:22:57] [Server thread/INFO]: [MythicMobs] All items loaded after 35ms!
-[23:22:57] [Server thread/INFO]: [MythicMobs] Loading Skills...
-[23:22:57] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.-0.8to1.1>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:22:57] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '2.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:22:57] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '7.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:22:57] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '12.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:22:57] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '17.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:22:57] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.0.9to1.1>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:22:57] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.0.5to0.85>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:22:57] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.0.8to1.15>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:22:57] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.1.0to1.2>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:22:58] [Server thread/INFO]: [MythicMobs] Loading Drop Tables...
-[23:22:58] [Server thread/INFO]: [MythicMobs] Loading Random Spawns...
-[23:22:58] [Server thread/INFO]: [MythicMobs] Loading Spawn Blocks...
-[23:22:58] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
-[23:22:58] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /workspaces/juegozombie/servidor_minecraft/plugins/MythicMobs/skills/ExampleSkills.yml
-[23:22:58] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
-[23:22:58] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
-[23:22:58] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
-[23:22:58] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /workspaces/juegozombie/servidor_minecraft/plugins/MythicMobs/skills/ExampleSkills.yml
-[23:22:58] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
-[23:22:58] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
-[23:22:58] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
-[23:22:58] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /workspaces/juegozombie/servidor_minecraft/plugins/MythicMobs/skills/ExampleSkills.yml
-[23:22:58] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
-[23:22:58] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
-[23:22:58] [Server thread/INFO]: [MythicMobs] Second passes loaded after 27ms!
-[23:22:58] [Server thread/INFO]: [MythicMobs] ✓ Loaded 15 mobs.
-[23:22:58] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 vanilla mob overrides.
-[23:22:58] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 mob stacks.
-[23:22:58] [Server thread/INFO]: [MythicMobs] ✓ Loaded 360 skills.
-[23:22:58] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 random spawns.
-[23:22:58] [Server thread/INFO]: [MythicMobs] ✓ Loaded 4 mythic items.
-[23:22:58] [Server thread/INFO]: [MythicMobs] ✓ Loaded 2 drop tables.
-[23:22:58] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 mob spawners.
-[23:22:58] [Server thread/INFO]: [MythicMobs] MythicMobs configuration file loaded successfully.
-[23:22:58] [Server thread/INFO]: [MythicMobs] Started up bStats Metrics
-[23:22:58] [Server thread/INFO]: [MythicMobs] ✓ MythicMobs v5.11.1 ( build de409cac ) has been successfully loaded!
-[23:22:59] [Server thread/INFO]: [MythicMobs] Model Engine Compatibility Loaded.
-[23:22:59] [Server thread/INFO]: [ModelEngine] [S] Compatibility applied: MythicMobs
-[23:22:59] [Server thread/INFO]: [CinematicView] Enabling CinematicView v1.51
-[23:22:59] [Server thread/INFO]: [CinematicView] Loading CinematicView.
-[23:22:59] [Server thread/INFO]: [CinematicView] Using Minecraft 1.21.10 package.
-[23:22:59] [Server thread/INFO]: [CinematicView] 'CinematicView 1.53' is available. You are on version 'CinematicView 1.51'
-[23:22:59] [Server thread/INFO]: [CinematicView] LuckPerms detected.
-[23:22:59] [Server thread/INFO]: [CinematicView] Loading config.
-[23:22:59] [Server thread/INFO]: [CinematicView] Loaded CinematicView.
-[23:22:59] [Server thread/INFO]: [WESV] Enabling WorldEditSelectionVisualizer v2.1.9
-[23:22:59] [Server thread/INFO]: [WESV] Using WorldEdit 7 api
-[23:22:59] [Server thread/INFO]: [WESV] Using Folia scheduler
-[23:22:59] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: wesv [2.1.9]
-[23:22:59] [Server thread/INFO]: [WESV] PlaceholderAPI extension successfully registered.
-[23:22:59] [Server thread/INFO]: [EzEconomy] Enabling EzEconomy v0.1.1
-[23:22:59] [Server thread/INFO]: [EzEconomy] EzEconomy enabled and registered as Vault provider.
-[23:22:59] [Server thread/INFO]: [ConditionalEvents] Enabling ConditionalEvents v4.73.1
-[23:22:59] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: conditionalevents [4.73.1]
-[23:22:59] [Server thread/INFO]: [ConditionalEvents] Has been enabled! Version: 4.73.1
-[23:22:59] [Server thread/INFO]: [ConditionalEvents] Thanks for using my plugin!   ~Ajneb97
-[23:22:59] [Server thread/INFO]: There is a new version available. (4.73.2)
-[23:22:59] [Server thread/INFO]: You can download it at: https://modrinth.com/plugin/conditionalevents
-[23:22:59] [Server thread/INFO]: [ItemsAdder] Enabling ItemsAdder v4.0.15
-[23:22:59] [Server thread/WARN]: ItemsAdder) Using default server address: . Consider setting it in the `config.yml`
-[23:22:59] [Server thread/WARN]: ItemsAdder) Using default server port: 25565. Consider setting it in the `config.yml`
-[23:22:59] [Server thread/INFO]: ItemsAdder) 
+[00:53:51] [Server thread/WARN]: [ModelEngine] [S] Unable to activate MineSkin skin generation: Empty API Key
+[00:53:51] [Server thread/INFO]: [ModelEngine] [S] Loading default skin: Steve
+[00:53:51] [Server thread/INFO]: [ModelEngine] [S] Loading default skin: Alex
+[00:53:51] [ForkJoinPool.commonPool-worker-2/INFO]: [ModelEngine] [A] Registered default skin: Alex
+[00:53:51] [ForkJoinPool.commonPool-worker-1/INFO]: [ModelEngine] [A] Registered default skin: Steve
+[00:53:51] [Server thread/INFO]: [SkinsRestorer] Enabling SkinsRestorer v15.9.3
+[00:53:52] [Server thread/INFO]: [SkinsRestorer] Running on Minecraft 1.21.10.
+[00:53:53] [Server thread/INFO]: [SkinsRestorer] Using paper join listener!
+[00:53:53] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: skinsrestorer [15.9.3]
+[00:53:53] [Server thread/INFO]: [SkinsRestorer] PlaceholderAPI expansion registered!
+[00:53:53] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[00:53:53] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[00:53:53] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[00:53:53] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[00:53:53] [Server thread/INFO]: Preparing level "world"
+[00:53:53] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] ----------------------------------------------
+[00:53:53] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     +==================+
+[00:53:53] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     |   SkinsRestorer  |
+[00:53:53] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     |------------------|
+[00:53:53] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     |  Standalone Mode |
+[00:53:53] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     +==================+
+[00:53:53] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] ----------------------------------------------
+[00:53:53] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     Version: 15.9.3
+[00:53:53] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     Commit: 989bf18
+[00:53:53] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     This is the latest version!
+[00:53:53] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] ----------------------------------------------
+[00:53:53] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] Do you have issues? Read our troubleshooting guide: https://skinsrestorer.net/docs/troubleshooting
+[00:53:53] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] Want to support SkinsRestorer? Consider donating: https://skinsrestorer.net/donate
+[00:53:53] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:overworld'...
+[00:53:53] [Server thread/INFO]: Preparing spawn area: 100%
+[00:53:53] [Server thread/INFO]: Prepared spawn area in 2 ms
+[00:53:53] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:the_nether'...
+[00:53:53] [Server thread/INFO]: Prepared spawn area in 1 ms
+[00:53:53] [Server thread/INFO]: Done preparing level "world" (0.433s)
+[00:53:53] [Server thread/INFO]: [WorldGuard] Enabling WorldGuard v7.0.15-beta-01+445a1d7
+[00:53:54] [Server thread/INFO]: [WorldGuard] (world) TNT ignition is PERMITTED.
+[00:53:54] [Server thread/INFO]: [WorldGuard] (world) Lighters are PERMITTED.
+[00:53:54] [Server thread/INFO]: [WorldGuard] (world) Lava fire is PERMITTED.
+[00:53:54] [Server thread/INFO]: [WorldGuard] (world) Fire spread is UNRESTRICTED.
+[00:53:54] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world'
+[00:53:54] [Server thread/INFO]: [WorldGuard] (world_nether) TNT ignition is PERMITTED.
+[00:53:54] [Server thread/INFO]: [WorldGuard] (world_nether) Lighters are PERMITTED.
+[00:53:54] [Server thread/INFO]: [WorldGuard] (world_nether) Lava fire is PERMITTED.
+[00:53:54] [Server thread/INFO]: [WorldGuard] (world_nether) Fire spread is UNRESTRICTED.
+[00:53:54] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_nether'
+[00:53:54] [Server thread/INFO]: [WorldGuard] Loading region data...
+[00:53:54] [Server thread/INFO]: [PlaceholderAPI] Enabling PlaceholderAPI v2.11.7
+[00:53:54] [Server thread/INFO]: [PlaceholderAPI] Fetching available expansion information...
+[00:53:54] [Server thread/INFO]: [MythicMobs] Enabling MythicMobs v5.11.1-de409cac
+[00:53:54] [Server thread/INFO]: [MythicMobs] Loading MythicMobs for Paper (MC: 1.21.10)...
+[00:53:54] [Server thread/INFO]: [MythicMobs] The server is running Paper; enabled Paper exclusive functionality
+[00:53:56] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: mythic [5.0.0]
+[00:53:57] [Server thread/INFO]: [MythicMobs] Mythic PlaceholderAPI Support has been enabled!
+[00:53:57] [Server thread/INFO]: [MythicMobs] Mythic Vault Support has been enabled!
+[00:53:57] [Server thread/INFO]: [MythicMobs] Mythic WorldGuard Support has been enabled!
+[00:53:58] [Server thread/INFO]: [MythicMobs] Loading Packs...
+[00:53:59] [Server thread/INFO]: [MythicMobs] Loading Items...
+[00:53:59] [Server thread/INFO]: [MythicMobs] Loading Item Groups...
+[00:53:59] [Server thread/INFO]: [MythicMobs] All items loaded after 43ms!
+[00:53:59] [Server thread/INFO]: [MythicMobs] Loading Skills...
+[00:53:59] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.-0.8to1.1>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:53:59] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '2.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:53:59] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '7.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:53:59] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '12.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:53:59] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '17.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:53:59] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.0.9to1.1>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:53:59] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.0.5to0.85>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:53:59] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.0.8to1.15>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:53:59] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.1.0to1.2>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:54:00] [Server thread/INFO]: [MythicMobs] Loading Drop Tables...
+[00:54:00] [Server thread/INFO]: [MythicMobs] Loading Random Spawns...
+[00:54:00] [Server thread/INFO]: [MythicMobs] Loading Spawn Blocks...
+[00:54:00] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
+[00:54:00] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /workspaces/juegozombie/servidor_minecraft/plugins/MythicMobs/skills/ExampleSkills.yml
+[00:54:00] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
+[00:54:00] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
+[00:54:00] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
+[00:54:00] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /workspaces/juegozombie/servidor_minecraft/plugins/MythicMobs/skills/ExampleSkills.yml
+[00:54:00] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
+[00:54:00] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
+[00:54:00] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
+[00:54:00] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /workspaces/juegozombie/servidor_minecraft/plugins/MythicMobs/skills/ExampleSkills.yml
+[00:54:00] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
+[00:54:00] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
+[00:54:00] [Server thread/INFO]: [MythicMobs] Second passes loaded after 21ms!
+[00:54:00] [Server thread/INFO]: [MythicMobs] ✓ Loaded 15 mobs.
+[00:54:00] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 vanilla mob overrides.
+[00:54:00] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 mob stacks.
+[00:54:00] [Server thread/INFO]: [MythicMobs] ✓ Loaded 360 skills.
+[00:54:00] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 random spawns.
+[00:54:00] [Server thread/INFO]: [MythicMobs] ✓ Loaded 4 mythic items.
+[00:54:00] [Server thread/INFO]: [MythicMobs] ✓ Loaded 2 drop tables.
+[00:54:00] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 mob spawners.
+[00:54:00] [Server thread/INFO]: [MythicMobs] MythicMobs configuration file loaded successfully.
+[00:54:00] [Server thread/INFO]: [MythicMobs] Started up bStats Metrics
+[00:54:00] [Server thread/INFO]: [MythicMobs] ✓ MythicMobs v5.11.1 ( build de409cac ) has been successfully loaded!
+[00:54:01] [Server thread/INFO]: [MythicMobs] Model Engine Compatibility Loaded.
+[00:54:01] [Server thread/INFO]: [ModelEngine] [S] Compatibility applied: MythicMobs
+[00:54:01] [Server thread/INFO]: [CinematicView] Enabling CinematicView v1.51
+[00:54:01] [Server thread/INFO]: [CinematicView] Loading CinematicView.
+[00:54:01] [Server thread/INFO]: [CinematicView] Using Minecraft 1.21.10 package.
+[00:54:01] [Server thread/INFO]: [CinematicView] 'CinematicView 1.53' is available. You are on version 'CinematicView 1.51'
+[00:54:01] [Server thread/INFO]: [CinematicView] LuckPerms detected.
+[00:54:01] [Server thread/INFO]: [CinematicView] Loading config.
+[00:54:01] [Server thread/INFO]: [CinematicView] Loaded CinematicView.
+[00:54:01] [Server thread/INFO]: [WESV] Enabling WorldEditSelectionVisualizer v2.1.9
+[00:54:01] [Server thread/INFO]: [WESV] Using WorldEdit 7 api
+[00:54:01] [Server thread/INFO]: [WESV] Using Folia scheduler
+[00:54:01] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: wesv [2.1.9]
+[00:54:01] [Server thread/INFO]: [WESV] PlaceholderAPI extension successfully registered.
+[00:54:01] [Server thread/INFO]: [EzEconomy] Enabling EzEconomy v0.1.1
+[00:54:01] [Server thread/INFO]: [EzEconomy] EzEconomy enabled and registered as Vault provider.
+[00:54:01] [Server thread/INFO]: [ConditionalEvents] Enabling ConditionalEvents v4.73.1
+[00:54:01] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: conditionalevents [4.73.1]
+[00:54:01] [Server thread/INFO]: [ConditionalEvents] Has been enabled! Version: 4.73.1
+[00:54:01] [Server thread/INFO]: [ConditionalEvents] Thanks for using my plugin!   ~Ajneb97
+[00:54:01] [Server thread/INFO]: There is a new version available. (4.73.2)
+[00:54:01] [Server thread/INFO]: You can download it at: https://modrinth.com/plugin/conditionalevents
+[00:54:01] [Server thread/INFO]: [ItemsAdder] Enabling ItemsAdder v4.0.15
+[00:54:02] [Server thread/WARN]: ItemsAdder) Using default server address: . Consider setting it in the `config.yml`
+[00:54:02] [Server thread/WARN]: ItemsAdder) Using default server port: 25565. Consider setting it in the `config.yml`
+[00:54:02] [Server thread/INFO]: ItemsAdder) 
                                                    ItemsAdder 4.0.15
   ___  ___        __        __   __   ___  __      ProtocolLib 5.4.0
 |  |  |__   |\/| /__`  /\  |  \ |  \ |__  |__)     Paper 1.21.10-117-df4b668 (MC: 1.21.10)
 |  |  |___  |  | .__/ /--\ |__/ |__/ |___ |  \     Build Date: 2025-11-07_18.11.08
                                                    Java Version: 21.0.9
                                                    OS: Linux 6.8.0-1030-azure                                               
-[23:22:59] [Server thread/INFO]: [ItemsAdder] Loading GlowingEntities API
-[23:22:59] [Server thread/INFO]: [GlowingEntities] [GlowingEntities] Found server version 1.21.10
-[23:22:59] [Server thread/INFO]: [GlowingEntities] [GlowingEntities] Loaded transparent mappings.
-[23:23:00] [Server thread/INFO]: [Point] Enabling Point v1.0
-[23:23:00] [Server thread/INFO]: [Point] Point habilitado
-[23:23:00] [Server thread/INFO]: [TAB] Enabling TAB v5.4.0
-[23:23:01] [Server thread/INFO]: [TAB] Enabled in 209ms
-[23:23:01] [Server thread/INFO]: [AdvancedRegionMarket] Enabling AdvancedRegionMarket v3.5.5
-[23:23:01] [Server thread/INFO]: [AdvancedRegionMarket] Using WorldGuard7 adapter
-[23:23:01] [Server thread/INFO]: [AdvancedRegionMarket] Using WorldEdit7 adapter
-[23:23:01] [Server thread/INFO]: [AdvancedRegionMarket] Using MC 1.20 adapter
-[23:23:01] [Server thread/INFO]: [AdvancedRegionMarket] Regions loaded!
-[23:23:01] [Server thread/INFO]: [AdvancedRegionMarket] Programmed by Alex9849
-[23:23:01] [Server thread/INFO]: [AdvancedRegionMarket] I'm always searching for better translations of AdvancedRegionMarket. If you've translated the plugin it would be very nice if you would send me your translation via spigot private message! :)
-[23:23:01] [Server thread/INFO]: [spark] Starting background profiler...
-[23:23:01] [Server thread/INFO]: [PlaceholderAPI] Placeholder expansion registration initializing...
-[23:23:01] [Server thread/INFO]: Running delayed init tasks
-[23:23:01] [ForkJoinPool.commonPool-worker-1/INFO]: [ModelEngine] [A] 
-[23:23:01] [ForkJoinPool.commonPool-worker-1/INFO]: [ModelEngine] [A] [Importing models]
-[23:23:01] [ForkJoinPool.commonPool-worker-1/INFO]: [ModelEngine] [A] Loading cache version: R4.0.8
-[23:23:01] [Server thread/INFO]: [com.fastasyncworldedit.bukkit.regions.WorldGuardFeature] Plugin 'WorldGuard' found. Using it now.
-[23:23:01] [Server thread/INFO]: [com.fastasyncworldedit.bukkit.FaweBukkit] Attempting to use plugin 'WorldGuard'
-[23:23:01] [Craft Scheduler Thread - 2 - Vault/INFO]: [Vault] Checking for Updates ... 
-[23:23:01] [Craft Scheduler Thread - 7 - ItemsAdder/INFO]: ItemsAdder) [License] Spigot product licensed to: timoprince (1869569)
-[23:23:01] [Server thread/INFO]: Done (31.344s)! For help, type "help"
-[23:23:01] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: vault [1.8.3]
-[23:23:01] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: worldguard [1.4.2]
-[23:23:01] [Server thread/INFO]: 2 placeholder hook(s) registered!
-[23:23:02] [pool-18-thread-5/INFO]: [ModelEngine] [A] 
-[23:23:02] [pool-18-thread-5/INFO]: [ModelEngine] [A] Importing vehicle_truck_dead.bbmodel.
-[23:23:02] [pool-18-thread-3/INFO]: [ModelEngine] [A] 
-[23:23:02] [pool-18-thread-3/INFO]: [ModelEngine] [A] Importing vehicle_bike.bbmodel.
-[23:23:02] [pool-18-thread-7/INFO]: [ModelEngine] [A] 
-[23:23:02] [pool-18-thread-7/INFO]: [ModelEngine] [A] Importing vehicle_car_taxi.bbmodel.
-[23:23:02] [pool-18-thread-4/INFO]: [ModelEngine] [A] 
-[23:23:02] [pool-18-thread-4/INFO]: [ModelEngine] [A] Importing vehicle_bike_black.bbmodel.
-[23:23:02] [pool-18-thread-8/INFO]: [ModelEngine] [A] 
-[23:23:02] [pool-18-thread-8/INFO]: [ModelEngine] [A] Importing vehicle_car_dead.bbmodel.
-[23:23:02] [pool-18-thread-2/INFO]: [ModelEngine] [A] 
-[23:23:02] [pool-18-thread-2/INFO]: [ModelEngine] [A] Importing vehicle_bike_dead.bbmodel.
-[23:23:02] [pool-18-thread-1/INFO]: [ModelEngine] [A] 
-[23:23:02] [pool-18-thread-1/INFO]: [ModelEngine] [A] Importing internal_fire.bbmodel.
-[23:23:02] [pool-18-thread-9/INFO]: [ModelEngine] [A] 
-[23:23:02] [pool-18-thread-9/INFO]: [ModelEngine] [A] Importing vehicle_car.bbmodel.
-[23:23:02] [pool-18-thread-10/INFO]: [ModelEngine] [A] 
-[23:23:02] [pool-18-thread-10/INFO]: [ModelEngine] [A] Importing vehicle_car_police.bbmodel.
-[23:23:02] [Craft Scheduler Thread - 2 - Vault/INFO]: [Vault] No new version available
-[23:23:02] [pool-18-thread-6/INFO]: [ModelEngine] [A] 
-[23:23:02] [pool-18-thread-6/INFO]: [ModelEngine] [A] Importing vehicle_truck.bbmodel.
-[23:23:02] [Craft Scheduler Thread - 6 - ItemsAdder/INFO]: ItemsAdder) [Content] Loaded 27 items
-[23:23:02] [Craft Scheduler Thread - 6 - ItemsAdder/INFO]: ItemsAdder) Used Blocks IDs:
-[23:23:02] [Craft Scheduler Thread - 6 - ItemsAdder/INFO]: ItemsAdder)  - REAL 0/188
-[23:23:02] [Craft Scheduler Thread - 6 - ItemsAdder/INFO]: ItemsAdder)  - REAL_NOTE 0/750
-[23:23:02] [Craft Scheduler Thread - 6 - ItemsAdder/INFO]: ItemsAdder)  - REAL_TRANSPARENT 0/63
-[23:23:02] [Craft Scheduler Thread - 6 - ItemsAdder/INFO]: ItemsAdder) Used Font Images: 27/6608
-[23:23:02] [Craft Scheduler Thread - 6 - ItemsAdder/INFO]: ItemsAdder) [Content] Loaded 1 categories
-[23:23:02] [Craft Scheduler Thread - 6 - ItemsAdder/INFO]: ItemsAdder) [Content] Contents loaded successfully!
-[23:23:02] [pool-18-thread-6/INFO]: [ModelEngine] [A] 
-[23:23:02] [pool-18-thread-6/INFO]: [ModelEngine] [A] Resource pack zipped.
-[23:23:02] [pool-18-thread-6/INFO]: [ModelEngine] [A] Generator Profiled:
-[23:23:02] [pool-18-thread-6/INFO]: [ModelEngine] [A]  - Import Phase: 231.5ms
-[23:23:02] [pool-18-thread-6/INFO]: [ModelEngine] [A]  - Assets Phase: 250.5ms
-[23:23:02] [pool-18-thread-6/INFO]: [ModelEngine] [A]  - Zipping Phase: 391.3ms
-[23:23:02] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: img [1.0.1]
-[23:23:02] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: iaplayerstat [1.0.1]
-[23:23:02] [Server thread/INFO]: [Mythic] Reloading plugin...
-[23:23:02] [Server thread/INFO]: [MythicMobs] Saving plugin data...
-[23:23:02] [Server thread/INFO]: [MythicMobs] ✓Saving Finished
-[23:23:02] [Server thread/INFO]: [MythicMobs] Loading Packs...
-[23:23:03] [Server thread/INFO]: [MythicMobs] Loading Items...
-[23:23:03] [Server thread/INFO]: [MythicMobs] Loading Item Groups...
-[23:23:03] [Server thread/INFO]: [MythicMobs] All items loaded after 4ms!
-[23:23:03] [Server thread/INFO]: [MythicMobs] Loading Skills...
-[23:23:03] [Craft Scheduler Thread - 6 - ItemsAdder/INFO]: ItemsAdder) [Pack] Resourcepack URL is valid (lobfile). URL: https://lobfile.com/file/r5qVfSzc.zip
-[23:23:03] [Craft Scheduler Thread - 6 - ItemsAdder/INFO]: ItemsAdder) ResourcePack
-[23:23:03] [Craft Scheduler Thread - 6 - ItemsAdder/INFO]: ItemsAdder)  - Path: /servidor_minecraft/plugins/ItemsAdder/output/generated.zip
-[23:23:03] [Craft Scheduler Thread - 6 - ItemsAdder/INFO]: ItemsAdder)  - Download: https://lobfile.com/file/r5qVfSzc.zip
-[23:23:03] [Craft Scheduler Thread - 6 - ItemsAdder/INFO]: ItemsAdder)  - Size: 561 KB/250 MB (0%)
-[23:23:03] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.-0.8to1.1>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:23:03] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '2.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:23:03] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '7.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:23:03] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '12.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:23:03] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '17.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:23:03] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.0.9to1.1>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:23:03] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.0.5to0.85>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:23:03] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.0.8to1.15>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:23:03] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.1.0to1.2>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:23:03] [Server thread/INFO]: [MythicMobs] Loading Drop Tables...
-[23:23:03] [Server thread/INFO]: [MythicMobs] Loading Random Spawns...
-[23:23:03] [Server thread/INFO]: [MythicMobs] Loading Spawn Blocks...
-[23:23:03] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<skill.var.meg:front>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
-[23:23:03] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /workspaces/juegozombie/servidor_minecraft/plugins/MythicMobs/skills/ExampleSkills.yml
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
-[23:23:03] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /workspaces/juegozombie/servidor_minecraft/plugins/MythicMobs/skills/ExampleSkills.yml
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
-[23:23:03] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /workspaces/juegozombie/servidor_minecraft/plugins/MythicMobs/skills/ExampleSkills.yml
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
-[23:23:03] [Server thread/INFO]: [MythicMobs] Second passes loaded after 27ms!
-[23:23:03] [Server thread/INFO]: [MythicMobs] ✓ Loaded 15 mobs.
-[23:23:03] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 vanilla mob overrides.
-[23:23:03] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 mob stacks.
-[23:23:03] [Server thread/INFO]: [MythicMobs] ✓ Loaded 360 skills.
-[23:23:03] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 random spawns.
-[23:23:03] [Server thread/INFO]: [MythicMobs] ✓ Loaded 4 mythic items.
-[23:23:03] [Server thread/INFO]: [MythicMobs] ✓ Loaded 2 drop tables.
-[23:23:03] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 mob spawners.
-[23:23:03] [Server thread/WARN]: java.lang.IllegalArgumentException: Could not adapt item stack of invalid custom drop type 'VEHICLE_JERRYCAN'
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.BukkitBootstrap.createItem(BukkitBootstrap.java:377)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.parse(BukkitItemMatcher.java:110)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.lambda$new$0(BukkitItemMatcher.java:45)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.lambda$runPostReload$1(MythicClock.java:154)
-[23:23:03] [Server thread/WARN]: 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.runPostReload(MythicClock.java:151)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.doReloadPart2(ReloadCommand.java:184)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.onCommand(ReloadCommand.java:79)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:64)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:55)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:45)
-[23:23:03] [Server thread/WARN]: 	at io.papermc.paper.command.brigadier.bukkit.BukkitCommandNode$BukkitBrigCommand.run(BukkitCommandNode.java:83)
-[23:23:03] [Server thread/WARN]: 	at com.mojang.brigadier.context.ContextChain.runExecutable(ContextChain.java:73)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:30)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:13)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.UnboundEntryAction.lambda$bind$0(UnboundEntryAction.java:8)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.CommandQueueEntry.execute(CommandQueueEntry.java:5)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.ExecutionContext.runCommandQueue(ExecutionContext.java:105)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.Commands.executeCommandInContext(Commands.java:458)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.Commands.performCommand(Commands.java:364)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.CraftServer.dispatchCommand(CraftServer.java:944)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.Bukkit.dispatchCommand(Bukkit.java:1103)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//dev.lone.itemsadder.Core.OtherPlugins.MythicMobs.MythicMobsHook.reload(SourceFile:47)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ec.a(SourceFile:479)
-[23:23:03] [Server thread/WARN]: 	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:71)
-[23:23:03] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54)
-[23:23:03] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ave.a(SourceFile:72)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.e(SourceFile:1077)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.atb.g(SourceFile:144)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.a(SourceFile:1075)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1744)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1618)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.dedicated.DedicatedServer.tickServer(DedicatedServer.java:430)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1338)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:384)
-[23:23:03] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
-[23:23:03] [Server thread/WARN]: java.lang.IllegalArgumentException: Could not adapt item stack of invalid custom drop type 'VEHICLE_JERRYCAN'
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.BukkitBootstrap.createItem(BukkitBootstrap.java:377)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.parse(BukkitItemMatcher.java:110)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.lambda$new$0(BukkitItemMatcher.java:45)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.lambda$runPostReload$1(MythicClock.java:154)
-[23:23:03] [Server thread/WARN]: 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.runPostReload(MythicClock.java:151)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.doReloadPart2(ReloadCommand.java:184)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.onCommand(ReloadCommand.java:79)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:64)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:55)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:45)
-[23:23:03] [Server thread/WARN]: 	at io.papermc.paper.command.brigadier.bukkit.BukkitCommandNode$BukkitBrigCommand.run(BukkitCommandNode.java:83)
-[23:23:03] [Server thread/WARN]: 	at com.mojang.brigadier.context.ContextChain.runExecutable(ContextChain.java:73)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:30)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:13)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.UnboundEntryAction.lambda$bind$0(UnboundEntryAction.java:8)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.CommandQueueEntry.execute(CommandQueueEntry.java:5)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.ExecutionContext.runCommandQueue(ExecutionContext.java:105)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.Commands.executeCommandInContext(Commands.java:458)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.Commands.performCommand(Commands.java:364)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.CraftServer.dispatchCommand(CraftServer.java:944)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.Bukkit.dispatchCommand(Bukkit.java:1103)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//dev.lone.itemsadder.Core.OtherPlugins.MythicMobs.MythicMobsHook.reload(SourceFile:47)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ec.a(SourceFile:479)
-[23:23:03] [Server thread/WARN]: 	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:71)
-[23:23:03] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54)
-[23:23:03] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ave.a(SourceFile:72)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.e(SourceFile:1077)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.atb.g(SourceFile:144)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.a(SourceFile:1075)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1744)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1618)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.dedicated.DedicatedServer.tickServer(DedicatedServer.java:430)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1338)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:384)
-[23:23:03] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
-[23:23:03] [Server thread/WARN]: java.lang.IllegalArgumentException: Could not adapt item stack of invalid custom drop type 'VEHICLE_JERRYCAN'
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.BukkitBootstrap.createItem(BukkitBootstrap.java:377)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.parse(BukkitItemMatcher.java:110)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.lambda$new$0(BukkitItemMatcher.java:45)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.lambda$runPostReload$1(MythicClock.java:154)
-[23:23:03] [Server thread/WARN]: 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.runPostReload(MythicClock.java:151)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.doReloadPart2(ReloadCommand.java:184)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.onCommand(ReloadCommand.java:79)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:64)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:55)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:45)
-[23:23:03] [Server thread/WARN]: 	at io.papermc.paper.command.brigadier.bukkit.BukkitCommandNode$BukkitBrigCommand.run(BukkitCommandNode.java:83)
-[23:23:03] [Server thread/WARN]: 	at com.mojang.brigadier.context.ContextChain.runExecutable(ContextChain.java:73)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:30)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:13)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.UnboundEntryAction.lambda$bind$0(UnboundEntryAction.java:8)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.CommandQueueEntry.execute(CommandQueueEntry.java:5)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.ExecutionContext.runCommandQueue(ExecutionContext.java:105)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.Commands.executeCommandInContext(Commands.java:458)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.Commands.performCommand(Commands.java:364)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.CraftServer.dispatchCommand(CraftServer.java:944)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.Bukkit.dispatchCommand(Bukkit.java:1103)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//dev.lone.itemsadder.Core.OtherPlugins.MythicMobs.MythicMobsHook.reload(SourceFile:47)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ec.a(SourceFile:479)
-[23:23:03] [Server thread/WARN]: 	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:71)
-[23:23:03] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54)
-[23:23:03] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ave.a(SourceFile:72)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.e(SourceFile:1077)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.atb.g(SourceFile:144)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.a(SourceFile:1075)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1744)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1618)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.dedicated.DedicatedServer.tickServer(DedicatedServer.java:430)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1338)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:384)
-[23:23:03] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
-[23:23:03] [Server thread/WARN]: java.lang.IllegalArgumentException: Could not adapt item stack of invalid custom drop type 'VEHICLE_JERRYCAN'
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.BukkitBootstrap.createItem(BukkitBootstrap.java:377)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.parse(BukkitItemMatcher.java:110)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.lambda$new$0(BukkitItemMatcher.java:45)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.lambda$runPostReload$1(MythicClock.java:154)
-[23:23:03] [Server thread/WARN]: 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.runPostReload(MythicClock.java:151)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.doReloadPart2(ReloadCommand.java:184)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.onCommand(ReloadCommand.java:79)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:64)
-[23:23:03] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:55)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:45)
-[23:23:03] [Server thread/WARN]: 	at io.papermc.paper.command.brigadier.bukkit.BukkitCommandNode$BukkitBrigCommand.run(BukkitCommandNode.java:83)
-[23:23:03] [Server thread/WARN]: 	at com.mojang.brigadier.context.ContextChain.runExecutable(ContextChain.java:73)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:30)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:13)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.UnboundEntryAction.lambda$bind$0(UnboundEntryAction.java:8)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.CommandQueueEntry.execute(CommandQueueEntry.java:5)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.execution.ExecutionContext.runCommandQueue(ExecutionContext.java:105)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.Commands.executeCommandInContext(Commands.java:458)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.commands.Commands.performCommand(Commands.java:364)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.CraftServer.dispatchCommand(CraftServer.java:944)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.Bukkit.dispatchCommand(Bukkit.java:1103)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//dev.lone.itemsadder.Core.OtherPlugins.MythicMobs.MythicMobsHook.reload(SourceFile:47)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ec.a(SourceFile:479)
-[23:23:03] [Server thread/WARN]: 	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:71)
-[23:23:03] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54)
-[23:23:03] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ave.a(SourceFile:72)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.e(SourceFile:1077)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.atb.g(SourceFile:144)
-[23:23:03] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.a(SourceFile:1075)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78)
-[23:23:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1744)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1618)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.dedicated.DedicatedServer.tickServer(DedicatedServer.java:430)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1338)
-[23:23:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:384)
-[23:23:03] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
-[23:23:03] [Server thread/INFO]: [Mythic] Mythic has finished reloading!
-[23:23:03] [Server thread/INFO]: [MythicMobs] Mythic has finished reloading!
-[23:23:03] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Drop VEHICLE_JERRYCAN
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| File: 
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| Error Message: Drop type not found.
-[23:23:03] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Drop VEHICLE_JERRYCAN
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| File: 
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| Error Message: Drop type not found.
-[23:23:03] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Drop VEHICLE_JERRYCAN
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| File: 
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| Error Message: Drop type not found.
-[23:23:03] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Drop VEHICLE_JERRYCAN
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| File: 
-[23:23:03] [Server thread/WARN]: [MythicMobs] --| Error Message: Drop type not found.
-[23:23:43] [User Authenticator #0/INFO]: UUID of player sksrob is 9e3447ed-8b15-3a78-a0b0-644c91c1ff2e
-[23:23:43] [Server thread/INFO]: [HorriblePlayerLoginEventHack] You have plugins listening to the PlayerLoginEvent, this will cause re-configuration APIs to be unavailable: [LuckPerms, ProtocolLib, WorldGuard]
-[23:23:53] [Server thread/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
-[23:23:53] [Server thread/INFO]: sksrob joined the game
-[23:23:53] [Server thread/INFO]: sksrob[/127.121.243.89:49943] logged in with entity id 2 at ([world]3325.945771802638, 30.0, -305.4420459466126)
-[23:25:29] [Server thread/INFO]: [sksrob: Changed the block at 3288, 32, -315]
-[23:25:29] [Server thread/INFO]: [sksrob: Changed the block at 3288, 31, -315]
-[23:25:29] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:29] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:29] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:29] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:30] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:31] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:31] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:31] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:31] [Server thread/INFO]: [sksrob: Changed the block at 3288, 32, -315]
-[23:25:31] [Server thread/INFO]: [sksrob: Changed the block at 3288, 32, -315]
-[23:25:31] [Server thread/INFO]: [sksrob: Changed the block at 3288, 31, -315]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:32] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:33] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:33] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:33] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:33] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:33] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:33] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:33] [Server thread/INFO]: [Armor Stand: Teleported Armor Stand to 3288.600000, 31.000000, -313.970000]
-[23:25:38] [Server thread/INFO]: [sksrob: Set own game mode to Spectator Mode]
-[23:27:17] [lumine-scheduler-3/ERROR]: [MythicMobs] [SCHEDULER] Exception thrown whilst executing task
-[23:27:17] [lumine-scheduler-3/WARN]: java.lang.NullPointerException: Cannot invoke "com.ticxo.modelengine.api.model.bone.manager.MountManager.isControlled()" because "main" is null
-[23:27:17] [lumine-scheduler-3/WARN]: 	at ModelEngine-4.0.9.jar//com.ticxo.modelengine.core21.mythic.targeters.ModelDriverTargeter.getEntities(ModelDriverTargeter.java:25)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.targeters.WrappedEntityTargeter.getEntities(WrappedEntityTargeter.java:23)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillExecutor.processTargets(SkillExecutor.java:643)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.AbstractSkill.evaluateTargets(AbstractSkill.java:228)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.AbstractSkill.evaluateTargets(AbstractSkill.java:222)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillMechanic.executeSkills(SkillMechanic.java:541)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillMechanic.execute(SkillMechanic.java:505)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillExecutor.executeMobTimerSkills(SkillExecutor.java:328)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillExecutor.runTimerSkills(SkillExecutor.java:295)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.runSkillClock(MythicClock.java:191)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.Delegates$RunnableToConsumer.accept(Delegates.java:93)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.Schedulers$LumineAsyncTask.run(Schedulers.java:517)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.tasks.LumineExecutors$SchedulerWrappedRunnable.run(LumineExecutors.java:70)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.tasks.LumineAsyncExecutor$FixedRateWorker.lambda$run$0(LumineAsyncExecutor.java:186)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-[23:27:17] [lumine-scheduler-3/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
-[23:27:38] [Server thread/INFO]: [sksrob: Set own game mode to Creative Mode]
-[23:27:57] [User Authenticator #1/INFO]: UUID of player Cenicerou is 7c9f2d02-9320-3585-b245-5639bb8fa700
-[23:28:16] [Server thread/INFO]: sksrob issued server command: /ia i
-[23:28:17] [Server thread/INFO]: sksrob issued server command: /ia
-[23:28:18] [Server thread/INFO]: Cenicerou joined the game
-[23:28:18] [Server thread/INFO]: Cenicerou[/127.131.135.219:60835] logged in with entity id 1723 at ([world]2615.5, 24.0, -45.5)
-[23:28:39] [Server thread/INFO]: sksrob issued server command: /tp Cenicerou sksrob
-[23:28:39] [Server thread/INFO]: [sksrob: Teleported Cenicerou to sksrob]
-[23:28:44] [Server thread/INFO]: sksrob issued server command: /op Cenicerou
-[23:28:44] [Server thread/INFO]: [sksrob: Made Cenicerou a server operator]
-[23:29:20] [Server thread/INFO]: sksrob issued server command: /mm m s VEHICLE_BIKE
-[23:30:13] [Async Chat Thread - #0/INFO]: [Not Secure] <Cenicerou> 2
-[23:30:16] [Async Chat Thread - #0/INFO]: [Not Secure] <Cenicerou> 1
-[23:30:18] [Server thread/INFO]: sksrob issued server command: /ia
-[23:30:24] [Server thread/INFO]: sksrob issued server command: /ia
-[23:30:31] [Server thread/INFO]: sksrob lost connection: Disconnected
-[23:30:31] [Server thread/INFO]: sksrob left the game
-[23:31:07] [Server thread/INFO]: Cenicerou issued server command: /time set day
-[23:31:07] [Server thread/INFO]: [Cenicerou: Set the time to 1000]
-[23:34:29] [Server thread/INFO]: Cenicerou issued server command: /skin menu
-[23:34:38] [Server thread/INFO]: Cenicerou issued server command: /skin menu
-[23:35:07] [Server thread/INFO]: Cenicerou issued server command: /skin menu
-[23:35:11] [Server thread/INFO]: Cenicerou issued server command: /skin menu
-[23:36:17] [Server thread/INFO]: Cenicerou lost connection: Disconnected
-[23:36:17] [Server thread/INFO]: Cenicerou left the game
+[00:54:02] [Server thread/INFO]: [ItemsAdder] Loading GlowingEntities API
+[00:54:02] [Server thread/INFO]: [GlowingEntities] [GlowingEntities] Found server version 1.21.10
+[00:54:02] [Server thread/INFO]: [GlowingEntities] [GlowingEntities] Loaded transparent mappings.
+[00:54:05] [Server thread/INFO]: [Point] Enabling Point v1.0
+[00:54:05] [Server thread/INFO]: [Point] Point habilitado
+[00:54:05] [Server thread/INFO]: [TAB] Enabling TAB v5.4.0
+[00:54:06] [Server thread/INFO]: [TAB] Enabled in 300ms
+[00:54:06] [Server thread/INFO]: [AdvancedRegionMarket] Enabling AdvancedRegionMarket v3.5.5
+[00:54:06] [Server thread/INFO]: [AdvancedRegionMarket] Using WorldGuard7 adapter
+[00:54:06] [Server thread/INFO]: [AdvancedRegionMarket] Using WorldEdit7 adapter
+[00:54:06] [Server thread/INFO]: [AdvancedRegionMarket] Using MC 1.20 adapter
+[00:54:06] [Server thread/INFO]: [AdvancedRegionMarket] Regions loaded!
+[00:54:06] [Server thread/INFO]: [AdvancedRegionMarket] Programmed by Alex9849
+[00:54:06] [Server thread/INFO]: [AdvancedRegionMarket] I'm always searching for better translations of AdvancedRegionMarket. If you've translated the plugin it would be very nice if you would send me your translation via spigot private message! :)
+[00:54:06] [Server thread/INFO]: [spark] Starting background profiler...
+[00:54:07] [Server thread/INFO]: [PlaceholderAPI] Placeholder expansion registration initializing...
+[00:54:07] [Server thread/INFO]: Running delayed init tasks
+[00:54:07] [ForkJoinPool.commonPool-worker-1/INFO]: [ModelEngine] [A] 
+[00:54:07] [ForkJoinPool.commonPool-worker-1/INFO]: [ModelEngine] [A] [Importing models]
+[00:54:07] [ForkJoinPool.commonPool-worker-1/INFO]: [ModelEngine] [A] Loading cache version: R4.0.8
+[00:54:07] [Craft Scheduler Thread - 0 - Vault/INFO]: [Vault] Checking for Updates ... 
+[00:54:07] [Server thread/INFO]: [com.fastasyncworldedit.bukkit.regions.WorldGuardFeature] Plugin 'WorldGuard' found. Using it now.
+[00:54:07] [Server thread/INFO]: [com.fastasyncworldedit.bukkit.FaweBukkit] Attempting to use plugin 'WorldGuard'
+[00:54:07] [Craft Scheduler Thread - 5 - ItemsAdder/INFO]: ItemsAdder) [License] Spigot product licensed to: timoprince (1869569)
+[00:54:07] [pool-17-thread-1/INFO]: [ModelEngine] [A] 
+[00:54:07] [pool-17-thread-1/INFO]: [ModelEngine] [A] Importing internal_fire.bbmodel.
+[00:54:07] [pool-17-thread-2/INFO]: [ModelEngine] [A] 
+[00:54:07] [pool-17-thread-2/INFO]: [ModelEngine] [A] Importing vehicle_bike_dead.bbmodel.
+[00:54:07] [Server thread/INFO]: Done (37.975s)! For help, type "help"
+[00:54:07] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: vault [1.8.3]
+[00:54:07] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: worldguard [1.4.2]
+[00:54:07] [Server thread/INFO]: 2 placeholder hook(s) registered!
+[00:54:07] [pool-17-thread-8/INFO]: [ModelEngine] [A] 
+[00:54:07] [pool-17-thread-8/INFO]: [ModelEngine] [A] Importing vehicle_car_dead.bbmodel.
+[00:54:07] [pool-17-thread-4/INFO]: [ModelEngine] [A] 
+[00:54:07] [pool-17-thread-4/INFO]: [ModelEngine] [A] Importing vehicle_bike_black.bbmodel.
+[00:54:07] [pool-17-thread-3/INFO]: [ModelEngine] [A] 
+[00:54:07] [pool-17-thread-3/INFO]: [ModelEngine] [A] Importing vehicle_bike.bbmodel.
+[00:54:07] [pool-17-thread-5/INFO]: [ModelEngine] [A] 
+[00:54:07] [pool-17-thread-5/INFO]: [ModelEngine] [A] Importing vehicle_truck_dead.bbmodel.
+[00:54:07] [Craft Scheduler Thread - 0 - Vault/INFO]: [Vault] No new version available
+[00:54:08] [pool-17-thread-9/INFO]: [ModelEngine] [A] 
+[00:54:08] [pool-17-thread-9/INFO]: [ModelEngine] [A] Importing vehicle_car.bbmodel.
+[00:54:08] [pool-17-thread-7/INFO]: [ModelEngine] [A] 
+[00:54:08] [pool-17-thread-7/INFO]: [ModelEngine] [A] Importing vehicle_car_taxi.bbmodel.
+[00:54:08] [pool-17-thread-6/INFO]: [ModelEngine] [A] 
+[00:54:08] [pool-17-thread-6/INFO]: [ModelEngine] [A] Importing vehicle_truck.bbmodel.
+[00:54:08] [pool-17-thread-10/INFO]: [ModelEngine] [A] 
+[00:54:08] [pool-17-thread-10/INFO]: [ModelEngine] [A] Importing vehicle_car_police.bbmodel.
+[00:54:08] [Craft Scheduler Thread - 4 - ItemsAdder/INFO]: ItemsAdder) [Content] Loaded 27 items
+[00:54:08] [Craft Scheduler Thread - 4 - ItemsAdder/INFO]: ItemsAdder) Used Blocks IDs:
+[00:54:08] [Craft Scheduler Thread - 4 - ItemsAdder/INFO]: ItemsAdder)  - REAL 0/188
+[00:54:08] [Craft Scheduler Thread - 4 - ItemsAdder/INFO]: ItemsAdder)  - REAL_NOTE 0/750
+[00:54:08] [Craft Scheduler Thread - 4 - ItemsAdder/INFO]: ItemsAdder)  - REAL_TRANSPARENT 0/63
+[00:54:08] [Craft Scheduler Thread - 4 - ItemsAdder/INFO]: ItemsAdder) Used Font Images: 27/6608
+[00:54:08] [Craft Scheduler Thread - 4 - ItemsAdder/INFO]: ItemsAdder) [Content] Loaded 1 categories
+[00:54:08] [Craft Scheduler Thread - 4 - ItemsAdder/INFO]: ItemsAdder) [Content] Contents loaded successfully!
+[00:54:08] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: img [1.0.1]
+[00:54:08] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: iaplayerstat [1.0.1]
+[00:54:08] [Server thread/INFO]: [Mythic] Reloading plugin...
+[00:54:08] [Server thread/INFO]: [MythicMobs] Saving plugin data...
+[00:54:08] [Server thread/INFO]: [MythicMobs] ✓Saving Finished
+[00:54:08] [Server thread/INFO]: [MythicMobs] Loading Packs...
+[00:54:08] [pool-17-thread-10/INFO]: [ModelEngine] [A] 
+[00:54:08] [pool-17-thread-10/INFO]: [ModelEngine] [A] Resource pack zipped.
+[00:54:08] [pool-17-thread-10/INFO]: [ModelEngine] [A] Generator Profiled:
+[00:54:08] [pool-17-thread-10/INFO]: [ModelEngine] [A]  - Import Phase: 438.0ms
+[00:54:08] [pool-17-thread-10/INFO]: [ModelEngine] [A]  - Assets Phase: 227.5ms
+[00:54:08] [pool-17-thread-10/INFO]: [ModelEngine] [A]  - Zipping Phase: 463.7ms
+[00:54:08] [Craft Scheduler Thread - 4 - ItemsAdder/INFO]: ItemsAdder) [Pack] Resourcepack URL is valid (lobfile). URL: https://lobfile.com/file/r5qVfSzc.zip
+[00:54:08] [Craft Scheduler Thread - 4 - ItemsAdder/INFO]: ItemsAdder) ResourcePack
+[00:54:08] [Craft Scheduler Thread - 4 - ItemsAdder/INFO]: ItemsAdder)  - Path: /servidor_minecraft/plugins/ItemsAdder/output/generated.zip
+[00:54:08] [Craft Scheduler Thread - 4 - ItemsAdder/INFO]: ItemsAdder)  - Download: https://lobfile.com/file/r5qVfSzc.zip
+[00:54:08] [Craft Scheduler Thread - 4 - ItemsAdder/INFO]: ItemsAdder)  - Size: 561 KB/250 MB (0%)
+[00:54:09] [Server thread/INFO]: [MythicMobs] Loading Items...
+[00:54:09] [Server thread/INFO]: [MythicMobs] Loading Item Groups...
+[00:54:09] [Server thread/INFO]: [MythicMobs] All items loaded after 4ms!
+[00:54:09] [Server thread/INFO]: [MythicMobs] Loading Skills...
+[00:54:09] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.-0.8to1.1>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:54:09] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '2.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:54:09] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '7.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:54:09] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '12.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:54:09] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '17.5': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:54:09] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.0.9to1.1>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:54:09] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.0.5to0.85>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:54:09] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.0.8to1.15>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:54:09] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<random.float.1.0to1.2>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:54:09] [Server thread/INFO]: [MythicMobs] Loading Drop Tables...
+[00:54:09] [Server thread/INFO]: [MythicMobs] Loading Random Spawns...
+[00:54:09] [Server thread/INFO]: [MythicMobs] Loading Spawn Blocks...
+[00:54:09] [Server thread/WARN]: [MythicMobs] Failed to parse Placeholder '<skill.var.meg:front>': Math and variables in numeric values require premium! Consider getting MythicMobs Premium at www.mythiccraft.io
+[00:54:09] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /workspaces/juegozombie/servidor_minecraft/plugins/MythicMobs/skills/ExampleSkills.yml
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
+[00:54:09] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /workspaces/juegozombie/servidor_minecraft/plugins/MythicMobs/skills/ExampleSkills.yml
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
+[00:54:09] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /workspaces/juegozombie/servidor_minecraft/plugins/MythicMobs/skills/ExampleSkills.yml
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
+[00:54:09] [Server thread/INFO]: [MythicMobs] Second passes loaded after 24ms!
+[00:54:09] [Server thread/INFO]: [MythicMobs] ✓ Loaded 15 mobs.
+[00:54:09] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 vanilla mob overrides.
+[00:54:09] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 mob stacks.
+[00:54:09] [Server thread/INFO]: [MythicMobs] ✓ Loaded 360 skills.
+[00:54:09] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 random spawns.
+[00:54:09] [Server thread/INFO]: [MythicMobs] ✓ Loaded 4 mythic items.
+[00:54:09] [Server thread/INFO]: [MythicMobs] ✓ Loaded 2 drop tables.
+[00:54:09] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 mob spawners.
+[00:54:09] [Server thread/WARN]: java.lang.IllegalArgumentException: Could not adapt item stack of invalid custom drop type 'VEHICLE_JERRYCAN'
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.BukkitBootstrap.createItem(BukkitBootstrap.java:377)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.parse(BukkitItemMatcher.java:110)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.lambda$new$0(BukkitItemMatcher.java:45)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.lambda$runPostReload$1(MythicClock.java:154)
+[00:54:09] [Server thread/WARN]: 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.runPostReload(MythicClock.java:151)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.doReloadPart2(ReloadCommand.java:184)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.onCommand(ReloadCommand.java:79)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:64)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:55)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:45)
+[00:54:09] [Server thread/WARN]: 	at io.papermc.paper.command.brigadier.bukkit.BukkitCommandNode$BukkitBrigCommand.run(BukkitCommandNode.java:83)
+[00:54:09] [Server thread/WARN]: 	at com.mojang.brigadier.context.ContextChain.runExecutable(ContextChain.java:73)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:30)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:13)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.UnboundEntryAction.lambda$bind$0(UnboundEntryAction.java:8)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.CommandQueueEntry.execute(CommandQueueEntry.java:5)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.ExecutionContext.runCommandQueue(ExecutionContext.java:105)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.Commands.executeCommandInContext(Commands.java:458)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.Commands.performCommand(Commands.java:364)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.craftbukkit.CraftServer.dispatchCommand(CraftServer.java:944)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.Bukkit.dispatchCommand(Bukkit.java:1103)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//dev.lone.itemsadder.Core.OtherPlugins.MythicMobs.MythicMobsHook.reload(SourceFile:47)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ec.a(SourceFile:479)
+[00:54:09] [Server thread/WARN]: 	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:71)
+[00:54:09] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54)
+[00:54:09] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ave.a(SourceFile:72)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.e(SourceFile:1077)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.atb.g(SourceFile:144)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.a(SourceFile:1075)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1744)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1618)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.dedicated.DedicatedServer.tickServer(DedicatedServer.java:430)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1338)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:384)
+[00:54:09] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[00:54:09] [Server thread/WARN]: java.lang.IllegalArgumentException: Could not adapt item stack of invalid custom drop type 'VEHICLE_JERRYCAN'
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.BukkitBootstrap.createItem(BukkitBootstrap.java:377)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.parse(BukkitItemMatcher.java:110)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.lambda$new$0(BukkitItemMatcher.java:45)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.lambda$runPostReload$1(MythicClock.java:154)
+[00:54:09] [Server thread/WARN]: 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.runPostReload(MythicClock.java:151)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.doReloadPart2(ReloadCommand.java:184)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.onCommand(ReloadCommand.java:79)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:64)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:55)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:45)
+[00:54:09] [Server thread/WARN]: 	at io.papermc.paper.command.brigadier.bukkit.BukkitCommandNode$BukkitBrigCommand.run(BukkitCommandNode.java:83)
+[00:54:09] [Server thread/WARN]: 	at com.mojang.brigadier.context.ContextChain.runExecutable(ContextChain.java:73)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:30)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:13)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.UnboundEntryAction.lambda$bind$0(UnboundEntryAction.java:8)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.CommandQueueEntry.execute(CommandQueueEntry.java:5)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.ExecutionContext.runCommandQueue(ExecutionContext.java:105)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.Commands.executeCommandInContext(Commands.java:458)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.Commands.performCommand(Commands.java:364)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.craftbukkit.CraftServer.dispatchCommand(CraftServer.java:944)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.Bukkit.dispatchCommand(Bukkit.java:1103)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//dev.lone.itemsadder.Core.OtherPlugins.MythicMobs.MythicMobsHook.reload(SourceFile:47)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ec.a(SourceFile:479)
+[00:54:09] [Server thread/WARN]: 	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:71)
+[00:54:09] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54)
+[00:54:09] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ave.a(SourceFile:72)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.e(SourceFile:1077)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.atb.g(SourceFile:144)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.a(SourceFile:1075)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1744)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1618)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.dedicated.DedicatedServer.tickServer(DedicatedServer.java:430)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1338)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:384)
+[00:54:09] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[00:54:09] [Server thread/WARN]: java.lang.IllegalArgumentException: Could not adapt item stack of invalid custom drop type 'VEHICLE_JERRYCAN'
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.BukkitBootstrap.createItem(BukkitBootstrap.java:377)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.parse(BukkitItemMatcher.java:110)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.lambda$new$0(BukkitItemMatcher.java:45)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.lambda$runPostReload$1(MythicClock.java:154)
+[00:54:09] [Server thread/WARN]: 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.runPostReload(MythicClock.java:151)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.doReloadPart2(ReloadCommand.java:184)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.onCommand(ReloadCommand.java:79)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:64)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:55)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:45)
+[00:54:09] [Server thread/WARN]: 	at io.papermc.paper.command.brigadier.bukkit.BukkitCommandNode$BukkitBrigCommand.run(BukkitCommandNode.java:83)
+[00:54:09] [Server thread/WARN]: 	at com.mojang.brigadier.context.ContextChain.runExecutable(ContextChain.java:73)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:30)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:13)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.UnboundEntryAction.lambda$bind$0(UnboundEntryAction.java:8)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.CommandQueueEntry.execute(CommandQueueEntry.java:5)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.ExecutionContext.runCommandQueue(ExecutionContext.java:105)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.Commands.executeCommandInContext(Commands.java:458)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.Commands.performCommand(Commands.java:364)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.craftbukkit.CraftServer.dispatchCommand(CraftServer.java:944)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.Bukkit.dispatchCommand(Bukkit.java:1103)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//dev.lone.itemsadder.Core.OtherPlugins.MythicMobs.MythicMobsHook.reload(SourceFile:47)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ec.a(SourceFile:479)
+[00:54:09] [Server thread/WARN]: 	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:71)
+[00:54:09] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54)
+[00:54:09] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ave.a(SourceFile:72)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.e(SourceFile:1077)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.atb.g(SourceFile:144)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.a(SourceFile:1075)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1744)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1618)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.dedicated.DedicatedServer.tickServer(DedicatedServer.java:430)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1338)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:384)
+[00:54:09] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[00:54:09] [Server thread/WARN]: java.lang.IllegalArgumentException: Could not adapt item stack of invalid custom drop type 'VEHICLE_JERRYCAN'
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.BukkitBootstrap.createItem(BukkitBootstrap.java:377)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.parse(BukkitItemMatcher.java:110)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.adapters.BukkitItemMatcher.lambda$new$0(BukkitItemMatcher.java:45)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.lambda$runPostReload$1(MythicClock.java:154)
+[00:54:09] [Server thread/WARN]: 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.runPostReload(MythicClock.java:151)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.doReloadPart2(ReloadCommand.java:184)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.commands.ReloadCommand.onCommand(ReloadCommand.java:79)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:64)
+[00:54:09] [Server thread/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.commands.Command.onCommand(Command.java:55)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:45)
+[00:54:09] [Server thread/WARN]: 	at io.papermc.paper.command.brigadier.bukkit.BukkitCommandNode$BukkitBrigCommand.run(BukkitCommandNode.java:83)
+[00:54:09] [Server thread/WARN]: 	at com.mojang.brigadier.context.ContextChain.runExecutable(ContextChain.java:73)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:30)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:13)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.UnboundEntryAction.lambda$bind$0(UnboundEntryAction.java:8)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.CommandQueueEntry.execute(CommandQueueEntry.java:5)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.execution.ExecutionContext.runCommandQueue(ExecutionContext.java:105)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.Commands.executeCommandInContext(Commands.java:458)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.commands.Commands.performCommand(Commands.java:364)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.craftbukkit.CraftServer.dispatchCommand(CraftServer.java:944)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.Bukkit.dispatchCommand(Bukkit.java:1103)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//dev.lone.itemsadder.Core.OtherPlugins.MythicMobs.MythicMobsHook.reload(SourceFile:47)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ec.a(SourceFile:479)
+[00:54:09] [Server thread/WARN]: 	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:71)
+[00:54:09] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54)
+[00:54:09] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.ave.a(SourceFile:72)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.e(SourceFile:1077)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.atb.g(SourceFile:144)
+[00:54:09] [Server thread/WARN]: 	at ItemsAdder_4.0.15.jar//itemsadder.m.a.a(SourceFile:1075)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78)
+[00:54:09] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1744)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1618)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.dedicated.DedicatedServer.tickServer(DedicatedServer.java:430)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1338)
+[00:54:09] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:384)
+[00:54:09] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[00:54:09] [Server thread/INFO]: [Mythic] Mythic has finished reloading!
+[00:54:09] [Server thread/INFO]: [MythicMobs] Mythic has finished reloading!
+[00:54:09] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Drop VEHICLE_JERRYCAN
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| File: 
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| Error Message: Drop type not found.
+[00:54:09] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Drop VEHICLE_JERRYCAN
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| File: 
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| Error Message: Drop type not found.
+[00:54:09] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Drop VEHICLE_JERRYCAN
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| File: 
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| Error Message: Drop type not found.
+[00:54:09] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Drop VEHICLE_JERRYCAN
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| File: 
+[00:54:09] [Server thread/WARN]: [MythicMobs] --| Error Message: Drop type not found.
+[00:54:34] [User Authenticator #0/INFO]: UUID of player sksrob is 9e3447ed-8b15-3a78-a0b0-644c91c1ff2e
+[00:54:34] [Server thread/INFO]: [HorriblePlayerLoginEventHack] You have plugins listening to the PlayerLoginEvent, this will cause re-configuration APIs to be unavailable: [LuckPerms, ProtocolLib, WorldGuard]
+[00:54:38] [lumine-scheduler-2/ERROR]: [MythicMobs] [SCHEDULER] Exception thrown whilst executing task
+[00:54:38] [lumine-scheduler-2/WARN]: java.lang.NullPointerException: Cannot invoke "com.ticxo.modelengine.api.model.bone.manager.MountManager.isControlled()" because "main" is null
+[00:54:38] [lumine-scheduler-2/WARN]: 	at ModelEngine-4.0.9.jar//com.ticxo.modelengine.core21.mythic.targeters.ModelDriverTargeter.getEntities(ModelDriverTargeter.java:25)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.targeters.WrappedEntityTargeter.getEntities(WrappedEntityTargeter.java:23)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillExecutor.processTargets(SkillExecutor.java:643)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.AbstractSkill.evaluateTargets(AbstractSkill.java:228)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.AbstractSkill.evaluateTargets(AbstractSkill.java:222)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillMechanic.executeSkills(SkillMechanic.java:541)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillMechanic.execute(SkillMechanic.java:505)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillExecutor.executeMobTimerSkills(SkillExecutor.java:328)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillExecutor.runTimerSkills(SkillExecutor.java:295)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.runSkillClock(MythicClock.java:191)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.Delegates$RunnableToConsumer.accept(Delegates.java:93)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.Schedulers$LumineAsyncTask.run(Schedulers.java:517)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.tasks.LumineExecutors$SchedulerWrappedRunnable.run(LumineExecutors.java:70)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.tasks.LumineAsyncExecutor$FixedRateWorker.lambda$run$0(LumineAsyncExecutor.java:186)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[00:54:38] [lumine-scheduler-2/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[00:54:38] [Server thread/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[00:54:38] [Server thread/INFO]: sksrob joined the game
+[00:54:38] [Server thread/INFO]: sksrob[/127.121.243.89:38675] logged in with entity id 2 at ([world]2602.252342585071, 24.0, -37.7228584289124)
+[00:54:48] [Server thread/INFO]: [sksrob: Set own game mode to Spectator Mode]
+[00:55:10] [lumine-scheduler-1/ERROR]: [MythicMobs] [SCHEDULER] Exception thrown whilst executing task
+[00:55:10] [lumine-scheduler-1/WARN]: java.lang.NullPointerException: Cannot invoke "com.ticxo.modelengine.api.model.bone.manager.MountManager.isControlled()" because "main" is null
+[00:55:10] [lumine-scheduler-1/WARN]: 	at ModelEngine-4.0.9.jar//com.ticxo.modelengine.core21.mythic.targeters.ModelDriverTargeter.getEntities(ModelDriverTargeter.java:25)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.targeters.WrappedEntityTargeter.getEntities(WrappedEntityTargeter.java:23)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillExecutor.processTargets(SkillExecutor.java:643)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.AbstractSkill.evaluateTargets(AbstractSkill.java:228)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.AbstractSkill.evaluateTargets(AbstractSkill.java:222)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillMechanic.executeSkills(SkillMechanic.java:541)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillMechanic.execute(SkillMechanic.java:505)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillExecutor.executeMobTimerSkills(SkillExecutor.java:328)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.core.skills.SkillExecutor.runTimerSkills(SkillExecutor.java:295)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.clock.MythicClock.runSkillClock(MythicClock.java:191)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.Delegates$RunnableToConsumer.accept(Delegates.java:93)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.Schedulers$LumineAsyncTask.run(Schedulers.java:517)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.tasks.LumineExecutors$SchedulerWrappedRunnable.run(LumineExecutors.java:70)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at MythicMobs-5.11.1.jar//io.lumine.mythic.bukkit.utils.tasks.LumineAsyncExecutor$FixedRateWorker.lambda$run$0(LumineAsyncExecutor.java:186)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[00:55:10] [lumine-scheduler-1/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[00:59:15] [Server thread/INFO]: sksrob lost connection: Disconnected
+[00:59:15] [Server thread/INFO]: sksrob left the game
